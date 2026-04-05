@@ -45,19 +45,6 @@ public enum MarineTransportBuilding implements BuildingType {
             ProductType.ENERGY, 750.0,
             ProductType.TECHNOLOGY, 150.0
         ))
-    ),
-
-    SHIPYARD("Maintains and produces ships to support maritime operations.",
-        90000, 26000,
-        new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_TR
-        )),
-        4000,
-        BASE_PERFORMANCE_MULTIPLIER_TR * 7,
-        new EnumMap<>(Map.of(
-            ProductType.ENERGY, 800.0,
-            ProductType.TECHNOLOGY, 180.0
-        ))
     );
 
     private final String description;
