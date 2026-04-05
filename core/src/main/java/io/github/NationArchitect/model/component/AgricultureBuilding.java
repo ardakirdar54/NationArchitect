@@ -29,9 +29,9 @@ public enum AgricultureBuilding implements BuildingType {
     MEDIUM_FARM("Produces essential agricultural goods and supports the food supply.",
         25000,
         9500,
-        new EnumMap<>(
+        new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 4
-        ),
+        )),
         3500,
         0,
         BASE_PRODUCTION_AG * 3.5,
@@ -46,9 +46,9 @@ public enum AgricultureBuilding implements BuildingType {
     LARGE_FARM("Produces essential agricultural goods and supports the food supply.",
         55000,
         20000,
-        new EnumMap<>(
+        new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 10
-        ),
+        )),
         8000,
         0,
         BASE_PRODUCTION_AG * 10,
@@ -63,9 +63,9 @@ public enum AgricultureBuilding implements BuildingType {
     SMALL_GREENHOUSE("Produces agricultural goods in a controlled environment and improves production efficiency.",
         20000,
         5500,
-        new EnumMap<>(
+        new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 2
-        ),
+        )),
         1500,
         BASE_PERFORMANCE_MULTIPLIER_AG,
         BASE_PRODUCTION_AG * 2.5,
@@ -80,9 +80,9 @@ public enum AgricultureBuilding implements BuildingType {
     MEDIUM_GREENHOUSE("Produces agricultural goods in a controlled environment and improves production efficiency.",
         45000,
         10000,
-        new EnumMap<>(
+        new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 7
-        ),
+        )),
         5000,
         BASE_PERFORMANCE_MULTIPLIER_AG * 4,
         BASE_PRODUCTION_AG * 6,
@@ -97,9 +97,9 @@ public enum AgricultureBuilding implements BuildingType {
     LARGE_GREENHOUSE("Produces agricultural goods in a controlled environment and improves production efficiency.",
         100000,
         18000,
-        new EnumMap<>(
+        new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 7
-        ),
+        )),
         5000,
         BASE_PERFORMANCE_MULTIPLIER_AG * 9,
         BASE_PRODUCTION_AG * 13.5,
@@ -114,9 +114,9 @@ public enum AgricultureBuilding implements BuildingType {
     IRRIGATION_SYSTEM("Improves water distribution to increase farming productivity.",
         80000,
         10000,
-        new EnumMap<>(
+        new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 5
-        ),
+        )),
         900,
         BASE_PERFORMANCE_MULTIPLIER_AG * 7,
         0,
@@ -131,9 +131,9 @@ public enum AgricultureBuilding implements BuildingType {
     FERTILIZER_PLANT("Enhances soil productivity and boosts agricultural output.",
         35000,
         10000,
-        new EnumMap<>(
+        new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 2.5
-        ),
+        )),
         1500,
         BASE_PERFORMANCE_MULTIPLIER_AG * 3,
         0,
@@ -148,9 +148,9 @@ public enum AgricultureBuilding implements BuildingType {
     AGRICULTURAL_RESEARCH_CENTER("Develops advanced farming techniques to improve efficiency.",
         250000,
         45000,
-        new EnumMap<>(
+        new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 8
-        ),
+        )),
         900,
         BASE_PERFORMANCE_MULTIPLIER_AG * 13.5,
         0,

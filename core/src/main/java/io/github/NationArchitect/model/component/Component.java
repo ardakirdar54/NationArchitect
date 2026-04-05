@@ -2,6 +2,7 @@ package io.github.NationArchitect.model.component;
 
 import java.util.ArrayList;
 import java.util.EnumMap;
+import io.github.NationArchitect.model.Effect.Effect;
 import io.github.NationArchitect.model.metric.*;
 
 public abstract class Component {
@@ -98,6 +99,10 @@ public abstract class Component {
 
     public double calculateEffectMultiplier() {
         return 0;
+    }
+
+    public double getPerformanceWithType(MetricType metricType) {
+        return relatedMetrics.getOrDefault(metricType, 0.0);
     }
 
     public ComponentType getComponentType() {

@@ -23,8 +23,9 @@ public enum OfficeBuilding implements BuildingType {
     private final double performanceMultiplier;
     private final double production;
     private final EnumMap<ProductType, Double> demand;
+    private final int maxWorkerAmount;
 
-    OfficeBuilding(String description, double constructionCost, double maintenanceCost, EnumMap<MetricType, Double> relatedMetrics, double occupiedLand, double performanceMultiplier, double production, EnumMap<ProductType, Double> demand) {
+    OfficeBuilding(String description, double constructionCost, double maintenanceCost, EnumMap<MetricType, Double> relatedMetrics, double occupiedLand, double performanceMultiplier, double production, EnumMap<ProductType, Double> demand, int maxWorkerAmount) {
         this.description = description;
         this.constructionCost = constructionCost;
         this.maintenanceCost = maintenanceCost;
@@ -33,6 +34,7 @@ public enum OfficeBuilding implements BuildingType {
         this.performanceMultiplier = performanceMultiplier;
         this.production = production;
         this.demand = demand;
+        this.maxWorkerAmount = maxWorkerAmount;
     }
 
     @Override
@@ -50,6 +52,10 @@ public enum OfficeBuilding implements BuildingType {
 
     public EnumMap<MetricType, Double> getRelatedMetrics() {
         return new EnumMap<>(relatedMetrics);
+    }
+
+    public EnumMap<ComponentType, Double> getRelatedComponents() {
+        return null;
     }
 
     public double getOccupiedLand() {
@@ -70,5 +76,10 @@ public enum OfficeBuilding implements BuildingType {
 
     public String getDescription() {
         return description;
+    }
+
+    @Override
+    public int getMaxWorkerAmount() {
+        return maxWorkerAmount;
     }
 }
