@@ -10,6 +10,9 @@ public class Happiness extends Metric{
 
     @Override
     public void calculateForRegion(Region region) {
+        if(region == null){
+            throw new IllegalArgumentException("Region cannot be null! Metric can't be calculated");
+        }
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'calculateForRegion'");
     }
