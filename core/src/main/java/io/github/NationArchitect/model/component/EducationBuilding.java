@@ -21,7 +21,8 @@ public enum EducationBuilding implements BuildingType {
             ProductType.ENERGY, 300.0,
             ProductType.TECHNOLOGY, 50.0
         )),
-        30
+        30,
+        250
     ),
 
     HIGH_SCHOOL("Improves education level and increases workforce productivity.",
@@ -37,7 +38,8 @@ public enum EducationBuilding implements BuildingType {
             ProductType.ENERGY, 450.0,
             ProductType.TECHNOLOGY, 70.0
         )),
-        70
+        70,
+        500
     ),
 
     UNIVERSITY("Boosts higher education and significantly increases innovation and productivity.",
@@ -53,7 +55,8 @@ public enum EducationBuilding implements BuildingType {
             ProductType.ENERGY, 1300.0,
             ProductType.TECHNOLOGY, 250.0
         )),
-        500
+        500,
+        3000
     ),
 
     RESEARCH_INSTITUTE("Drives advanced research and greatly enhances innovation capacity.",
@@ -69,7 +72,8 @@ public enum EducationBuilding implements BuildingType {
             ProductType.ENERGY, 900.0,
             ProductType.TECHNOLOGY, 450.0
         )),
-        400
+        400,
+        0
     ),
 
     VOCATIONAL_TRAINING_CENTER("Provides practical training to improve workforce efficiency.",
@@ -85,7 +89,8 @@ public enum EducationBuilding implements BuildingType {
             ProductType.ENERGY, 600.0,
             ProductType.TECHNOLOGY, 150.0
         )),
-        200
+        200,
+        0
     );
 
     private final String description;
@@ -96,8 +101,9 @@ public enum EducationBuilding implements BuildingType {
     private final double performanceMultiplier;
     private final EnumMap<ProductType, Double> demand;
     private final int maxWorkerAmount;
+    private final int capacity;
 
-    EducationBuilding(String description, double constructionCost, double maintenanceCost, EnumMap<MetricType, Double> relatedMetrics, double occupiedLand, double performanceMultiplier, EnumMap<ProductType, Double> demand, int maxWorkerAmount) {
+    EducationBuilding(String description, double constructionCost, double maintenanceCost, EnumMap<MetricType, Double> relatedMetrics, double occupiedLand, double performanceMultiplier, EnumMap<ProductType, Double> demand, int maxWorkerAmount, int capacity) {
         this.description = description;
         this.constructionCost = constructionCost;
         this.maintenanceCost = maintenanceCost;
@@ -106,6 +112,7 @@ public enum EducationBuilding implements BuildingType {
         this.performanceMultiplier = performanceMultiplier;
         this.demand = demand;
         this.maxWorkerAmount = maxWorkerAmount;
+        this.capacity = capacity;
     }
 
     public String getName() {
@@ -150,5 +157,9 @@ public enum EducationBuilding implements BuildingType {
 
     public int getMaxWorkerAmount() {
         return maxWorkerAmount;
+    }
+
+    public int getCapacity() {
+        return capacity;
     }
 }

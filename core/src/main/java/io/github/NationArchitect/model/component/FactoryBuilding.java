@@ -5,7 +5,7 @@ import io.github.NationArchitect.model.metric.*;
 import java.util.EnumMap;
 import java.util.Map;
 
-import static io.github.NationArchitect.model.component.BuildingConstants.BASE_HAPPINESS_BOOST_F;
+import static io.github.NationArchitect.model.component.BuildingConstants.*;
 
 public enum FactoryBuilding implements BuildingType  {
 
@@ -107,9 +107,9 @@ public enum FactoryBuilding implements BuildingType  {
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_F * 10
         )),
         new EnumMap<ComponentType, Double>(Map.of(
-            ComponentType.ELECTRICITY, 0.06,
-            ComponentType.RAIL_TRANSPORT, 0.08,
-            ComponentType.ROAD_NETWORK, 0.04
+            ComponentType.ELECTRICITY, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 6,
+            ComponentType.RAIL_TRANSPORT, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 8,
+            ComponentType.ROAD_NETWORK, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 4
         )),
         2000.0,
         2000,
@@ -129,9 +129,9 @@ public enum FactoryBuilding implements BuildingType  {
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_F * 10
         )),
         new EnumMap<ComponentType, Double>(Map.of(
-            ComponentType.WATER_MANAGEMENT, 0.04,
-            ComponentType.ELECTRICITY, 0.03,
-            ComponentType.AGRICULTURE, 0.03
+            ComponentType.WATER_MANAGEMENT, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 4,
+            ComponentType.ELECTRICITY, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 3,
+            ComponentType.AGRICULTURE, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 3
         )),
         1500.0,
         1800,
@@ -151,14 +151,14 @@ public enum FactoryBuilding implements BuildingType  {
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_F * 10
         )),
         new EnumMap<ComponentType, Double>(Map.of(
-            ComponentType.INTERNET, 0.04,
-            ComponentType.ELECTRICITY, 0.03,
-            ComponentType.EDUCATION, 0.02,
-            ComponentType.AIR_TRANSPORT, 0.06,
-            ComponentType.HEALTH_SERVICES, 0.05,
-            ComponentType.AGRICULTURE, 0.04,
-            ComponentType.OFFICE, 0.07,
-            ComponentType.TOURISM, 0.05
+            ComponentType.INTERNET, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 4,
+            ComponentType.ELECTRICITY, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 3,
+            ComponentType.EDUCATION, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 2,
+            ComponentType.AIR_TRANSPORT, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 6,
+            ComponentType.HEALTH_SERVICES, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 5,
+            ComponentType.AGRICULTURE, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 4,
+            ComponentType.OFFICE, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 7,
+            ComponentType.TOURISM, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 5
         )),
         2100.0,
         2000,
@@ -178,7 +178,7 @@ public enum FactoryBuilding implements BuildingType  {
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_F * 10
         )),
         new EnumMap<ComponentType, Double>(Map.of(
-            ComponentType.HEALTH_SERVICES, 0.09
+            ComponentType.HEALTH_SERVICES, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 9
         )),
         1000.0,
         1500,
@@ -198,8 +198,8 @@ public enum FactoryBuilding implements BuildingType  {
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_F * 10
         )),
         new EnumMap<ComponentType, Double>(Map.of(
-            ComponentType.AGRICULTURE, 0.4,
-            ComponentType.WATER_MANAGEMENT, 0.3
+            ComponentType.AGRICULTURE, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 8,
+            ComponentType.WATER_MANAGEMENT, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 5
         )),
         3500,
         1500,
@@ -219,8 +219,8 @@ public enum FactoryBuilding implements BuildingType  {
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_F * 10
         )),
         new EnumMap<ComponentType, Double>(Map.of(
-            ComponentType.ROAD_TRANSPORT, 0.09,
-            ComponentType.RAIL_TRANSPORT, 0.09
+            ComponentType.ROAD_TRANSPORT, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 9,
+            ComponentType.RAIL_TRANSPORT, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 9
         )),
         3000.0,
         2500,
@@ -240,8 +240,8 @@ public enum FactoryBuilding implements BuildingType  {
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_F * 10
         )),
         new EnumMap<ComponentType, Double>(Map.of(
-            ComponentType.ELECTRICITY, 0.05,
-            ComponentType.EDUCATION, 0.04
+            ComponentType.ELECTRICITY, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 5,
+            ComponentType.EDUCATION, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 4
         )),
         2500.0,
         1250,
@@ -261,8 +261,8 @@ public enum FactoryBuilding implements BuildingType  {
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_F * 10
         )),
         new EnumMap<ComponentType, Double>(Map.of(
-            ComponentType.HEALTH_SERVICES, 0.09,
-            ComponentType.EDUCATION, 0.04
+            ComponentType.HEALTH_SERVICES, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 9,
+            ComponentType.EDUCATION, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 4
         )),
         1600.0,
         1800,
@@ -282,10 +282,10 @@ public enum FactoryBuilding implements BuildingType  {
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_F * 10
         )),
         new EnumMap<ComponentType, Double>(Map.of(
-            ComponentType.INTERNET, 0.07,
-            ComponentType.EDUCATION, 0.08,
-            ComponentType.ELECTRICITY, 0.05,
-            ComponentType.OFFICE, 0.05
+            ComponentType.INTERNET, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 7,
+            ComponentType.EDUCATION, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 8,
+            ComponentType.ELECTRICITY, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 5,
+            ComponentType.OFFICE, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 5
         )),
         3500.0,
         2200,
@@ -304,7 +304,7 @@ public enum FactoryBuilding implements BuildingType  {
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_F * 10
         )),
         new EnumMap<ComponentType, Double>(Map.of(
-            ComponentType.MARINE_TRANSPORT, 0.08
+            ComponentType.MARINE_TRANSPORT, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 8
         )),
         4000,
         2800,

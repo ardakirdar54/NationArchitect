@@ -33,13 +33,15 @@ public class Building {
     public Building(String name, BuildingType type) {
         this.name = name;
         this.type = type;
+        this.description = type.getDescription();
         this.constructionCost = type.getConstructionCost();
         this.maintenanceCost = type.getMaintenanceCost();
         this.relatedMetrics = type.getRelatedMetrics();
         this.relatedComponents = type.getRelatedComponents();
         this.occupiedLand = type.getOccupiedLand();
         this.performanceMultiplier = type.getPerformanceMultiplier();
-
+        this.demand = type.getDemand();
+        this.maxWorkerAmount = type.getMaxWorkerAmount();
     }
 
     public String getName() {
@@ -70,6 +72,10 @@ public class Building {
         return performanceMultiplier;
     }
 
+    public EnumMap<ProductType, Double> getDemand() {
+        return demand == null ? null : new EnumMap<>(demand);
+    }
+
     public int getWorkerAmount() {
         return workerAmount;
     }
@@ -82,4 +88,3 @@ public class Building {
         return maxWorkerAmount;
     }
 }
-

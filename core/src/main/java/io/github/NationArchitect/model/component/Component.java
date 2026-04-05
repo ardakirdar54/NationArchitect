@@ -67,10 +67,10 @@ public abstract class Component {
     }
 
     public void destroyBuilding(Building building) {
-        getBuildings().remove(building);
-        setBaseMonthlyBudget(getBaseMonthlyBudget() + building.getMaintenanceCost());
+        buildings.remove(building);
+        setBaseMonthlyBudget(getBaseMonthlyBudget() - building.getMaintenanceCost());
         setTotalOccupiedLand(getTotalOccupiedLand() - building.getOccupiedLand());
-        setPerformance(getPerformance() / (1 + building.getPerformanceMultiplier()));
+        setPerformanceMultiplier(getPerformanceMultiplier() - building.getPerformanceMultiplier());
     }
 
     public void calculateBudgetMultiplier(double budgetPercentage) {
@@ -79,23 +79,23 @@ public abstract class Component {
     }
 
     public void calculateFinalMonthlyBudget(double budgetPercentage) {
-
     }
 
     public void calculatePerformance(double budgetPercentage) {
-        setPerformance(getPerformance() * budgetPercentage);
+        setPerformance((BASE_PERFORMANCE + getPerformanceMultiplier()) * budgetPercentage);
     }
 
     public void affectMetrics() {
-
     }
 
     public void affectComponents() {
     }
 
-    //public void addEffect(Effect effect)
+    public void addEffect(Effect effect) {
+    }
 
-    //public void removeEffect(Effect effect)
+    public void removeEffect(Effect effect) {
+    }
 
     public double calculateEffectMultiplier() {
         return 0;

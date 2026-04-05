@@ -70,9 +70,9 @@ public enum AgricultureBuilding implements BuildingType {
         BASE_PERFORMANCE_MULTIPLIER_AG,
         BASE_PRODUCTION_AG * 2.5,
         new EnumMap<>(Map.of(
-            ProductType.WATER, 225.0,
-            ProductType.ENERGY, 250.0,
-            ProductType.TECHNOLOGY, 25.0
+            ProductType.WATER, 325.0,
+            ProductType.ENERGY, 350.0,
+            ProductType.TECHNOLOGY, 45.0
         )),
         15
     ),
@@ -87,9 +87,9 @@ public enum AgricultureBuilding implements BuildingType {
         BASE_PERFORMANCE_MULTIPLIER_AG * 4,
         BASE_PRODUCTION_AG * 6,
         new EnumMap<>(Map.of(
-            ProductType.WATER, 400.0,
-            ProductType.ENERGY, 500.0,
-            ProductType.TECHNOLOGY, 45.0
+            ProductType.WATER, 600.0,
+            ProductType.ENERGY, 800.0,
+            ProductType.TECHNOLOGY, 75.0
         )),
         40
     ),
@@ -98,15 +98,15 @@ public enum AgricultureBuilding implements BuildingType {
         100000,
         18000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 7
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 8
         )),
-        5000,
-        BASE_PERFORMANCE_MULTIPLIER_AG * 9,
-        BASE_PRODUCTION_AG * 13.5,
+        6500,
+        BASE_PERFORMANCE_MULTIPLIER_AG * 7.5,
+        BASE_PRODUCTION_AG * 11,
         new EnumMap<>(Map.of(
-            ProductType.WATER, 400.0,
-            ProductType.ENERGY, 500.0,
-            ProductType.TECHNOLOGY, 45.0
+            ProductType.WATER, 1000.0,
+            ProductType.ENERGY, 1300.0,
+            ProductType.TECHNOLOGY, 200.0
         )),
         100
     ),
