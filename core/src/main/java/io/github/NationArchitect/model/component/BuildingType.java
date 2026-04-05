@@ -1,5 +1,6 @@
 package io.github.NationArchitect.model.component;
 
+import io.github.NationArchitect.model.metric.MetricType;
 import io.github.NationArchitect.model.product.ProductType;
 
 import java.util.EnumMap;

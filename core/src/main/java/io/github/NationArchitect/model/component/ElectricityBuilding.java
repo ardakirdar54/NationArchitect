@@ -3,36 +3,124 @@ package io.github.NationArchitect.model.component;
 import io.github.NationArchitect.model.product.ProductType;
 import io.github.NationArchitect.model.metric.*;
 import java.util.EnumMap;
+import java.util.Map;
 
 public enum ElectricityBuilding implements BuildingType {
 
-    COAL_POWER_PLANT("Generates high electricity output at low cost but increases pollution and risk."),
-    NATURAL_GAS_POWER_PLANT("Produces efficient and cleaner energy with moderate output."),
-    OIL_POWER_PLANT("Provides reliable energy but comes with higher operational costs."),
-    WIND_POWER_PLANT("Generates clean energy with variable output depending on conditions."),
-    SOLAR_POWER_PLANT("Produces sustainable energy with lower but consistent output."),
-    HYDROELECTRIC_POWER_PLANT("Generates stable and strong energy using water resources."),
-    GEOTHERMAL_POWER_PLANT("Provides stable and continuous energy from underground heat sources."),
-    NUCLEAR_POWER_PLANT("Produces massive energy output with high cost and potential risks.");
+    COAL_POWER_PLANT("Generates high electricity output at low cost but increases pollution and risk.",
+        10000, 5000,
+        new EnumMap<>(Map.of(
+            MetricType.HAPPINESS, -0.3
+        )),
+        2500,
+        500,
+        new EnumMap<>(Map.of(
+            ProductType.WATER, 300.0,
+            ProductType.TECHNOLOGY, 50.0
+        )),
+        100
+    ),
+
+    NATURAL_GAS_POWER_PLANT("Produces efficient and cleaner energy with moderate output.",
+        20000, 12000,
+        new EnumMap<>(Map.of(
+            MetricType.HAPPINESS, -0.1
+        )),
+        2200,
+        800,
+        new EnumMap<>(Map.of(
+            ProductType.WATER, 200.0,
+            ProductType.TECHNOLOGY, 80.0
+        )),
+        100
+    ),
+
+    OIL_POWER_PLANT("Provides reliable energy but comes with higher operational costs.",
+        45000, 10000,
+        new EnumMap<>(Map.of(
+            MetricType.HAPPINESS, -0.2
+        )),
+        5000,
+        2000,
+        new EnumMap<>(Map.of(
+            ProductType.WATER, 250.0,
+            ProductType.TECHNOLOGY, 70.0
+        )),
+        100
+    ),
+
+    WIND_POWER_PLANT("Generates clean energy with variable output depending on conditions.",
+        35000, 8000,
+        new EnumMap<>(Map.of(
+            MetricType.HAPPINESS, 0.2
+        )),
+        3500,
+        1000,
+        new EnumMap<>(Map.of(
+            ProductType.TECHNOLOGY, 400.0
+        )),
+        100
+    ),
+
+    SOLAR_POWER_PLANT("Produces sustainable energy with lower but consistent output.",
+        30000, 7000,
+        new EnumMap<>(Map.of(
+            MetricType.HAPPINESS, 0.25
+        )),
+        5000,
+        1000,
+        new EnumMap<>(Map.of(
+            ProductType.TECHNOLOGY, 70.0
+        )),
+        300
+    ),
+
+    HYDROELECTRIC_POWER_PLANT("Generates stable and strong energy using water resources.",
+        80000, 20000,
+        new EnumMap<>(Map.of(
+            MetricType.HAPPINESS, 0.3
+        )),
+        9000,
+        1000,
+        new EnumMap<>(Map.of(
+            ProductType.WATER, 500.0,
+            ProductType.TECHNOLOGY, 120.0
+        )),
+        500
+    ),
+
+    NUCLEAR_POWER_PLANT("Produces massive energy output with high cost and potential risks.",
+        150000, 40000,
+        new EnumMap<>(Map.of(
+            MetricType.HAPPINESS, -0.2
+        )),
+        15000,
+        30000,
+        new EnumMap<>(Map.of(
+            ProductType.WATER, 2000.0,
+            ProductType.TECHNOLOGY, 1500.0
+        )),
+        1000
+    );
 
     private final String description;
     private final double constructionCost;
     private final double maintenanceCost;
     private final EnumMap<MetricType, Double> relatedMetrics;
     private final double occupiedLand;
-    private final double performanceMultiplier;
     private final double production;
     private final EnumMap<ProductType, Double> demand;
+    private final int maxWorkerAmount;
 
-    ElectricityBuilding(String description, double constructionCost, double maintenanceCost, EnumMap<MetricType, Double> relatedMetrics, double occupiedLand, double performanceMultiplier, double production, EnumMap<ProductType, Double> demand) {
+    ElectricityBuilding(String description, double constructionCost, double maintenanceCost, EnumMap<MetricType, Double> relatedMetrics, double occupiedLand, double production, EnumMap<ProductType, Double> demand, int maxWorkerAmount) {
         this.description = description;
         this.constructionCost = constructionCost;
         this.maintenanceCost = maintenanceCost;
         this.relatedMetrics = relatedMetrics;
         this.occupiedLand = occupiedLand;
-        this.performanceMultiplier = performanceMultiplier;
         this.production = production;
         this.demand = demand;
+        this.maxWorkerAmount = maxWorkerAmount;
     }
 
     @Override
@@ -52,12 +140,17 @@ public enum ElectricityBuilding implements BuildingType {
         return new EnumMap<>(relatedMetrics);
     }
 
+    @Override
+    public EnumMap<ComponentType, Double> getRelatedComponents() {
+        return null;
+    }
+
     public double getOccupiedLand() {
         return occupiedLand;
     }
 
     public double getPerformanceMultiplier() {
-        return performanceMultiplier;
+        return 0;
     }
 
     public double getProduction() {
@@ -70,5 +163,9 @@ public enum ElectricityBuilding implements BuildingType {
 
     public String getDescription() {
         return description;
+    }
+
+    public int getMaxWorkerAmount() {
+        return this.maxWorkerAmount;
     }
 }
