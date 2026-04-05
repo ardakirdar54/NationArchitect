@@ -171,10 +171,17 @@ public enum TourismBuilding implements BuildingType {
     private final EnumMap<ProductType, Double> demand;
     private final int maxWorkerAmount;
 
-    TourismBuilding(String description, double constructionCost, double maintenanceCost,
-        EnumMap<MetricType, Double> relatedMetrics, EnumMap<ComponentType, Double> relatedComponents,
-        double occupiedLand, double performanceMultiplier, EnumMap<ProductType, Double> demand,
-        int maxWorkerAmount) {
+    TourismBuilding(
+        String description,
+        double constructionCost,
+        double maintenanceCost,
+        EnumMap<MetricType, Double> relatedMetrics,
+        EnumMap<ComponentType, Double> relatedComponents,
+        double occupiedLand,
+        double performanceMultiplier,
+        EnumMap<ProductType, Double> demand,
+        int maxWorkerAmount
+    ) {
         this.description = description;
         this.constructionCost = constructionCost;
         this.maintenanceCost = maintenanceCost;

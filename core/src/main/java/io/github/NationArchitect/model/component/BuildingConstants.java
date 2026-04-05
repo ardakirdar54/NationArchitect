@@ -18,6 +18,10 @@ public class BuildingConstants {
     static final double BASE_PERFORMANCE_MULTIPLIER_ED = 0.005;
     static final double BASE_EDUCATION_LEVEL_BOOST_ED = 0.07;
 
+    //Constants related to electricity buildings
+    static final double BASE_HAPPINESS_PENALTY_EL = -0.1;
+    static final double BASE_HAPPINESS_BOOST_EL = 0.05;
+
     //Constants related to factories
     static final double BASE_HAPPINESS_BOOST_F = -0.0015;
     static final double BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F = 0.01;
@@ -34,11 +38,25 @@ public class BuildingConstants {
     static final double BASE_EDUCATION_PERFORMANCE_MULTIPLIER_IN = 0.003;
     static final double BASE_SECURITY_PERFORMANCE_MULTIPLIER_IN = 0.002;
 
-    //Constants related to transport buildings
-    static final double BASE_HAPPINESS_BOOST_TR = 0.018;
-    static final double BASE_PERFORMANCE_MULTIPLIER_TR = 0.0075;
-    static final double BASE_TOURISM_PERFORMANCE_MULTIPLIER_TR = 0.004;
-    static final double BASE_INDUSTRY_PERFORMANCE_MULTIPLIER_TR = 0.0055;
+    //Constants related to office buildings
+    static final double BASE_HAPPINESS_BOOST_OF = 0.01;
+
+    //Constants related to marine transport buildings
+    static final double BASE_HAPPINESS_BOOST_MT = 0.018;
+    static final double BASE_PERFORMANCE_MULTIPLIER_MT = 0.0075;
+    static final double BASE_INDUSTRY_PERFORMANCE_MULTIPLIER_MT = 0.0055;
+
+    //Constants related to rail transport buildings
+    static final double BASE_HAPPINESS_BOOST_RAIL = 0.018;
+    static final double BASE_PERFORMANCE_MULTIPLIER_RAIL = 0.0075;
+    static final double BASE_TOURISM_PERFORMANCE_MULTIPLIER_RAIL = 0.004;
+    static final double BASE_INDUSTRY_PERFORMANCE_MULTIPLIER_RAIL = 0.0055;
+
+    //Constants related to road transport buildings
+    static final double BASE_HAPPINESS_BOOST_RT = 0.018;
+    static final double BASE_PERFORMANCE_MULTIPLIER_RT = 0.0075;
+    static final double BASE_TOURISM_PERFORMANCE_MULTIPLIER_RT = 0.004;
+    static final double BASE_INDUSTRY_PERFORMANCE_MULTIPLIER_RT = 0.0055;
 
     //Constants related to road network buildings
     static final double BASE_HAPPINESS_BOOST_RN = 0.012;

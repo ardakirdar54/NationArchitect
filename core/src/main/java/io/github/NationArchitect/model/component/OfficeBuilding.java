@@ -4,6 +4,7 @@ import io.github.NationArchitect.model.product.ProductType;
 import io.github.NationArchitect.model.metric.*;
 import java.util.EnumMap;
 import java.util.Map;
+import static io.github.NationArchitect.model.component.BuildingConstants.*;
 
 public enum OfficeBuilding implements BuildingType {
 
@@ -12,7 +13,7 @@ public enum OfficeBuilding implements BuildingType {
         10000,
         3500,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, 0.01
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_OF
         )),
         400.0,
         180,
@@ -28,7 +29,7 @@ public enum OfficeBuilding implements BuildingType {
         22000,
         9000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, 0.018
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_OF * 1.8
         )),
         750.0,
         210,
@@ -45,7 +46,7 @@ public enum OfficeBuilding implements BuildingType {
         40000,
         16000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, 0.028
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_OF * 2.8
         )),
         1300.0,
         375,
@@ -62,7 +63,7 @@ public enum OfficeBuilding implements BuildingType {
         70000,
         26000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, 0.035
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_OF * 3.5
         )),
         1600.0,
         600,
@@ -79,7 +80,7 @@ public enum OfficeBuilding implements BuildingType {
         110000,
         42000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, 0.05
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_OF * 5
         )),
         2200.0,
         850,
@@ -96,7 +97,7 @@ public enum OfficeBuilding implements BuildingType {
         160000,
         65000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, 0.065
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_OF * 6.5
         )),
         3200.0,
         1300,
@@ -113,7 +114,7 @@ public enum OfficeBuilding implements BuildingType {
         260000,
         100000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, 0.08
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_OF * 8
         )),
         5000.0,
         2100,
@@ -134,7 +135,16 @@ public enum OfficeBuilding implements BuildingType {
     private final EnumMap<ProductType, Double> demand;
     private final int maxWorkerAmount;
 
-    OfficeBuilding(String description, double constructionCost, double maintenanceCost, EnumMap<MetricType, Double> relatedMetrics, double occupiedLand, double production, EnumMap<ProductType, Double> demand, int maxWorkerAmount) {
+    OfficeBuilding(
+        String description,
+        double constructionCost,
+        double maintenanceCost,
+        EnumMap<MetricType, Double> relatedMetrics,
+        double occupiedLand,
+        double production,
+        EnumMap<ProductType, Double> demand,
+        int maxWorkerAmount
+    ) {
         this.description = description;
         this.constructionCost = constructionCost;
         this.maintenanceCost = maintenanceCost;

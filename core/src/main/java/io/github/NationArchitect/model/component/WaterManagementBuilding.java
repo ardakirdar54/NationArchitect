@@ -159,10 +159,18 @@ public enum WaterManagementBuilding implements BuildingType {
     private final EnumMap<ProductType, Double> demand;
     private final int maxWorkerAmount;
 
-    WaterManagementBuilding(String description, double constructionCost, double maintenanceCost,
-        EnumMap<MetricType, Double> relatedMetrics, EnumMap<ComponentType, Double> relatedComponents,
-        double occupiedLand, double performanceMultiplier, double production,
-        EnumMap<ProductType, Double> demand, int maxWorkerAmount) {
+    WaterManagementBuilding(
+        String description,
+        double constructionCost,
+        double maintenanceCost,
+        EnumMap<MetricType, Double> relatedMetrics,
+        EnumMap<ComponentType, Double> relatedComponents,
+        double occupiedLand,
+        double performanceMultiplier,
+        double production,
+        EnumMap<ProductType, Double> demand,
+        int maxWorkerAmount
+    ) {
         this.description = description;
         this.constructionCost = constructionCost;
         this.maintenanceCost = maintenanceCost;

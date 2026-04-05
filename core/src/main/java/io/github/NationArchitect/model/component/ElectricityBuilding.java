@@ -4,13 +4,14 @@ import io.github.NationArchitect.model.product.ProductType;
 import io.github.NationArchitect.model.metric.*;
 import java.util.EnumMap;
 import java.util.Map;
+import static io.github.NationArchitect.model.component.BuildingConstants.*;
 
 public enum ElectricityBuilding implements BuildingType {
 
     COAL_POWER_PLANT("Generates high electricity output at low cost but increases pollution and risk.",
         10000, 5000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, -0.3
+            MetricType.HAPPINESS, BASE_HAPPINESS_PENALTY_EL * 3
         )),
         2500,
         500,
@@ -24,7 +25,7 @@ public enum ElectricityBuilding implements BuildingType {
     NATURAL_GAS_POWER_PLANT("Produces efficient and cleaner energy with moderate output.",
         20000, 12000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, -0.1
+            MetricType.HAPPINESS, BASE_HAPPINESS_PENALTY_EL
         )),
         2200,
         800,
@@ -38,7 +39,7 @@ public enum ElectricityBuilding implements BuildingType {
     OIL_POWER_PLANT("Provides reliable energy but comes with higher operational costs.",
         45000, 10000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, -0.2
+            MetricType.HAPPINESS, BASE_HAPPINESS_PENALTY_EL * 2
         )),
         5000,
         2000,
@@ -52,7 +53,7 @@ public enum ElectricityBuilding implements BuildingType {
     WIND_POWER_PLANT("Generates clean energy with variable output depending on conditions.",
         35000, 8000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, 0.2
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_EL * 4
         )),
         3500,
         1000,
@@ -65,7 +66,7 @@ public enum ElectricityBuilding implements BuildingType {
     SOLAR_POWER_PLANT("Produces sustainable energy with lower but consistent output.",
         30000, 7000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, 0.25
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_EL * 5
         )),
         5000,
         1000,
@@ -78,7 +79,7 @@ public enum ElectricityBuilding implements BuildingType {
     HYDROELECTRIC_POWER_PLANT("Generates stable and strong energy using water resources.",
         80000, 20000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, 0.3
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_EL * 6
         )),
         9000,
         1000,
@@ -92,7 +93,7 @@ public enum ElectricityBuilding implements BuildingType {
     NUCLEAR_POWER_PLANT("Produces massive energy output with high cost and potential risks.",
         150000, 40000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, -0.2
+            MetricType.HAPPINESS, BASE_HAPPINESS_PENALTY_EL * 2
         )),
         15000,
         30000,
@@ -112,7 +113,16 @@ public enum ElectricityBuilding implements BuildingType {
     private final EnumMap<ProductType, Double> demand;
     private final int maxWorkerAmount;
 
-    ElectricityBuilding(String description, double constructionCost, double maintenanceCost, EnumMap<MetricType, Double> relatedMetrics, double occupiedLand, double production, EnumMap<ProductType, Double> demand, int maxWorkerAmount) {
+    ElectricityBuilding(
+        String description,
+        double constructionCost,
+        double maintenanceCost,
+        EnumMap<MetricType, Double> relatedMetrics,
+        double occupiedLand,
+        double production,
+        EnumMap<ProductType, Double> demand,
+        int maxWorkerAmount
+    ) {
         this.description = description;
         this.constructionCost = constructionCost;
         this.maintenanceCost = maintenanceCost;

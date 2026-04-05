@@ -325,7 +325,17 @@ public enum FactoryBuilding implements BuildingType  {
     private final EnumMap<ProductType, Double> demand;
     private final int maxWorkerAmount;
 
-    FactoryBuilding(String description, double constructionCost, double maintenanceCost, EnumMap<MetricType, Double> relatedMetrics, EnumMap<ComponentType, Double> relatedComponents, double occupiedLand, double production, EnumMap<ProductType, Double> demand, int maxWorkerAmount) {
+    FactoryBuilding(
+        String description,
+        double constructionCost,
+        double maintenanceCost,
+        EnumMap<MetricType, Double> relatedMetrics,
+        EnumMap<ComponentType, Double> relatedComponents,
+        double occupiedLand,
+        double production,
+        EnumMap<ProductType, Double> demand,
+        int maxWorkerAmount
+    ) {
         this.description = description;
         this.constructionCost = constructionCost;
         this.maintenanceCost = maintenanceCost;

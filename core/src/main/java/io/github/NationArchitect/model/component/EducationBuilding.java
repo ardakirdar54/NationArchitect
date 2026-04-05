@@ -103,7 +103,17 @@ public enum EducationBuilding implements BuildingType {
     private final int maxWorkerAmount;
     private final int capacity;
 
-    EducationBuilding(String description, double constructionCost, double maintenanceCost, EnumMap<MetricType, Double> relatedMetrics, double occupiedLand, double performanceMultiplier, EnumMap<ProductType, Double> demand, int maxWorkerAmount, int capacity) {
+    EducationBuilding(
+        String description,
+        double constructionCost,
+        double maintenanceCost,
+        EnumMap<MetricType, Double> relatedMetrics,
+        double occupiedLand,
+        double performanceMultiplier,
+        EnumMap<ProductType, Double> demand,
+        int maxWorkerAmount,
+        int capacity
+    ) {
         this.description = description;
         this.constructionCost = constructionCost;
         this.maintenanceCost = maintenanceCost;

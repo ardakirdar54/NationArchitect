@@ -1,5 +1,6 @@
 package io.github.NationArchitect.model.component;
 
+import io.github.NationArchitect.model.metric.MetricType;
 import io.github.NationArchitect.model.product.ProductType;
 
 import java.util.EnumMap;
@@ -64,6 +65,14 @@ public class Building {
         return maintenanceCost;
     }
 
+    public EnumMap<MetricType, Double> getRelatedMetrics() {
+        return new EnumMap<>(relatedMetrics);
+    }
+
+    public EnumMap<ComponentType, Double> getRelatedComponents() {
+        return new EnumMap<>(relatedComponents);
+    }
+
     public double getOccupiedLand() {
         return occupiedLand;
     }
@@ -80,8 +89,12 @@ public class Building {
         return workerAmount;
     }
 
-    public void setWorkerAmount(int workerAmount) {
-        this.workerAmount = workerAmount;
+    void increaseWorkerAmount(int amount) {
+        workerAmount += amount;
+    }
+
+    void decreaseWorkerAmount(int amount) {
+        workerAmount = Math.max(0, workerAmount - amount);
     }
 
     public int getMaxWorkerAmount() {

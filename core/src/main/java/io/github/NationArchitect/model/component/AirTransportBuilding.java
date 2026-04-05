@@ -102,7 +102,17 @@ public enum AirTransportBuilding implements BuildingType {
     private final EnumMap<ProductType, Double> demand;
     private final int maxWorkerAmount;
 
-    AirTransportBuilding(String description, double constructionCost, double maintenanceCost, EnumMap<MetricType, Double> relatedMetrics, EnumMap<ComponentType, Double> relatedComponents, double occupiedLand, double performanceMultiplier, EnumMap<ProductType, Double> demand, int maxWorkerCount) {
+    AirTransportBuilding(
+        String description,
+        double constructionCost,
+        double maintenanceCost,
+        EnumMap<MetricType, Double> relatedMetrics,
+        EnumMap<ComponentType, Double> relatedComponents,
+        double occupiedLand,
+        double performanceMultiplier,
+        EnumMap<ProductType, Double> demand,
+        int maxWorkerCount
+    ) {
         this.description = description;
         this.constructionCost = constructionCost;
         this.maintenanceCost = maintenanceCost;
