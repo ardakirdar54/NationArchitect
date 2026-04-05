@@ -4,10 +4,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.EnumMap;
 
+import io.github.NationArchitect.model.component.Building;
 import io.github.NationArchitect.model.component.Component;
 import io.github.NationArchitect.model.component.ComponentType;
+import io.github.NationArchitect.model.component.Education;
+import io.github.NationArchitect.model.component.EducationBuilding;
 import io.github.NationArchitect.model.economy.Economy;
+import io.github.NationArchitect.model.economy.RegionEconomy;
 import io.github.NationArchitect.model.metric.*;
+import io.github.NationArchitect.model.population.Age;
 import io.github.NationArchitect.model.population.Population;
 
 public class Region extends Land {
@@ -17,8 +22,9 @@ public class Region extends Land {
     private EnumMap<ComponentType, Component> components;
     // private ArrayList<Policy> activePolicies;
     private double landValue;
+    private double baseCrimeRate;
 
-    public Region(String name, Economy economy, Population population) {
+    public Region(String name, RegionEconomy economy, Population population) {
         super(name, economy, population);
         // this.activePolicies = new ArrayList<>();
 
@@ -38,17 +44,9 @@ public class Region extends Land {
         this.components = components;
         return this;
     }
-
-    public double getSecurityPerformance() {
-        return this.components.get(ComponentType.SECURITY).getPerformance();
-    }
-
-    public double getEducationPerformance() {
-        return this.components.get(ComponentType.EDUCATION).getPerformance();
-    }
-
-    public double getHealthServicesPerformance() {
-        return this.components.get(ComponentType.HEALTH_SERVICES).getPerformance();
+    
+    public double getComponentPerformance(ComponentType type) {
+        return this.components.get(type).getPerformance();
     }
 
     public double getInfrastructurePerformance() {
@@ -74,10 +72,34 @@ public class Region extends Land {
         return sumOfInfrastructurePerformances / totalWeight;
     }
 
-    public int getUnemployedPeople() {
+    public int getTotalEmploymentCapacity() {
+        int totalWorkers = 0;
+
+        for(Component component : this.components.values()){
+            for(Building building : component.getBuildings()){
+                totalWorkers += building.getWorkerAmount();
+            }
+        }
         
+        return totalWorkers;
     }
 
+    public int getWorkingAgePopulation(){
+        return this.getPopulation().getWorkingAgePopulation();
+    }
+
+    public double getBaseCrimeRate(){return this.baseCrimeRate;}
+
+    public int getEducationBuildingCapacity(EducationBuilding type){
+        int totalCapacity = 0;
+        Education education = (Education) this.components.get(ComponentType.EDUCATION);
+        for(Building building : education.getBuildings()){
+            if(building.getType() == type){
+                totalCapacity += type.getCapacity();
+            }
+        }
+    }
+    
     @Override
     public void implementPolicy(Policy policy) {
         this.activePolicies.add(policy);
@@ -90,11 +112,11 @@ public class Region extends Land {
 
     @Override
     public void update() {
-        EnumMap<MetricType, Metric> currentRegionMetrics = this.getMetrics();
-        for (Metric metric : currentRegionMetrics.values()) {
+        
+        for (Metric metric : this.metrics.values()) {
             metric.calculateForRegion(this);
         }
-        double birthRate = this.getHappiness().getValue();
-        this.getPopulation().updateLifeCycle(birthRate, this.getHealthRate().getValue());
+        double birthRate = this.getMetricValue(MetricType.HAPPINESS);
+        this.population.updateLifeCycle(birthRate, this.getMetricValue(MetricType.HEALTH_RATE));
     }
 }

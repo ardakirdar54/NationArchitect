@@ -2,16 +2,18 @@ package io.github.NationArchitect.model.land;
 
 import java.util.EnumMap;
 import java.util.Map;
+import java.util.concurrent.atomic.DoubleAccumulator;
 
 import io.github.NationArchitect.model.economy.Economy;
 import io.github.NationArchitect.model.metric.*;
 import io.github.NationArchitect.model.population.Population;
+import io.github.NationArchitect.model.population.ReadOnlyPopulation;
 
 public abstract class Land {
     private String name;
     private Economy economy;
-    private Population population;
-    private EnumMap<MetricType, Metric> metrics;
+    protected Population population;
+    protected EnumMap<MetricType, Metric> metrics;
 
     Land(String name, Economy economy, Population population){
         this.name = name;
@@ -42,18 +44,13 @@ public abstract class Land {
 
     public Economy getEconomy(){return this.economy;}
 
-    public Population getPopulation(){return this.population;}
+    public ReadOnlyPopulation getPopulation(){return this.population;}
 
-    public Happiness getHappiness(){return (Happiness) this.metrics.get(MetricType.HAPPINESS);}
-
-    public Unemployment getUnemployment(){return (Unemployment) this.metrics.get(MetricType.UNEMPLOYMENT);}
-
-    public CrimeRate getCrimeRate(){return (CrimeRate) this.metrics.get(MetricType.CRIME_RATE);}
-
-    public EducationLevel getEducationLevel(){return (EducationLevel) this.metrics.get(MetricType.EDUCATION_LEVEL);}
-
-    public HealthRate getHealthRate(){return (HealthRate) this.metrics.get(MetricType.HEALTH_RATE);}
-
-    public EnumMap<MetricType, Metric> getMetrics(){return this.metrics;}
+    public double getMetricValue(MetricType type) {
+        if (this.metrics.containsKey(type)) {
+            return this.metrics.get(type).getValue();
+        }
+        return 0.0;
+    }
 
 }
