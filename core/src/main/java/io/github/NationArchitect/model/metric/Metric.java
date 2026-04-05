@@ -66,6 +66,8 @@ public abstract class Metric {
 
     public double getValue(){return this.value;}
 
+    public double getLastMonthValue(){return this.lastMonthValue;}
+
     public MetricType getType(){return this.type;}
 
 

@@ -53,4 +53,11 @@ public abstract class Land {
         return 0.0;
     }
 
+    public double getLastMonthMetricValue(MetricType type){
+        if (this.metrics.containsKey(type)) {
+            return this.metrics.get(type).getLastMonthValue();
+        }
+        return 0.0;
+    }
+
 }

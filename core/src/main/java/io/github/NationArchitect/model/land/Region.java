@@ -9,6 +9,7 @@ import io.github.NationArchitect.model.component.Component;
 import io.github.NationArchitect.model.component.ComponentType;
 import io.github.NationArchitect.model.component.Education;
 import io.github.NationArchitect.model.component.EducationBuilding;
+import io.github.NationArchitect.model.component.HealthServices;
 import io.github.NationArchitect.model.economy.Economy;
 import io.github.NationArchitect.model.economy.RegionEconomy;
 import io.github.NationArchitect.model.metric.*;
@@ -97,6 +98,14 @@ public class Region extends Land {
             if(building.getType() == type){
                 totalCapacity += type.getCapacity();
             }
+        }
+    }
+
+    public int getTotalHealthServiceCapacity(){
+        int totalCapacity = 0;
+        HealthServices healthServices = (HealthServices) this.components.get(ComponentType.HEALTH_SERVICES);
+        for(Building building : healthServices.getBuildings()){
+            totalCapacity += building.getCapacity();
         }
     }
     

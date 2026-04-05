@@ -45,8 +45,7 @@ public class Country extends Land {
             region.update();
         }
 
-        EnumMap<MetricType, Metric> countryMetrics = this.getMetrics();
-        for (Metric metric : countryMetrics.values()) {
+        for (Metric metric : this.metrics.values()) {
             metric.calculateForCountry(this);
         }
     }

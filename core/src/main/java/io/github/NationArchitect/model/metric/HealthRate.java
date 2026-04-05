@@ -1,7 +1,7 @@
 ﻿package io.github.NationArchitect.model.metric;
 
-import io.github.NationArchitect.model.component.ComponentType;
 import io.github.NationArchitect.model.land.Region;
+import io.github.NationArchitect.model.population.Age;
 
 public class HealthRate extends Metric{
 
@@ -17,16 +17,23 @@ public class HealthRate extends Metric{
             throw new IllegalArgumentException("Region cannot be null! Metric can't be calculated");
         }
 
-        int totalPopulation = region.getPopulation().getTotalPopulation();
+        int totalBurden = region.getPopulation().getTotalPopulation();
+        totalBurden += region.getPopulation().getAgeDistribution(Age.ELDERLY);
 
-        if (totalPopulation == 0) {
+        if (totalBurden == 0) {
             this.setValue(100.0);
             return;
         }
 
-        double totalMultiplier = region.getComponentPerformance(ComponentType.HEALTH_SERVICES);
+        int totalHealthServiceCapacity = region.getTotalHealthServiceCapacity();
 
-        
+        this.setValue(calculateFulfillment(totalBurden, totalHealthServiceCapacity));
+    }
+
+    private double calculateFulfillment(int demand, int supply){
+        if (demand == 0) return 100.0;
+        double fulfillment = ((double) supply / demand) * 100;
+        return Math.min(100.0, fulfillment);
     }
 
 }
