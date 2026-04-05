@@ -39,6 +39,9 @@ public abstract class Metric {
      * @param country 
      */
     public void calculateForCountry(Country country) {
+        if(country == null){
+            throw new IllegalArgumentException("Country cannot be null! Metric can't be calculated");
+        }
         int totalPopulation = country.getPopulation().getTotalPopulation();
 
         if (totalPopulation == 0) {
@@ -52,7 +55,7 @@ public abstract class Metric {
             if (region != null && region.getPopulation().getTotalPopulation() > 0) {
                 int regionPop = region.getPopulation().getTotalPopulation();
 
-                double regionMetricValue = region.getMetrics().get(this.type).getValue();
+                double regionMetricValue = region.getMetricValue(this.type);
                 
                 sumOfWeightedValue += (regionMetricValue * regionPop);
             }

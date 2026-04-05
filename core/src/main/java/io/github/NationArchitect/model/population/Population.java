@@ -2,7 +2,7 @@
 
 import java.util.EnumMap;
 
-public class Population{
+public class Population implements ReadOnlyPopulation{
 
     private EnumMap<Age, Integer> ageDistribution;
     private EnumMap<Gender, Integer> genderDistribution;
@@ -98,6 +98,19 @@ public class Population{
         return this.ageDistribution.get(Age.YOUNG_ADULT) + this.ageDistribution.get(Age.ADULT);
     }
 
+    @Override
+    public int getAgeDistribution(Age type) {
+        return this.ageDistribution.get(type);
+    }
+
+    public int getBirths(){
+        return this.births;
+    }
+    
+    public int getDeaths(){
+        return this.deaths;
+    }
+    
     public EnumMap<Age, Integer> getAgeDistribution(){
         return ageDistribution;
     }
