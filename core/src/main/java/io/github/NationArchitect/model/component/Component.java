@@ -67,10 +67,10 @@ public abstract class Component {
     }
 
     public void destroyBuilding(Building building) {
-        getBuildings().remove(building);
-        setBaseMonthlyBudget(getBaseMonthlyBudget() + building.getMaintenanceCost());
+        buildings.remove(building);
+        setBaseMonthlyBudget(getBaseMonthlyBudget() - building.getMaintenanceCost());
         setTotalOccupiedLand(getTotalOccupiedLand() - building.getOccupiedLand());
-        setPerformance(getPerformance() / (1 + building.getPerformanceMultiplier()));
+        setPerformanceMultiplier(getPerformanceMultiplier() - building.getPerformanceMultiplier());
     }
 
     public void calculateBudgetMultiplier(double budgetPercentage) {
@@ -79,30 +79,45 @@ public abstract class Component {
     }
 
     public void calculateFinalMonthlyBudget(double budgetPercentage) {
-
     }
 
     public void calculatePerformance(double budgetPercentage) {
-        setPerformance(getPerformance() * budgetPercentage);
+        double effectMultiplier = 1 + calculateEffectMultiplier();
+        setPerformance((BASE_PERFORMANCE + getPerformanceMultiplier()) * budgetPercentage * effectMultiplier);
     }
 
-    public void affectMetrics() {
-
+    public void addEffect(Effect effect) {
+        if (effect == null || activeEffects.contains(effect)) {
+            return;
+        }
+        activeEffects.add(effect);
     }
 
-    public void affectComponents() {
+    public void removeEffect(Effect effect) {
+        if (effect == null) {
+            return;
+        }
+        activeEffects.remove(effect);
     }
-
-    //public void addEffect(Effect effect)
-
-    //public void removeEffect(Effect effect)
 
     public double calculateEffectMultiplier() {
-        return 0;
+        double totalEffect = 0;
+
+        for (Effect effect : activeEffects) {
+            totalEffect += effect.getRelatedComponents().getOrDefault(getComponentType(), 0.0);
+        }
+
+        return Math.max(-0.9, totalEffect);
     }
 
     public double getPerformanceWithType(MetricType metricType) {
-        return relatedMetrics.getOrDefault(metricType, 0.0);
+        double totalMetricEffect = relatedMetrics.getOrDefault(metricType, 0.0);
+
+        for (Effect effect : activeEffects) {
+            totalMetricEffect += effect.getRelatedMetrics().getOrDefault(metricType, 0.0);
+        }
+
+        return totalMetricEffect;
     }
 
     public ComponentType getComponentType() {
@@ -117,7 +132,7 @@ public abstract class Component {
         return baseMonthlyBudget;
     }
 
-    public void setBaseMonthlyBudget(double baseMonthlyBudget){
+    void setBaseMonthlyBudget(double baseMonthlyBudget){
         this.baseMonthlyBudget = baseMonthlyBudget;
     }
 
@@ -125,7 +140,7 @@ public abstract class Component {
         return finalMonthlyBudget;
     }
 
-    public void setFinalMonthlyBudget(double finalMonthlyBudget){
+    void setFinalMonthlyBudget(double finalMonthlyBudget){
         this.finalMonthlyBudget = finalMonthlyBudget;
     }
 
@@ -133,7 +148,7 @@ public abstract class Component {
         return budgetMultiplier;
     }
 
-    public void setBudgetMultiplier(double budgetMultiplier){
+    void setBudgetMultiplier(double budgetMultiplier){
         this.budgetMultiplier = budgetMultiplier;
     }
 
@@ -141,7 +156,7 @@ public abstract class Component {
         return performance;
     }
 
-    public void setPerformance(double performance){
+    void setPerformance(double performance){
         this.performance = performance;
     }
 
@@ -149,7 +164,7 @@ public abstract class Component {
         return totalOccupiedLand;
     }
 
-    public void setTotalOccupiedLand(double totalOccupiedLand){
+    void setTotalOccupiedLand(double totalOccupiedLand){
         this.totalOccupiedLand = totalOccupiedLand;
     }
 
@@ -169,7 +184,11 @@ public abstract class Component {
         return performanceMultiplier;
     }
 
-    public void setPerformanceMultiplier(double performanceMultiplier) {
+    void setPerformanceMultiplier(double performanceMultiplier) {
         this.performanceMultiplier = performanceMultiplier;
+    }
+
+    public ArrayList<Effect> getActiveEffects() {
+        return new ArrayList<>(activeEffects);
     }
 }

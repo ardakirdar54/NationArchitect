@@ -11,58 +11,84 @@ public enum MarineTransportBuilding implements BuildingType {
     PORT("Supports basic sea transport and improves trade efficiency.",
         55000, 17000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_TR * 0.5
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_MT * 0.5
+        )),
+        new EnumMap<>(Map.of(
+            ComponentType.FACTORY, BASE_INDUSTRY_PERFORMANCE_MULTIPLIER_MT * 1.2
         )),
         3500,
-        BASE_PERFORMANCE_MULTIPLIER_TR * 6,
+        BASE_PERFORMANCE_MULTIPLIER_MT * 6,
         new EnumMap<>(Map.of(
             ProductType.ENERGY, 500.0,
             ProductType.TECHNOLOGY, 100.0
-        ))
+        )),
+        160
     ),
 
     COMMERCIAL_PORT("Handles large-scale cargo operations and boosts trade capacity.",
         110000, 32000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_TR
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_MT
+        )),
+        new EnumMap<>(Map.of(
+            ComponentType.FACTORY, BASE_INDUSTRY_PERFORMANCE_MULTIPLIER_MT * 2.5
         )),
         7000,
-        BASE_PERFORMANCE_MULTIPLIER_TR * 8.5,
+        BASE_PERFORMANCE_MULTIPLIER_MT * 8.5,
         new EnumMap<>(Map.of(
             ProductType.ENERGY, 900.0,
             ProductType.TECHNOLOGY, 200.0
-        ))
+        )),
+        340
     ),
 
     CARGO_TERMINAL("Facilitates efficient loading and unloading of goods.",
         80000, 24000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_TR * 0.5
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_MT * 0.5
+        )),
+        new EnumMap<>(Map.of(
+            ComponentType.FACTORY, BASE_INDUSTRY_PERFORMANCE_MULTIPLIER_MT * 2
         )),
         5000,
-        BASE_PERFORMANCE_MULTIPLIER_TR * 7.5,
+        BASE_PERFORMANCE_MULTIPLIER_MT * 7.5,
         new EnumMap<>(Map.of(
             ProductType.ENERGY, 750.0,
             ProductType.TECHNOLOGY, 150.0
-        ))
+        )),
+        240
     );
 
     private final String description;
     private final double constructionCost;
     private final double maintenanceCost;
     private final EnumMap<MetricType, Double> relatedMetrics;
+    private final EnumMap<ComponentType, Double> relatedComponents;
     private final double occupiedLand;
     private final double performanceMultiplier;
     private final EnumMap<ProductType, Double> demand;
+    private final int maxWorkerAmount;
 
-    MarineTransportBuilding(String description, double constructionCost, double maintenanceCost, EnumMap<MetricType, Double> relatedMetrics, double occupiedLand, double performanceMultiplier, double production, EnumMap<ProductType, Double> demand) {
+    MarineTransportBuilding(
+        String description,
+        double constructionCost,
+        double maintenanceCost,
+        EnumMap<MetricType, Double> relatedMetrics,
+        EnumMap<ComponentType, Double> relatedComponents,
+        double occupiedLand,
+        double performanceMultiplier,
+        EnumMap<ProductType, Double> demand,
+        int maxWorkerAmount
+    ) {
         this.description = description;
         this.constructionCost = constructionCost;
         this.maintenanceCost = maintenanceCost;
         this.relatedMetrics = relatedMetrics;
+        this.relatedComponents = relatedComponents;
         this.occupiedLand = occupiedLand;
         this.performanceMultiplier = performanceMultiplier;
         this.demand = demand;
+        this.maxWorkerAmount = maxWorkerAmount;
     }
 
     @Override
@@ -82,6 +108,10 @@ public enum MarineTransportBuilding implements BuildingType {
         return new EnumMap<>(relatedMetrics);
     }
 
+    public EnumMap<ComponentType, Double> getRelatedComponents() {
+        return new EnumMap<>(relatedComponents);
+    }
+
     public double getOccupiedLand() {
         return occupiedLand;
     }
@@ -90,11 +120,19 @@ public enum MarineTransportBuilding implements BuildingType {
         return performanceMultiplier;
     }
 
+    public double getProduction() {
+        return 0;
+    }
+
     public EnumMap<ProductType, Double> getDemand() {
         return new EnumMap<>(demand);
     }
 
     public String getDescription() {
         return description;
+    }
+
+    public int getMaxWorkerAmount() {
+        return maxWorkerAmount;
     }
 }

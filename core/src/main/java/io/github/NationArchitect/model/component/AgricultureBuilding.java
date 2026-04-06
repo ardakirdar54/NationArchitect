@@ -70,9 +70,9 @@ public enum AgricultureBuilding implements BuildingType {
         BASE_PERFORMANCE_MULTIPLIER_AG,
         BASE_PRODUCTION_AG * 2.5,
         new EnumMap<>(Map.of(
-            ProductType.WATER, 225.0,
-            ProductType.ENERGY, 250.0,
-            ProductType.TECHNOLOGY, 25.0
+            ProductType.WATER, 325.0,
+            ProductType.ENERGY, 350.0,
+            ProductType.TECHNOLOGY, 45.0
         )),
         15
     ),
@@ -87,9 +87,9 @@ public enum AgricultureBuilding implements BuildingType {
         BASE_PERFORMANCE_MULTIPLIER_AG * 4,
         BASE_PRODUCTION_AG * 6,
         new EnumMap<>(Map.of(
-            ProductType.WATER, 400.0,
-            ProductType.ENERGY, 500.0,
-            ProductType.TECHNOLOGY, 45.0
+            ProductType.WATER, 600.0,
+            ProductType.ENERGY, 800.0,
+            ProductType.TECHNOLOGY, 75.0
         )),
         40
     ),
@@ -98,27 +98,27 @@ public enum AgricultureBuilding implements BuildingType {
         100000,
         18000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 7
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 8
         )),
-        5000,
-        BASE_PERFORMANCE_MULTIPLIER_AG * 9,
-        BASE_PRODUCTION_AG * 13.5,
+        6500,
+        BASE_PERFORMANCE_MULTIPLIER_AG * 7.5,
+        BASE_PRODUCTION_AG * 11,
         new EnumMap<>(Map.of(
-            ProductType.WATER, 400.0,
-            ProductType.ENERGY, 500.0,
-            ProductType.TECHNOLOGY, 45.0
+            ProductType.WATER, 1000.0,
+            ProductType.ENERGY, 1300.0,
+            ProductType.TECHNOLOGY, 200.0
         )),
         100
     ),
 
     IRRIGATION_SYSTEM("Improves water distribution to increase farming productivity.",
         80000,
-        10000,
+        25000,
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 5
         )),
         900,
-        BASE_PERFORMANCE_MULTIPLIER_AG * 7,
+        BASE_PERFORMANCE_MULTIPLIER_AG * 5,
         0,
         new EnumMap<>(Map.of(
             ProductType.WATER, 250.0,
@@ -135,7 +135,7 @@ public enum AgricultureBuilding implements BuildingType {
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 2.5
         )),
         1500,
-        BASE_PERFORMANCE_MULTIPLIER_AG * 3,
+        BASE_PERFORMANCE_MULTIPLIER_AG * 1.5,
         0,
         new EnumMap<>(Map.of(
             ProductType.WATER, 500.0,
@@ -147,17 +147,17 @@ public enum AgricultureBuilding implements BuildingType {
 
     AGRICULTURAL_RESEARCH_CENTER("Develops advanced farming techniques to improve efficiency.",
         250000,
-        45000,
+        85000,
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 8
         )),
-        900,
+        800,
         BASE_PERFORMANCE_MULTIPLIER_AG * 13.5,
         0,
         new EnumMap<>(Map.of(
-            ProductType.WATER, 800.0,
-            ProductType.ENERGY, 1000.0,
-            ProductType.TECHNOLOGY, 200.0
+            ProductType.WATER, 1200.0,
+            ProductType.ENERGY, 1500.0,
+            ProductType.TECHNOLOGY, 700.0
         )),
         150
     );
@@ -172,8 +172,17 @@ public enum AgricultureBuilding implements BuildingType {
     private final EnumMap<ProductType, Double> demand;
     private final int maxWorkerAmount;
 
-    AgricultureBuilding(String description, double constructionCost, double maintenanceCost, EnumMap<MetricType, Double> relatedMetrics,
-                        double occupiedLand, double performanceMultiplier, double production, EnumMap<ProductType, Double> demand, int maxWorkerAmount) {
+    AgricultureBuilding(
+        String description,
+        double constructionCost,
+        double maintenanceCost,
+        EnumMap<MetricType, Double> relatedMetrics,
+        double occupiedLand,
+        double performanceMultiplier,
+        double production,
+        EnumMap<ProductType, Double> demand,
+        int maxWorkerAmount
+    ) {
         this.description = description;
         this.constructionCost = constructionCost;
         this.maintenanceCost = maintenanceCost;
