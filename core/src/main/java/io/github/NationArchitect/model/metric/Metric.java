@@ -70,6 +70,8 @@ public abstract class Metric {
 
     public MetricType getType(){return this.type;}
 
-
+    public void shiftHistory() {
+        this.lastMonthValue = this.value;
+    }
 }
 

@@ -49,6 +49,17 @@ public class Country extends Land {
         }
     }
 
+    public void shiftAllMetricsHistory() {
+
+        for (Region region : regions) {
+            region.shiftAllMetricsHistory();
+        }
+        
+        for (Metric metric : this.metrics.values()) {
+            metric.shiftHistory();
+        }
+    }
+
     public Region[] getRegions(){return this.regions;}
 }
 

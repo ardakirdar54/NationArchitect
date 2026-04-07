@@ -1,8 +1,6 @@
 package io.github.NationArchitect.model.land;
 
 import java.util.EnumMap;
-import java.util.Map;
-import java.util.concurrent.atomic.DoubleAccumulator;
 
 import io.github.NationArchitect.model.Effect.Policy;
 import io.github.NationArchitect.model.economy.Economy;

@@ -58,8 +58,9 @@ public class EducationLevel extends Metric{
             (researchFulfillment * 0.10);    
 
         double policyBonus = region.getTotalPolicyModifierForMetric(MetricType.EDUCATION_LEVEL);
+        double activeEffectBonus = region.getTotalActiveEffectModifierForMetric(MetricType.EDUCATION_LEVEL);
 
-        double finalEducationLevel = Math.max(0, Math.min(overallEducation + policyBonus, 100));
+        double finalEducationLevel = Math.max(0, Math.min(overallEducation + policyBonus + activeEffectBonus, 100));
 
         this.setValue(finalEducationLevel);
     }
