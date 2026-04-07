@@ -4,6 +4,7 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.concurrent.atomic.DoubleAccumulator;
 
+import io.github.NationArchitect.model.Effect.Policy;
 import io.github.NationArchitect.model.economy.Economy;
 import io.github.NationArchitect.model.metric.*;
 import io.github.NationArchitect.model.population.Population;
@@ -49,6 +50,13 @@ public abstract class Land {
     public double getMetricValue(MetricType type) {
         if (this.metrics.containsKey(type)) {
             return this.metrics.get(type).getValue();
+        }
+        return 0.0;
+    }
+
+    public double getLastMonthMetricValue(MetricType type){
+        if (this.metrics.containsKey(type)) {
+            return this.metrics.get(type).getLastMonthValue();
         }
         return 0.0;
     }

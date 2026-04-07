@@ -17,13 +17,13 @@ public class Region extends Land {
     private TerrainType terrainType;
     private EnumMap<ResourceType, Double> undergroundResources;
     private EnumMap<ComponentType, Component> components;
-    // private ArrayList<Policy> activePolicies;
+    private ArrayList<Policy> activePolicies;
     private double landValue;
     private double baseCrimeRate;
 
     public Region(String name, RegionEconomy economy, Population population) {
         super(name, economy, population);
-        // this.activePolicies = new ArrayList<>();
+        this.activePolicies = new ArrayList<>();
 
     }
 
@@ -130,6 +130,14 @@ public class Region extends Land {
         }
     }
 
+    public int getTotalHealthServiceCapacity(){
+        int totalCapacity = 0;
+        HealthServices healthServices = (HealthServices) this.components.get(ComponentType.HEALTH_SERVICES);
+        for(Building building : healthServices.getBuildings()){
+            totalCapacity += building.getCapacity();
+        }
+    }
+    
     @Override
     public void implementPolicy(Policy policy) {
         this.activePolicies.add(policy);
@@ -138,6 +146,14 @@ public class Region extends Land {
     @Override
     public void cancelPolicy(Policy policy) {
         this.activePolicies.remove(policy);
+    }
+
+    public double getTotalPolicyModifierForMetric(MetricType type) {
+        double totalModifier = 0.0;
+        for (Policy policy : activePolicies) {
+            totalModifier += policy.getMetricModifier(type);
+        }
+        return totalModifier;
     }
 
     @Override
