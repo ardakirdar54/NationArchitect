@@ -1,0 +1,21 @@
+
+button.png
+size: 2048, 2048
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+Stylized Game UI Button (Community)
+  rotate: false
+  xy: 1, 839
+  size: 1920, 1080
+  orig: 1920, 1080
+  offset: 0, 0
+  index: -1
+gamebutton
+  rotate: false
+  xy: 1, 839
+  size: 1920, 1080
+  split: 0, 0, 0, 0
+  orig: 1920, 1080
+  offset: 0, 0
+  index: -1
