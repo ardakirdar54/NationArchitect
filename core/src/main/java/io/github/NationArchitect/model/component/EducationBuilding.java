@@ -6,8 +6,15 @@ import java.util.EnumMap;
 import java.util.Map;
 import static io.github.NationArchitect.model.component.BuildingConstants.*;
 
+/**
+ * Defines the building types available for the Education component.
+ */
 public enum EducationBuilding implements BuildingType {
 
+    /**
+     * Represents primary school.
+     * It affects {@link Happiness} and {@link EducationLevel}.
+     */
     PRIMARY_SCHOOL("Provides basic education and slightly improves workforce skill levels.",
         8000, 4000,
         new EnumMap<>(Map.of(
@@ -18,13 +25,17 @@ public enum EducationBuilding implements BuildingType {
         0,
         new EnumMap<>(Map.of(
             ProductType.WATER, 200.0,
-            ProductType.ENERGY, 300.0,
+            ProductType.ENERGY, 350.0,
             ProductType.TECHNOLOGY, 50.0
         )),
         30,
         250
     ),
 
+    /**
+     * Represents high school.
+     * It affects {@link Happiness} and {@link EducationLevel}.
+     */
     HIGH_SCHOOL("Improves education level and increases workforce productivity.",
         16000, 6000,
         new EnumMap<>(Map.of(
@@ -42,6 +53,10 @@ public enum EducationBuilding implements BuildingType {
         500
     ),
 
+    /**
+     * Represents university.
+     * It affects {@link Happiness} and {@link EducationLevel}.
+     */
     UNIVERSITY("Boosts higher education and significantly increases innovation and productivity.",
         60000, 20000,
         new EnumMap<>(Map.of(
@@ -59,6 +74,10 @@ public enum EducationBuilding implements BuildingType {
         3000
     ),
 
+    /**
+     * Represents research institute.
+     * It affects {@link Happiness} and {@link EducationLevel}.
+     */
     RESEARCH_INSTITUTE("Drives advanced research and greatly enhances innovation capacity.",
         110000, 28000,
         new EnumMap<>(Map.of(
@@ -66,7 +85,7 @@ public enum EducationBuilding implements BuildingType {
             MetricType.EDUCATION_LEVEL, BASE_EDUCATION_LEVEL_BOOST_ED * 5
         )),
         4000,
-        BASE_PERFORMANCE_MULTIPLIER_ED * 10,
+        BASE_PERFORMANCE_MULTIPLIER_ED * 8,
         new EnumMap<>(Map.of(
             ProductType.WATER, 700.0,
             ProductType.ENERGY, 900.0,
@@ -76,6 +95,10 @@ public enum EducationBuilding implements BuildingType {
         0
     ),
 
+    /**
+     * Represents vocational training center.
+     * It affects {@link Happiness} and {@link EducationLevel}.
+     */
     VOCATIONAL_TRAINING_CENTER("Provides practical training to improve workforce efficiency.",
         60000, 25000,
         new EnumMap<>(Map.of(
@@ -93,16 +116,38 @@ public enum EducationBuilding implements BuildingType {
         0
     );
 
+    /** Description of the enum value. */
     private final String description;
+    /** Construction cost of the building type. */
     private final double constructionCost;
+    /** Maintenance cost of the building type. */
     private final double maintenanceCost;
+    /** Metric effects applied by the building type. */
     private final EnumMap<MetricType, Double> relatedMetrics;
+    /** Land occupied by the building type. */
     private final double occupiedLand;
+    /** Performance multiplier provided by the building type. */
     private final double performanceMultiplier;
+    /** Resource demand of the building type. */
     private final EnumMap<ProductType, Double> demand;
+    /** Maximum worker capacity of the building type. */
     private final int maxWorkerAmount;
+    /** Maximum student capacity of the building type. */
     private final int capacity;
 
+    /**
+     * Creates the enum value definition for {@link EducationBuilding}.
+     *
+     * @param description human-readable summary of the enum value
+     * @param constructionCost construction cost of the building type
+     * @param maintenanceCost maintenance cost of the building type
+     * @param relatedMetrics metric effects applied by the building type
+     * @param occupiedLand land occupied by the building type
+     * @param performanceMultiplier performance multiplier provided by the building type
+     * @param demand resource demand of the building type
+     * @param maxWorkerAmount maximum worker capacity of the building type
+     * @param capacity capacity value used by the enum entry
+     */
     EducationBuilding(
         String description,
         double constructionCost,
@@ -173,3 +218,6 @@ public enum EducationBuilding implements BuildingType {
         return capacity;
     }
 }
+
+
+

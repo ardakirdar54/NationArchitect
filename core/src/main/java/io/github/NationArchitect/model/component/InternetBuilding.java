@@ -8,15 +8,22 @@ import java.util.Map;
 
 import static io.github.NationArchitect.model.component.BuildingConstants.*;
 
+/**
+ * Defines the building types available for the Internet component.
+ */
 public enum InternetBuilding implements BuildingType {
 
+    /**
+     * Represents communication tower.
+     * It affects {@link Happiness} and influences {@link Office}.
+     */
     COMMUNICATION_TOWER("Provides basic internet coverage and a small efficiency boost.",
         14000, 5000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_IN
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_IN * 2.3
         )),
         new EnumMap<>(Map.of(
-            ComponentType.OFFICE, BASE_OFFICE_PERFORMANCE_MULTIPLIER_IN
+            ComponentType.OFFICE, BASE_OFFICE_PERFORMANCE_MULTIPLIER_IN * 0.4
         )),
         500,
         BASE_PERFORMANCE_MULTIPLIER_IN,
@@ -27,13 +34,17 @@ public enum InternetBuilding implements BuildingType {
         25
     ),
 
+    /**
+     * Represents data center.
+     * It affects {@link Happiness} and influences {@link Office} and {@link Education}.
+     */
     DATA_CENTER("Processes data and increases overall network efficiency.",
         50000, 21000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_IN * 1.5
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_IN
         )),
         new EnumMap<>(Map.of(
-            ComponentType.OFFICE, BASE_OFFICE_PERFORMANCE_MULTIPLIER_IN * 1.8,
+            ComponentType.OFFICE, BASE_OFFICE_PERFORMANCE_MULTIPLIER_IN * 3.8,
             ComponentType.EDUCATION, BASE_EDUCATION_PERFORMANCE_MULTIPLIER_IN
         )),
         1600,
@@ -46,6 +57,10 @@ public enum InternetBuilding implements BuildingType {
         90
     ),
 
+    /**
+     * Represents network control center.
+     * It affects {@link Happiness} and influences {@link Office} and {@link Security}.
+     */
     NETWORK_CONTROL_CENTER("Optimizes network operations and improves overall system performance.",
         70000, 26000,
         new EnumMap<>(Map.of(
@@ -65,6 +80,10 @@ public enum InternetBuilding implements BuildingType {
         130
     ),
 
+    /**
+     * Represents edge network hub.
+     * It affects {@link Happiness} and influences {@link Office}, {@link Education}, and {@link Security}.
+     */
     EDGE_NETWORK_HUB("Distributes data processing closer to users, improving efficiency.",
         90000, 32000,
         new EnumMap<>(Map.of(
@@ -85,6 +104,10 @@ public enum InternetBuilding implements BuildingType {
         160
     ),
 
+    /**
+     * Represents ai optimization center.
+     * It affects {@link Happiness} and influences {@link Office}, {@link Education}, and {@link Security}.
+     */
     AI_OPTIMIZATION_CENTER("Uses AI to maximize network efficiency across all systems.",
         140000, 52000,
         new EnumMap<>(Map.of(
@@ -105,6 +128,10 @@ public enum InternetBuilding implements BuildingType {
         240
     ),
 
+    /**
+     * Represents cloud infrastructure hub.
+     * It affects {@link Happiness} and influences {@link Office}, {@link Education}, and {@link Security}.
+     */
     CLOUD_INFRASTRUCTURE_HUB("Enables scalable computing and provides a strong global efficiency boost.",
         220000, 85000,
         new EnumMap<>(Map.of(
@@ -125,16 +152,38 @@ public enum InternetBuilding implements BuildingType {
         400
     );
 
+    /** Description of the enum value. */
     private final String description;
+    /** Construction cost of the building type. */
     private final double constructionCost;
+    /** Maintenance cost of the building type. */
     private final double maintenanceCost;
+    /** Metric effects applied by the building type. */
     private final EnumMap<MetricType, Double> relatedMetrics;
+    /** Component effects applied by the building type. */
     private final EnumMap<ComponentType, Double> relatedComponents;
+    /** Land occupied by the building type. */
     private final double occupiedLand;
+    /** Performance multiplier provided by the building type. */
     private final double performanceMultiplier;
+    /** Resource demand of the building type. */
     private final EnumMap<ProductType, Double> demand;
+    /** Maximum worker capacity of the building type. */
     private final int maxWorkerAmount;
 
+    /**
+     * Creates the enum value definition for {@link InternetBuilding}.
+     *
+     * @param description human-readable summary of the enum value
+     * @param constructionCost construction cost of the building type
+     * @param maintenanceCost maintenance cost of the building type
+     * @param relatedMetrics metric effects applied by the building type
+     * @param relatedComponents component effects applied by the building type
+     * @param occupiedLand land occupied by the building type
+     * @param performanceMultiplier performance multiplier provided by the building type
+     * @param demand resource demand of the building type
+     * @param maxWorkerAmount maximum worker capacity of the building type
+     */
     InternetBuilding(
         String description,
         double constructionCost,
@@ -201,4 +250,11 @@ public enum InternetBuilding implements BuildingType {
     public int getMaxWorkerAmount() {
         return maxWorkerAmount;
     }
+
+    public int getCapacity() {
+        return 0;
+    }
 }
+
+
+

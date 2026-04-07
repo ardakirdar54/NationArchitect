@@ -7,8 +7,16 @@ import java.util.Map;
 
 import static io.github.NationArchitect.model.component.BuildingConstants.*;
 
+/**
+ * Defines the building types available for the Agriculture component.
+ */
 public enum AgricultureBuilding implements BuildingType {
 
+    /**
+     * Represents small farm.
+     * Produces {@link ProductType#FOOD}.
+     * It affects {@link Happiness}.
+     */
     SMALL_FARM("Produces essential agricultural goods and supports the food supply.",
         10000,
         4000,
@@ -26,11 +34,16 @@ public enum AgricultureBuilding implements BuildingType {
         10
     ),
 
+    /**
+     * Represents medium farm.
+     * Produces {@link ProductType#FOOD}.
+     * It affects {@link Happiness}.
+     */
     MEDIUM_FARM("Produces essential agricultural goods and supports the food supply.",
         25000,
         9500,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 4
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 3.4
         )),
         3500,
         0,
@@ -43,11 +56,16 @@ public enum AgricultureBuilding implements BuildingType {
         35
     ),
 
+    /**
+     * Represents large farm.
+     * Produces {@link ProductType#FOOD}.
+     * It affects {@link Happiness}.
+     */
     LARGE_FARM("Produces essential agricultural goods and supports the food supply.",
         55000,
         20000,
         new EnumMap<>(Map.of(
-            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 10
+            MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 11.6
         )),
         8000,
         0,
@@ -60,6 +78,11 @@ public enum AgricultureBuilding implements BuildingType {
         80
     ),
 
+    /**
+     * Represents small greenhouse.
+     * Produces {@link ProductType#FOOD}.
+     * It affects {@link Happiness}.
+     */
     SMALL_GREENHOUSE("Produces agricultural goods in a controlled environment and improves production efficiency.",
         20000,
         5500,
@@ -77,9 +100,14 @@ public enum AgricultureBuilding implements BuildingType {
         15
     ),
 
+    /**
+     * Represents medium greenhouse.
+     * Produces {@link ProductType#FOOD}.
+     * It affects {@link Happiness}.
+     */
     MEDIUM_GREENHOUSE("Produces agricultural goods in a controlled environment and improves production efficiency.",
         45000,
-        10000,
+        15000,
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 7
         )),
@@ -94,9 +122,14 @@ public enum AgricultureBuilding implements BuildingType {
         40
     ),
 
+    /**
+     * Represents large greenhouse.
+     * Produces {@link ProductType#FOOD}.
+     * It affects {@link Happiness}.
+     */
     LARGE_GREENHOUSE("Produces agricultural goods in a controlled environment and improves production efficiency.",
         100000,
-        18000,
+        28000,
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 8
         )),
@@ -111,6 +144,11 @@ public enum AgricultureBuilding implements BuildingType {
         100
     ),
 
+    /**
+     * Represents irrigation system.
+     * Produces {@link ProductType#FOOD}.
+     * It affects {@link Happiness}.
+     */
     IRRIGATION_SYSTEM("Improves water distribution to increase farming productivity.",
         80000,
         25000,
@@ -128,6 +166,11 @@ public enum AgricultureBuilding implements BuildingType {
         40
     ),
 
+    /**
+     * Represents fertilizer plant.
+     * Produces {@link ProductType#FOOD}.
+     * It affects {@link Happiness}.
+     */
     FERTILIZER_PLANT("Enhances soil productivity and boosts agricultural output.",
         35000,
         10000,
@@ -145,9 +188,14 @@ public enum AgricultureBuilding implements BuildingType {
         60
     ),
 
+    /**
+     * Represents agricultural research center.
+     * Produces {@link ProductType#FOOD}.
+     * It affects {@link Happiness}.
+     */
     AGRICULTURAL_RESEARCH_CENTER("Develops advanced farming techniques to improve efficiency.",
         250000,
-        85000,
+        75000,
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AG * 8
         )),
@@ -162,16 +210,38 @@ public enum AgricultureBuilding implements BuildingType {
         150
     );
 
+    /** Description of the enum value. */
     private final String description;
+    /** Construction cost of the building type. */
     private final double constructionCost;
+    /** Maintenance cost of the building type. */
     private final double maintenanceCost;
+    /** Metric effects applied by the building type. */
     private final EnumMap<MetricType, Double> relatedMetrics;
+    /** Land occupied by the building type. */
     private final double occupiedLand;
+    /** Performance multiplier provided by the building type. */
     private final double performanceMultiplier;
+    /** Production output provided by the building type. */
     private final double production;
+    /** Resource demand of the building type. */
     private final EnumMap<ProductType, Double> demand;
+    /** Maximum worker capacity of the building type. */
     private final int maxWorkerAmount;
 
+    /**
+     * Creates the enum value definition for {@link AgricultureBuilding}.
+     *
+     * @param description human-readable summary of the enum value
+     * @param constructionCost construction cost of the building type
+     * @param maintenanceCost maintenance cost of the building type
+     * @param relatedMetrics metric effects applied by the building type
+     * @param occupiedLand land occupied by the building type
+     * @param performanceMultiplier performance multiplier provided by the building type
+     * @param production production output provided by the building type
+     * @param demand resource demand of the building type
+     * @param maxWorkerAmount maximum worker capacity of the building type
+     */
     AgricultureBuilding(
         String description,
         double constructionCost,
@@ -238,4 +308,11 @@ public enum AgricultureBuilding implements BuildingType {
     public int getMaxWorkerAmount() {
         return maxWorkerAmount;
     }
+
+    public int getCapacity() {
+        return 0;
+    }
 }
+
+
+
