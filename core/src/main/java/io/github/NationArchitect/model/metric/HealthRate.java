@@ -27,7 +27,11 @@ public class HealthRate extends Metric{
 
         int totalHealthServiceCapacity = region.getTotalHealthServiceCapacity();
 
-        this.setValue(calculateFulfillment(totalBurden, totalHealthServiceCapacity));
+        double policyBonus = region.getTotalPolicyModifierForMetric(MetricType.HEALTH_RATE);
+
+        double finalHealthRate = Math.min(100, 
+            Math.max(0, calculateFulfillment(totalBurden, totalHealthServiceCapacity) + policyBonus));
+        this.setValue(finalHealthRate);
     }
 
     private double calculateFulfillment(int demand, int supply){

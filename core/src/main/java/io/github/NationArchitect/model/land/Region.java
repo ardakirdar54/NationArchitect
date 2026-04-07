@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.EnumMap;
 
+import io.github.NationArchitect.model.Effect.Policy;
 import io.github.NationArchitect.model.component.Building;
 import io.github.NationArchitect.model.component.Component;
 import io.github.NationArchitect.model.component.ComponentType;
@@ -21,13 +22,13 @@ public class Region extends Land {
     private TerrainType terrainType;
     private EnumMap<ResourceType, Double> undergroundResources;
     private EnumMap<ComponentType, Component> components;
-    // private ArrayList<Policy> activePolicies;
+    private ArrayList<Policy> activePolicies;
     private double landValue;
     private double baseCrimeRate;
 
     public Region(String name, RegionEconomy economy, Population population) {
         super(name, economy, population);
-        // this.activePolicies = new ArrayList<>();
+        this.activePolicies = new ArrayList<>();
 
     }
 
@@ -117,6 +118,14 @@ public class Region extends Land {
     @Override
     public void cancelPolicy(Policy policy) {
         this.activePolicies.remove(policy);
+    }
+
+    public double getTotalPolicyModifierForMetric(MetricType type) {
+        double totalModifier = 0.0;
+        for (Policy policy : activePolicies) {
+            totalModifier += policy.getMetricModifier(type);
+        }
+        return totalModifier;
     }
 
     @Override

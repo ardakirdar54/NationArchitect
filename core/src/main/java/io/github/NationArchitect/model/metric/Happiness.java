@@ -31,7 +31,9 @@ public class Happiness extends Metric{
 
         double rawHappiness = 50.0 + positiveFactors - negativeFactors;
 
-        double finalHappiness = Math.max(0.0, Math.min(100.0, rawHappiness));
+        double policyBonus = region.getTotalPolicyModifierForMetric(MetricType.HAPPINESS);
+
+        double finalHappiness = Math.max(0.0, Math.min(100.0, rawHappiness + policyBonus));
 
         this.setValue(finalHappiness);
     }

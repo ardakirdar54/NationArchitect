@@ -24,7 +24,11 @@ public class Unemployment extends Metric{
         int unemployedPeople = Math.max(0, workForce - totalWorkers);
         double unemploymentRate = ((double) (unemployedPeople / workForce)) * 100;
 
-        this.setValue(unemploymentRate);
+        double policyBonus = region.getTotalPolicyModifierForMetric(MetricType.UNEMPLOYMENT);
+
+        double finalUnemployment = Math.min(100, Math.max(0, unemploymentRate + policyBonus));
+
+        this.setValue(finalUnemployment);
     }
 }
 

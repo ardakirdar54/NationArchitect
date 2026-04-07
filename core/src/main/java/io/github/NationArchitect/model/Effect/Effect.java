@@ -39,6 +39,22 @@ public class Effect {
         return description;
     }
 
+    protected void addMetricModifier(MetricType type, double value) {
+        this.relatedMetrics.put(type, value);
+    }
+
+    protected void addComponentModifier(ComponentType type, double value) {
+        this.relatedComponents.put(type, value);
+    }
+
+    public double getMetricModifier(MetricType type) {
+        return this.relatedMetrics.getOrDefault(type, 0.0);
+    }
+
+    public double getComponentModifier(ComponentType type) {
+        return this.relatedComponents.getOrDefault(type, 0.0);
+    }
+
     public EnumMap<ComponentType, Double> getRelatedComponents() {
         return new EnumMap<>(relatedComponents);
     }

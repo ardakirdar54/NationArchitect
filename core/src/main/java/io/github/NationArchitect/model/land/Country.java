@@ -1,9 +1,8 @@
 ﻿package io.github.NationArchitect.model.land;
 
 
-import java.util.EnumMap;
-import java.util.Map;
 
+import io.github.NationArchitect.model.Effect.Policy;
 import io.github.NationArchitect.model.economy.Economy;
 import io.github.NationArchitect.model.metric.*;
 import io.github.NationArchitect.model.population.Population;
