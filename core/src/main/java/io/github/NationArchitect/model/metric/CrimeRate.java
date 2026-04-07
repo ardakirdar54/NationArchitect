@@ -14,8 +14,9 @@ public class CrimeRate extends Metric{
         if(region == null){
             throw new IllegalArgumentException("Region cannot be null! Metric can't be calculated");
         }
-        double happiness = region.getMetricValue(MetricType.HAPPINESS);
-        double unemployment = region.getMetricValue(MetricType.UNEMPLOYMENT);
+        
+        double happiness = region.getLastMonthMetricValue(MetricType.HAPPINESS);
+        double unemployment = region.getLastMonthMetricValue(MetricType.UNEMPLOYMENT);
         double securityPerformance = region.getComponentPerformance(ComponentType.SECURITY);
         double baseCrimeRate = region.getBaseCrimeRate();
 
@@ -26,8 +27,11 @@ public class CrimeRate extends Metric{
         double securityMultiplier = 1.0 - (securityPerformance * 0.007);
         securityMultiplier = Math.max(0.1, securityMultiplier);
 
+        double policyBonus = region.getTotalPolicyModifierForMetric(MetricType.CRIME_RATE);
+
         double finalCrimeRate = rawCrime * securityMultiplier;
-        finalCrimeRate = Math.max(0, Math.min(100, finalCrimeRate));
+
+        finalCrimeRate = Math.max(0, Math.min(100, finalCrimeRate + policyBonus));
 
         this.setValue(finalCrimeRate);
     }
