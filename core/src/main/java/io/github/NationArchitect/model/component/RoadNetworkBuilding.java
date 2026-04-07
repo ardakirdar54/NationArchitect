@@ -8,8 +8,15 @@ import java.util.Map;
 
 import static io.github.NationArchitect.model.component.BuildingConstants.*;
 
+/**
+ * Defines the building types available for the RoadNetwork component.
+ */
 public enum RoadNetworkBuilding implements BuildingType {
 
+    /**
+     * Represents distribution center.
+     * It affects {@link Happiness} and influences {@link Factory} and {@link RoadTransport}.
+     */
     DISTRIBUTION_CENTER("Improves goods distribution and boosts trade efficiency.",
         22000, 8000,
         new EnumMap<>(Map.of(
@@ -29,6 +36,10 @@ public enum RoadNetworkBuilding implements BuildingType {
         55
     ),
 
+    /**
+     * Represents road maintenance facility.
+     * It affects {@link Happiness} and influences {@link RoadTransport}, {@link RailTransport}, {@link Security}, and {@link HealthServices}.
+     */
     ROAD_MAINTENANCE_FACILITY("Maintains road quality and reduces infrastructure-related issues.",
         18000, 6500,
         new EnumMap<>(Map.of(
@@ -36,7 +47,9 @@ public enum RoadNetworkBuilding implements BuildingType {
         )),
         new EnumMap<>(Map.of(
             ComponentType.ROAD_TRANSPORT, BASE_TRANSPORT_PERFORMANCE_MULTIPLIER_RN * 1.3,
-            ComponentType.RAIL_TRANSPORT, BASE_TRANSPORT_PERFORMANCE_MULTIPLIER_RN * 0.8
+            ComponentType.RAIL_TRANSPORT, BASE_TRANSPORT_PERFORMANCE_MULTIPLIER_RN * 0.8,
+            ComponentType.SECURITY, BASE_PUBLIC_SERVICE_PERFORMANCE_RN,
+            ComponentType.HEALTH_SERVICES, BASE_PUBLIC_SERVICE_PERFORMANCE_RN
         )),
         1400,
         BASE_PERFORMANCE_MULTIPLIER_RN,
@@ -48,6 +61,10 @@ public enum RoadNetworkBuilding implements BuildingType {
         45
     ),
 
+    /**
+     * Represents traffic control center.
+     * It affects {@link Happiness} and influences {@link RoadTransport}, {@link RailTransport}, and {@link Tourism}.
+     */
     TRAFFIC_CONTROL_CENTER("Optimizes traffic flow and increases transportation efficiency.",
         30000, 12000,
         new EnumMap<>(Map.of(
@@ -68,6 +85,10 @@ public enum RoadNetworkBuilding implements BuildingType {
         85
     ),
 
+    /**
+     * Represents logistics hub.
+     * It affects {@link Happiness} and influences {@link Factory}, {@link RoadTransport}, and {@link RailTransport}.
+     */
     LOGISTICS_HUB("Enhances large-scale logistics and significantly boosts trade operations.",
         65000, 24000,
         new EnumMap<>(Map.of(
@@ -89,6 +110,10 @@ public enum RoadNetworkBuilding implements BuildingType {
         170
     ),
 
+    /**
+     * Represents navigation routing center.
+     * It affects {@link Happiness} and influences {@link RoadTransport}, {@link RailTransport}, and {@link Factory}.
+     */
     NAVIGATION_ROUTING_CENTER("Optimizes route planning to improve overall transport efficiency.",
         48000, 18000,
         new EnumMap<>(Map.of(
@@ -109,16 +134,38 @@ public enum RoadNetworkBuilding implements BuildingType {
         120
     );
 
+    /** Description of the enum value. */
     private final String description;
+    /** Construction cost of the building type. */
     private final double constructionCost;
+    /** Maintenance cost of the building type. */
     private final double maintenanceCost;
+    /** Metric effects applied by the building type. */
     private final EnumMap<MetricType, Double> relatedMetrics;
+    /** Component effects applied by the building type. */
     private final EnumMap<ComponentType, Double> relatedComponents;
+    /** Land occupied by the building type. */
     private final double occupiedLand;
+    /** Performance multiplier provided by the building type. */
     private final double performanceMultiplier;
+    /** Resource demand of the building type. */
     private final EnumMap<ProductType, Double> demand;
+    /** Maximum worker capacity of the building type. */
     private final int maxWorkerAmount;
 
+    /**
+     * Creates the enum value definition for {@link RoadNetworkBuilding}.
+     *
+     * @param description human-readable summary of the enum value
+     * @param constructionCost construction cost of the building type
+     * @param maintenanceCost maintenance cost of the building type
+     * @param relatedMetrics metric effects applied by the building type
+     * @param relatedComponents component effects applied by the building type
+     * @param occupiedLand land occupied by the building type
+     * @param performanceMultiplier performance multiplier provided by the building type
+     * @param demand resource demand of the building type
+     * @param maxWorkerAmount maximum worker capacity of the building type
+     */
     RoadNetworkBuilding(
         String description,
         double constructionCost,
@@ -185,4 +232,11 @@ public enum RoadNetworkBuilding implements BuildingType {
     public int getMaxWorkerAmount() {
         return maxWorkerAmount;
     }
+
+    public int getCapacity() {
+        return 0;
+    }
 }
+
+
+

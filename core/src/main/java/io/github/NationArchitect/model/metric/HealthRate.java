@@ -30,4 +30,3 @@ public class HealthRate extends Metric{
     }
 
 }
-

@@ -1,49 +1,20 @@
 package io.github.NationArchitect.model.component;
 
+import io.github.NationArchitect.model.land.Region;
+import io.github.NationArchitect.model.metric.EducationLevel;
+
+/**
+ * Represents the education component, which primarily improves the
+ * {@link EducationLevel} metric and tracks education capacity across school tiers.
+ */
 public class Education extends Component {
 
-    private int primarySchoolCapacity;
-    private int highSchoolCapacity;
-    private int universityCapacity;
-
-    public Education() {
-        super(ComponentType.EDUCATION);
-    }
-
-
-    public int getPrimarySchoolCapacity() {
-        return primarySchoolCapacity;
-    }
-
-    void increasePrimarySchoolCapacity(int amount) {
-        this.primarySchoolCapacity += amount;
-    }
-
-    void decreasePrimarySchoolCapacity(int amount) {
-        this.primarySchoolCapacity = Math.max(0, this.primarySchoolCapacity - amount);
-    }
-
-    public int getHighSchoolCapacity() {
-        return highSchoolCapacity;
-    }
-
-    void increaseHighSchoolCapacity(int amount) {
-        this.highSchoolCapacity += amount;
-    }
-
-    void decreaseHighSchoolCapacity(int amount) {
-        this.highSchoolCapacity = Math.max(0, this.highSchoolCapacity - amount);
-    }
-
-    public int getUniversityCapacity() {
-        return universityCapacity;
-    }
-
-    void increaseUniversityCapacity(int amount) {
-        this.universityCapacity += amount;
-    }
-
-    void decreaseUniversityCapacity(int amount) {
-        this.universityCapacity = Math.max(0, this.universityCapacity - amount);
+    /**
+     * Creates the education component that affects education level through its buildings.
+     *
+     * @param region region that owns the component
+     */
+    public Education(Region region) {
+        super(ComponentType.EDUCATION, region);
     }
 }

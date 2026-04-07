@@ -6,8 +6,15 @@ import java.util.EnumMap;
 import java.util.Map;
 import static io.github.NationArchitect.model.component.BuildingConstants.*;
 
+/**
+ * Defines the building types available for the AirTransport component.
+ */
 public enum AirTransportBuilding implements BuildingType {
 
+    /**
+     * Represents airport.
+     * It affects {@link Happiness} and influences {@link Education}.
+     */
     AIRPORT("Supports air travel and improves long-distance transportation efficiency.",
         100000, 40000,
         new EnumMap<>(Map.of(
@@ -27,12 +34,17 @@ public enum AirTransportBuilding implements BuildingType {
         1000
     ),
 
+    /**
+     * Represents international airport.
+     * It affects {@link Happiness}.
+     */
     INTERNATIONAL_AIRPORT("Handles large-scale air traffic and significantly improves global connectivity.",
         250000, 70000,
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AT * 3
         )),
-        null, 70000,
+        null,
+        70000,
         BASE_PERFORMANCE_MULTIPLIER_AT * 3,
         new EnumMap<>(Map.of(
             ProductType.INDUSTRIAL_GOOD, 1500.0,
@@ -43,12 +55,17 @@ public enum AirTransportBuilding implements BuildingType {
         2500
     ),
 
+    /**
+     * Represents cargo air terminal.
+     * It affects {@link Happiness}.
+     */
     CARGO_AIR_TERMINAL("Facilitates air freight operations and boosts trade efficiency.",
         80000, 24000,
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_AT * 0.3
         )),
-        null, 45000,
+        null,
+        45000,
         BASE_PERFORMANCE_MULTIPLIER_AT * 7,
         new EnumMap<>(Map.of(
             ProductType.INDUSTRIAL_GOOD, 1000.0,
@@ -59,6 +76,10 @@ public enum AirTransportBuilding implements BuildingType {
         1200
     ),
 
+    /**
+     * Represents aircraft maintenance hangar.
+     * It affects {@link Happiness}.
+     */
     AIRCRAFT_MAINTENANCE_HANGAR("Ensures aircraft reliability and improves operational efficiency.",
         50000, 16000,
         new EnumMap<>(Map.of(
@@ -75,6 +96,10 @@ public enum AirTransportBuilding implements BuildingType {
         150
     ),
 
+    /**
+     * Represents aviation training center.
+     * It affects {@link Happiness}.
+     */
     AVIATION_TRAINING_CENTER("Improves workforce expertise and enhances overall air transport efficiency.",
         55000,
         17000,
@@ -92,16 +117,38 @@ public enum AirTransportBuilding implements BuildingType {
         100
     );
 
+    /** Description of the enum value. */
     private final String description;
+    /** Construction cost of the building type. */
     private final double constructionCost;
+    /** Maintenance cost of the building type. */
     private final double maintenanceCost;
+    /** Metric effects applied by the building type. */
     private final EnumMap<MetricType, Double> relatedMetrics;
+    /** Component effects applied by the building type. */
     private final EnumMap<ComponentType, Double> relatedComponents;
+    /** Land occupied by the building type. */
     private final double occupiedLand;
+    /** Performance multiplier provided by the building type. */
     private final double performanceMultiplier;
+    /** Resource demand of the building type. */
     private final EnumMap<ProductType, Double> demand;
+    /** Maximum worker capacity of the building type. */
     private final int maxWorkerAmount;
 
+    /**
+     * Creates the enum value definition for {@link AirTransportBuilding}.
+     *
+     * @param description human-readable summary of the enum value
+     * @param constructionCost construction cost of the building type
+     * @param maintenanceCost maintenance cost of the building type
+     * @param relatedMetrics metric effects applied by the building type
+     * @param relatedComponents component effects applied by the building type
+     * @param occupiedLand land occupied by the building type
+     * @param performanceMultiplier performance multiplier provided by the building type
+     * @param demand resource demand of the building type
+     * @param maxWorkerCount maximum worker capacity of the building type
+     */
     AirTransportBuilding(
         String description,
         double constructionCost,
@@ -166,5 +213,9 @@ public enum AirTransportBuilding implements BuildingType {
 
     public int getMaxWorkerAmount() {
         return maxWorkerAmount;
+    }
+
+    public int getCapacity() {
+        return 0;
     }
 }
