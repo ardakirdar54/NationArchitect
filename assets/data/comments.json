@@ -1,0 +1,34 @@
+[
+  {
+    "author": "@AngryCitizen99",
+    "content": "I got mugged twice today on my way to work! The police are useless! #CrimeCity",
+    "triggers": [
+      {
+        "metricType": "CRIME_RATE",
+        "operator": "GREATER_THAN",
+        "value": 70.0
+      }
+    ]
+  },
+  {
+    "author": "@HappyCamper",
+    "content": "Just had an amazing walk in the park. Loving the new policies! So safe here.",
+    "triggers": [
+      {
+        "metricType": "CRIME_RATE",
+        "operator": "LESS_THAN",
+        "value": 20.0
+      },
+      {
+        "metricType": "HAPPINESS",
+        "operator": "GREATER_THAN",
+        "value": 80.0
+      }
+    ]
+  },
+  {
+    "author": "@DailyGamer",
+    "content": "Why is it raining again? I wanted to go out today...",
+    "triggers": [] 
+  }
+]

@@ -28,10 +28,11 @@ public class CrimeRate extends Metric{
         securityMultiplier = Math.max(0.1, securityMultiplier);
 
         double policyBonus = region.getTotalPolicyModifierForMetric(MetricType.CRIME_RATE);
+        double activeEffectBonus = region.getTotalActiveEffectModifierForMetric(MetricType.CRIME_RATE);
 
         double finalCrimeRate = rawCrime * securityMultiplier;
 
-        finalCrimeRate = Math.max(0, Math.min(100, finalCrimeRate + policyBonus));
+        finalCrimeRate = Math.max(0, Math.min(100, finalCrimeRate + policyBonus + activeEffectBonus));
 
         this.setValue(finalCrimeRate);
     }

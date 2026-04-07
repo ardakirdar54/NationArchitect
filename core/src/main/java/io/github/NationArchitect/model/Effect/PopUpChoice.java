@@ -5,20 +5,20 @@ import java.util.EnumMap;
 import io.github.NationArchitect.model.component.ComponentType;
 import io.github.NationArchitect.model.metric.MetricType;
 
-public class Policy extends Effect{
+public class PopUpChoice extends Effect{
 
-    boolean isActive;
+    int duration;
 
-    public Policy() {
+    public PopUpChoice() {
         super();
     }
-    
-    public Policy(String name, String description, 
+
+    public PopUpChoice(String name, String description,
         EnumMap<ComponentType, Double> relatedComponents, EnumMap<MetricType, Double> relatedMetrics) {
         super(name, description, relatedComponents, relatedMetrics);
     }
 
-    boolean isActive(){
-        return isActive;
+    public int getDuration(){
+        return duration;
     }
 }
