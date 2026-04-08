@@ -6,10 +6,8 @@ import java.util.EnumMap;
 
 import io.github.NationArchitect.model.Effect.*;
 import io.github.NationArchitect.model.component.*;
-import io.github.NationArchitect.model.economy.Economy;
 import io.github.NationArchitect.model.economy.RegionEconomy;
 import io.github.NationArchitect.model.metric.*;
-import io.github.NationArchitect.model.population.Age;
 import io.github.NationArchitect.model.population.Population;
 import io.github.NationArchitect.model.product.ProductType;
 
@@ -19,12 +17,14 @@ public class Region extends Land {
     private EnumMap<ResourceType, Double> undergroundResources;
     private EnumMap<ComponentType, Component> components;
     private ArrayList<Policy> activePolicies;
+    private ArrayList<ActiveEffect> activeEffects;
     private double landValue;
     private double baseCrimeRate;
 
     public Region(String name, RegionEconomy economy, Population population) {
         super(name, economy, population);
         this.activePolicies = new ArrayList<>();
+        this.activeEffects = new ArrayList<>();
 
     }
 
@@ -45,23 +45,29 @@ public class Region extends Land {
 
     public double getComponentEffect(ComponentType affected, ComponentType affecter) {
         if (components.get(affecter).getRelatedComponents().containsKey(affected)) {
-            return components.get(affecter).getRelatedComponents().get(affected) * components.get(affecter).getPerformance();
+            return components.get(affecter).getRelatedComponents().get(affected)
+                    * components.get(affecter).getPerformance();
         }
         return 0;
     }
 
     public int getManufacturerComponentProduction(ProductType productType) {
-        return switch (productType) {
-            case FOOD -> ((ManufacturerComponent) components.get(ComponentType.AGRICULTURE)).getProductionAmount();
-            case TECHNOLOGY -> ((ManufacturerComponent) components.get(ComponentType.OFFICE)).getProductionAmount();
-            case INDUSTRIAL_GOOD ->
-                ((ManufacturerComponent) components.get(ComponentType.FACTORY)).getProductionAmount();
-            case TOURISM_SERVICE ->
-                ((ManufacturerComponent) components.get(ComponentType.TOURISM)).getProductionAmount();
-            case WATER ->
-                ((ManufacturerComponent) components.get(ComponentType.WATER_MANAGEMENT)).getProductionAmount();
-            case ENERGY -> ((ManufacturerComponent) components.get(ComponentType.ELECTRICITY)).getProductionAmount();
-        };
+        switch (productType) {
+            case FOOD:
+                return ((ManufacturerComponent) components.get(ComponentType.AGRICULTURE)).getProductionAmount();
+            case TECHNOLOGY:
+                return ((ManufacturerComponent) components.get(ComponentType.OFFICE)).getProductionAmount();
+            case INDUSTRIAL_GOOD:
+                return ((ManufacturerComponent) components.get(ComponentType.FACTORY)).getProductionAmount();
+            case TOURISM_SERVICE:
+                return ((ManufacturerComponent) components.get(ComponentType.TOURISM)).getProductionAmount();
+            case WATER:
+                return ((ManufacturerComponent) components.get(ComponentType.WATER_MANAGEMENT)).getProductionAmount();
+            case ENERGY:
+                return ((ManufacturerComponent) components.get(ComponentType.ELECTRICITY)).getProductionAmount();
+            default:
+                return 0;
+        }
     }
 
     public int getProductDemand(ProductType productType) {
@@ -106,8 +112,8 @@ public class Region extends Land {
     public int getTotalEmploymentCapacity() {
         int totalWorkers = 0;
 
-        for(Component component : this.components.values()){
-            for(Building building : component.getBuildings()){
+        for (Component component : this.components.values()) {
+            for (Building building : component.getBuildings()) {
                 totalWorkers += building.getWorkerAmount();
             }
         }
@@ -115,29 +121,32 @@ public class Region extends Land {
         return totalWorkers;
     }
 
-    public int getWorkingAgePopulation(){
+    public int getWorkingAgePopulation() {
         return this.getPopulation().getWorkingAgePopulation();
     }
 
-    public double getBaseCrimeRate(){return this.baseCrimeRate;}
+    public double getBaseCrimeRate() {
+        return this.baseCrimeRate;
+    }
 
-    public int getEducationBuildingCapacity(EducationBuilding type){
+    public int getEducationBuildingCapacity(EducationBuilding type) {
         int totalCapacity = 0;
         Education education = (Education) this.components.get(ComponentType.EDUCATION);
-        for(Building building : education.getBuildings()){
-            if(building.getType() == type){
+        for (Building building : education.getBuildings()) {
+            if (building.getType() == type) {
                 totalCapacity += type.getCapacity();
             }
         }
         return totalCapacity;
     }
 
-    public int getTotalHealthServiceCapacity(){
+    public int getTotalHealthServiceCapacity() {
         int totalCapacity = 0;
         HealthServices healthServices = (HealthServices) this.components.get(ComponentType.HEALTH_SERVICES);
-        for(Building building : healthServices.getBuildings()){
+        for (Building building : healthServices.getBuildings()) {
             totalCapacity += building.getType().getCapacity();
         }
+
         return totalCapacity;
     }
 
@@ -149,6 +158,22 @@ public class Region extends Land {
     @Override
     public void cancelPolicy(Policy policy) {
         this.activePolicies.remove(policy);
+    }
+
+    public void addTemporaryEffect(Effect effect, int duration) {
+        if (duration > 0) {
+            this.activeEffects.add(new ActiveEffect(effect, duration));
+        } else {
+
+        }
+    }
+
+    public double getTotalActiveEffectModifierForMetric(MetricType type) {
+        double totalModifier = 0.0;
+        for (ActiveEffect effect : activeEffects) {
+            totalModifier += effect.getEffect().getMetricModifier(type);
+        }
+        return totalModifier;
     }
 
     public double getTotalPolicyModifierForMetric(MetricType type) {
@@ -167,5 +192,11 @@ public class Region extends Land {
         }
         double birthRate = this.getMetricValue(MetricType.HAPPINESS);
         this.population.updateLifeCycle(birthRate, this.getMetricValue(MetricType.HEALTH_RATE));
+    }
+
+    public void shiftAllMetricsHistory() {
+        for (Metric metric : this.metrics.values()) {
+            metric.shiftHistory();
+        }
     }
 }

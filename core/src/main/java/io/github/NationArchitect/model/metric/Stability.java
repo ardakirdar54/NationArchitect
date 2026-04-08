@@ -30,8 +30,10 @@ public class Stability extends Metric {
         double securityBonus = securityPerformance * 0.5;
 
         double policyBonus = region.getTotalPolicyModifierForMetric(MetricType.STABILITY);
+        double activeEffectBonus = region.getTotalActiveEffectModifierForMetric(MetricType.STABILITY);
 
-        double targetStability = 50.0 + happinessImpact + securityBonus + policyBonus - crimePenalty - unemploymentPenalty;
+        double targetStability = 50.0 + happinessImpact + securityBonus + policyBonus + activeEffectBonus
+         - crimePenalty - unemploymentPenalty;
         targetStability = Math.max(0.0, Math.min(100.0, targetStability));
         this.targetStability = targetStability;
 

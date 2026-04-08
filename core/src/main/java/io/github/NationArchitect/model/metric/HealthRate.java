@@ -5,8 +5,6 @@ import io.github.NationArchitect.model.population.Age;
 
 public class HealthRate extends Metric{
 
-    private static final double BASE_HEALTH = 20.0;
-
     public HealthRate(){
         super(MetricType.HEALTH_RATE, 50.0);
     }
@@ -28,9 +26,10 @@ public class HealthRate extends Metric{
         int totalHealthServiceCapacity = region.getTotalHealthServiceCapacity();
 
         double policyBonus = region.getTotalPolicyModifierForMetric(MetricType.HEALTH_RATE);
+        double activeEffectBonus = region.getTotalActiveEffectModifierForMetric(MetricType.HEALTH_RATE);
 
         double finalHealthRate = Math.min(100, 
-            Math.max(0, calculateFulfillment(totalBurden, totalHealthServiceCapacity) + policyBonus));
+            Math.max(0, calculateFulfillment(totalBurden, totalHealthServiceCapacity) + policyBonus + activeEffectBonus));
         this.setValue(finalHealthRate);
     }
 
