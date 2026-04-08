@@ -24,11 +24,11 @@ public class Happiness extends Metric{
 
         double positiveFactors = (healthRate * 0.35) + (education * 0.25) + (infrastructure * 0.1);
 
-       // double taxPenalty = taxBurden * 1.2;
+       double taxPenalty = taxBurden * 1.2;
         double crimePenalty = crimeRate * 0.5;
         double unemploymentPenalty = unemployment * 0.8;
 
-        double negativeFactors = /*taxPenalty*/ + crimePenalty + unemploymentPenalty;
+        double negativeFactors = taxPenalty + crimePenalty + unemploymentPenalty;
 
         double rawHappiness = 50.0 + positiveFactors - negativeFactors;
 

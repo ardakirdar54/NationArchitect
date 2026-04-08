@@ -1,20 +1,22 @@
-package io.github.NationArchitect.model.land;
+﻿package io.github.NationArchitect.model.land;
+
+import java.util.EnumMap;
 
 import io.github.NationArchitect.model.Effect.Policy;
 import io.github.NationArchitect.model.economy.Economy;
 import io.github.NationArchitect.model.metric.*;
+import io.github.NationArchitect.model.population.Age;
+import io.github.NationArchitect.model.population.Gender;
 import io.github.NationArchitect.model.population.Population;
 
 public class Country extends Land {
 
     private Region[] regions;
 
-    // private Date date;
-
     public Country(String name, Economy economy, Population population) {
         super(name, economy, population);
         this.regions = new Region[10];
-        // this.date = new Date();
+        
     }
 
     /**
@@ -173,6 +175,29 @@ public class Country extends Land {
                 }
             }
         }
+    }
+
+    public void calculatePopulation(){
+        EnumMap<Age, Integer> ageDistribution = new EnumMap<>(Age.class);
+        EnumMap<Gender, Integer> genderDistribution = new EnumMap<>(Gender.class);
+
+        for(Age age : Age.values()){
+            int total = 0;
+            for(Region region : this.regions){
+                total += region.population.getAgeDistribution().get(age);
+            }
+            ageDistribution.put(age, total);
+        }
+        for(Gender gender : Gender.values()){
+            int total = 0;
+            for(Region region : this.regions){
+                total += region.population.getGenderDistribution().get(gender);
+            }
+            genderDistribution.put(gender, total);
+        }
+        this.population.setAgeDistribution(ageDistribution);
+        this.population.setGenderDistribution(genderDistribution);
+
     }
 
     public Region[] getRegions() {
