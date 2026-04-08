@@ -1,4 +1,4 @@
-﻿package io.github.NationArchitect.model.land;
+package io.github.NationArchitect.model.land;
 
 import java.util.ArrayList;
 import java.util.Collections;
