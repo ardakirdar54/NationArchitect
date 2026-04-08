@@ -1,0 +1,117 @@
+[
+  {
+    "title": "Organized Crime Syndicate",
+    "description": "A powerful crime syndicate has taken root in our cities due to high crime rates. Do we launch a massive police raid or try to negotiate?",
+    "baseWeight": 3.0,
+    "triggers": [
+      {
+        "metricType": "CRIME_RATE",
+        "operator": "GREATER_THAN",
+        "value": 65.0
+      }
+    ],
+    "choices": [
+      {
+        "name": "Launch a Massive Police Raid",
+        "description": "Hit them with everything we have. It will cause temporary unrest but crush the syndicate.",
+        "duration": 6,
+        "relatedMetrics": {
+          "CRIME_RATE": -20.0,
+          "HAPPINESS": -10.0,
+          "STABILITY": 5.0
+        },
+        "relatedComponents": {
+          "SECURITY": 10.0
+        }
+      },
+      {
+        "name": "Turn a Blind Eye",
+        "description": "Let them handle the underground as long as they don't bother the state. The people won't like it.",
+        "duration": 6,
+        "relatedMetrics": {
+          "CRIME_RATE": 10.0,
+          "STABILITY": -15.0
+        },
+        "relatedComponents": {}
+      }
+    ]
+  },
+  {
+    "title": "Public Health Emergency",
+    "description": "Hospitals are overcrowded and our health infrastructure is failing. Citizens are demanding immediate action!",
+    "baseWeight": 5.0,
+    "triggers": [
+      {
+        "metricType": "HEALTH_RATE",
+        "operator": "LESS_THAN",
+        "value": 40.0
+      }
+    ],
+    "choices": [
+      {
+        "name": "Emergency Health Subsidies",
+        "description": "Divert state funds to hospitals immediately.",
+        "duration": 6,
+        "relatedMetrics": {
+          "HEALTH_RATE": 15.0,
+          "HAPPINESS": 5.0
+        },
+        "relatedComponents": {
+          "HEALTH_SERVICES": 20.0
+        }
+      },
+      {
+        "name": "Rely on Private Clinics",
+        "description": "We cannot afford a state intervention. Let the private sector handle it.",
+        "duration": 6,
+        "relatedMetrics": {
+          "HEALTH_RATE": -10.0,
+          "HAPPINESS": -15.0,
+          "STABILITY": -5.0
+        },
+        "relatedComponents": {}
+      }
+    ]
+  },
+  {
+    "title": "The Brain Drain",
+    "description": "Our highly educated youth cannot find jobs. Many are packing their bags to leave the country.",
+    "baseWeight": 2.5,
+    "triggers": [
+      {
+        "metricType": "EDUCATION_LEVEL",
+        "operator": "GREATER_THAN",
+        "value": 75.0
+      },
+      {
+        "metricType": "UNEMPLOYMENT",
+        "operator": "GREATER_THAN",
+        "value": 20.0
+      }
+    ],
+    "choices": [
+      {
+        "name": "Create State Jobs",
+        "description": "Open new research facilities and state offices to employ them.",
+        "duration": 6,
+        "relatedMetrics": {
+          "UNEMPLOYMENT": -10.0,
+          "STABILITY": 5.0
+        },
+        "relatedComponents": {
+          "EDUCATION": 5.0
+        }
+      },
+      {
+        "name": "Let Them Leave",
+        "description": "We don't need them anyway.",
+        "duration": 6,
+        "relatedMetrics": {
+          "EDUCATION_LEVEL": -15.0,
+          "STABILITY": -10.0
+        },
+        "relatedComponents": {}
+      }
+    ]
+  }
+]
