@@ -62,11 +62,15 @@ public class Building {
         this.description = type.getDescription();
         this.constructionCost = type.getConstructionCost();
         this.maintenanceCost = type.getMaintenanceCost();
-        this.relatedMetrics = type.getRelatedMetrics();
-        this.relatedComponents = type.getRelatedComponents();
+        this.relatedMetrics = type.getRelatedMetrics() == null
+            ? new EnumMap<>(MetricType.class)
+            : new EnumMap<>(type.getRelatedMetrics());
+        this.relatedComponents = type.getRelatedComponents() == null
+            ? new EnumMap<>(ComponentType.class)
+            : new EnumMap<>(type.getRelatedComponents());
         this.occupiedLand = type.getOccupiedLand();
         this.performanceMultiplier = type.getPerformanceMultiplier();
-        this.demand = type.getDemand();
+        this.demand = type.getDemand() == null ? null : new EnumMap<>(type.getDemand());
         this.maxWorkerAmount = type.getMaxWorkerAmount();
         calculateEfficiency();
     }
@@ -165,8 +169,14 @@ public class Building {
     public void calculateEfficiency() {
         efficiency = (double) workerAmount / maxWorkerAmount;
         performanceMultiplier *= efficiency;
-        relatedMetrics.replaceAll((t, v) -> type.getRelatedMetrics().getOrDefault(t, 0.0) * efficiency);
-        relatedComponents.replaceAll((t, v) -> type.getRelatedComponents().getOrDefault(t, 0.0) * efficiency);
+        EnumMap<MetricType, Double> baseRelatedMetrics = type.getRelatedMetrics() == null
+            ? new EnumMap<>(MetricType.class)
+            : type.getRelatedMetrics();
+        EnumMap<ComponentType, Double> baseRelatedComponents = type.getRelatedComponents() == null
+            ? new EnumMap<>(ComponentType.class)
+            : type.getRelatedComponents();
+        relatedMetrics.replaceAll((t, v) -> baseRelatedMetrics.getOrDefault(t, 0.0) * efficiency);
+        relatedComponents.replaceAll((t, v) -> baseRelatedComponents.getOrDefault(t, 0.0) * efficiency);
     }
 
     /**

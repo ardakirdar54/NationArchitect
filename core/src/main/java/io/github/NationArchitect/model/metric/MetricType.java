@@ -1,4 +1,4 @@
-﻿package io.github.NationArchitect.model.metric;
+package io.github.NationArchitect.model.metric;
 
 public enum MetricType {
 

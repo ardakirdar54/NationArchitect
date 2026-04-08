@@ -1,12 +1,10 @@
-﻿package io.github.NationArchitect.model.land;
+package io.github.NationArchitect.model.land;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.EnumMap;
 
-import io.github.NationArchitect.model.Effect.ActiveEffect;
-import io.github.NationArchitect.model.Effect.Effect;
-import io.github.NationArchitect.model.Effect.Policy;
+import io.github.NationArchitect.model.Effect.*;
 import io.github.NationArchitect.model.component.*;
 import io.github.NationArchitect.model.economy.RegionEconomy;
 import io.github.NationArchitect.model.metric.*;
