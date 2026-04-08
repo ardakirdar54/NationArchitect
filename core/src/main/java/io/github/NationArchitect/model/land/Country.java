@@ -1,7 +1,5 @@
 package io.github.NationArchitect.model.land;
 
-
-
 import io.github.NationArchitect.model.Effect.Policy;
 import io.github.NationArchitect.model.economy.Economy;
 import io.github.NationArchitect.model.metric.*;
@@ -21,9 +19,9 @@ public class Country extends Land {
 
     /**
      * Adds the policy to activePolicies list for all of the regions.
-    *
-    * @param policy the policy will be implemented for all of the regions
-    */
+     *
+     * @param policy the policy will be implemented for all of the regions
+     */
     @Override
     public void implementPolicy(Policy policy) {
         for (Region region : regions) {
@@ -41,25 +39,143 @@ public class Country extends Land {
     @Override
     public void update() {
         for (Region region : regions) {
-            region.update();
+            if (region != null) {
+                region.update(); 
+            }
         }
+
+        processExternalMigration();
+        
+        processInternalMigration();
 
         for (Metric metric : this.metrics.values()) {
             metric.calculateForCountry(this);
         }
     }
 
-    public void shiftAllMetricsHistory() {
+    @Override
+    public void updateLastMonthValues() {
+        super.updateLastMonthValues();
 
-        for (Region region : regions) {
-            region.shiftAllMetricsHistory();
-        }
-        
-        for (Metric metric : this.metrics.values()) {
-            metric.shiftHistory();
+        if (regions != null) {
+            for (Region region : regions) {
+                if (region != null) {
+                    region.updateLastMonthValues();
+                }
+            }
         }
     }
 
-    public Region[] getRegions(){return this.regions;}
-}
+    public void processInternalMigration() {
+        double totalAttractiveness = 0;
+        int validRegionsCount = 0;
 
+        
+        for (Region region : regions) {
+            if (region != null) {
+                totalAttractiveness += region.calculateAttractiveness();
+                validRegionsCount++;
+            }
+        }
+
+        if (validRegionsCount == 0) return;
+        double averageAttractiveness = totalAttractiveness / validRegionsCount;
+
+        int internalMigrantsPool = 0;
+
+        for (Region region : regions) {
+            if (region != null) {
+                double attractiveness = region.calculateAttractiveness();
+                if (attractiveness < averageAttractiveness) {
+                    
+                    double difference = averageAttractiveness - attractiveness;
+                    
+                    double migrationRate = (difference / 100.0) * 0.02; 
+                    int leavingMigrants = (int) (region.getPopulation().getTotalPopulation() * migrationRate);
+
+                    region.population.processMigration(-leavingMigrants);
+                    internalMigrantsPool += leavingMigrants;
+                }
+            }
+        }
+
+        double totalPositiveDifference = 0;
+        for (Region region : regions) {
+            if (region != null) {
+                double attractiveness = region.calculateAttractiveness();
+                if (attractiveness > averageAttractiveness) {
+                    totalPositiveDifference += (attractiveness - averageAttractiveness);
+                }
+            }
+        }
+
+        if (totalPositiveDifference > 0 && internalMigrantsPool > 0) {
+            for (Region region : regions) {
+                if (region != null) {
+                    double attractiveness = region.calculateAttractiveness();
+                    if (attractiveness > averageAttractiveness) {
+                        
+                        double share = (attractiveness - averageAttractiveness) / totalPositiveDifference;
+                        int arrivingMigrants = (int) (internalMigrantsPool * share);
+                        
+                        region.population.processMigration(arrivingMigrants);
+                    }
+                }
+            }
+        }
+    }
+
+    public void processExternalMigration() {
+        double countryAttractiveness = this.calculateAttractiveness();
+        
+        double migrationMultiplier = (countryAttractiveness - 50.0) / 100.0;
+        
+        int totalCountryPop = this.getPopulation().getTotalPopulation();
+        
+        int externalMigrationPool = (int) (totalCountryPop * migrationMultiplier * 0.01);
+
+        if (externalMigrationPool == 0) return;
+
+        if (externalMigrationPool > 0) {
+            
+            double totalAttractivenessSum = 0;
+            for (Region region : regions) {
+                if (region != null) totalAttractivenessSum += region.calculateAttractiveness();
+            }
+
+            for (Region region : regions) {
+                if (region != null) {
+                    
+                    double share = region.calculateAttractiveness() / totalAttractivenessSum;
+                    int arrivingMigrants = (int) (externalMigrationPool * share);
+                    region.population.processMigration(arrivingMigrants);
+                }
+            }
+
+        } else {
+            
+            int peopleLeaving = Math.abs(externalMigrationPool);
+            double totalUnattractivenessSum = 0;
+            
+            
+            for (Region region : regions) {
+                if (region != null) totalUnattractivenessSum += (100.0 - region.calculateAttractiveness());
+            }
+
+            for (Region region : regions) {
+                if (region != null) {
+                    double unattractiveness = 100.0 - region.calculateAttractiveness();
+                    
+                    double share = unattractiveness / totalUnattractivenessSum;
+                    int leavingMigrants = (int) (peopleLeaving * share);
+                    
+                    region.population.processMigration(-leavingMigrants);
+                }
+            }
+        }
+    }
+
+    public Region[] getRegions() {
+        return this.regions;
+    }
+}

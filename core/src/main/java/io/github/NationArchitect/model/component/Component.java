@@ -204,8 +204,10 @@ public abstract class Component {
         }
 
         performanceMultiplier *= budgetPercentage / 100;
-
-        setPerformance(BASE_PERFORMANCE * Math.log(performanceMultiplier + 1));
+        double policyContribution = region.getTotalPolicyModifierForComponent(this.componentType);
+        double activeEffectContribution = region.getTotalActiveEffectModifierForComponent(this.componentType);
+        
+        setPerformance((BASE_PERFORMANCE * Math.log(performanceMultiplier + 1)));
     }
 
     /**
