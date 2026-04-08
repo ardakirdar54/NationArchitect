@@ -198,4 +198,24 @@ public abstract class Economy {
             taxRevenues.put(taxType, revenue);
         }
     }
+
+    public void restoreSummary(double income, double expanse, double balance) {
+        setIncome(income);
+        setExpanse(expanse);
+        this.balance = balance;
+    }
+
+    public void restoreTaxRevenues(EnumMap<TaxType, Double> revenues) {
+        clearTaxRevenues();
+        if (revenues != null) {
+            taxRevenues.putAll(revenues);
+        }
+    }
+
+    public void restoreComponentBudgets(EnumMap<ComponentType, Double> budgets) {
+        clearComponentBudgets();
+        if (budgets != null) {
+            componentBudgets.putAll(budgets);
+        }
+    }
 }

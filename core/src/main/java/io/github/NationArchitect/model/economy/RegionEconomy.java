@@ -37,7 +37,10 @@ public class RegionEconomy extends Economy {
      * @param land the land that economy belongs to
      */
     public void update(Land land) {
+
         calculateTotalIncome(land);
+        calculateTotalExpanses(land);
+        calculateBalance(land);
     }
 
     /**
@@ -245,6 +248,28 @@ public class RegionEconomy extends Economy {
                 product.produce(region.getProductDemand(type));
             }
             demand.put(type, product);
+        }
+    }
+
+    public EnumMap<ProductType, Product> getProductionProducts() {
+        return new EnumMap<>(production);
+    }
+
+    public EnumMap<ProductType, Product> getDemandProducts() {
+        return new EnumMap<>(demand);
+    }
+
+    public void restoreProduction(EnumMap<ProductType, Product> production) {
+        this.production.clear();
+        if (production != null) {
+            this.production.putAll(production);
+        }
+    }
+
+    public void restoreDemand(EnumMap<ProductType, Product> demand) {
+        this.demand.clear();
+        if (demand != null) {
+            this.demand.putAll(demand);
         }
     }
 }

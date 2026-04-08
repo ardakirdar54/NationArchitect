@@ -59,4 +59,20 @@ public abstract class Land {
         return 0.0;
     }
 
+    public Population getMutablePopulation() {
+        return this.population;
+    }
+
+    public void setMetricValue(MetricType type, double value) {
+        if (this.metrics.containsKey(type)) {
+            this.metrics.get(type).setValue(value);
+        }
+    }
+
+    public void setLastMonthMetricValue(MetricType type, double value) {
+        if (this.metrics.containsKey(type)) {
+            this.metrics.get(type).setLastMonthValue(value);
+        }
+    }
+
 }
