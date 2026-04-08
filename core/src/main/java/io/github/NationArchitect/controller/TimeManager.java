@@ -37,13 +37,11 @@ public class TimeManager {
 
     private boolean autoSave;
 
-    private boolean autoSaveInterval;// ??
-
     private int currentDay;
     private int currentMonth;
     private int currentYear;
 
-    TimeManager(GameManager gameManager) {
+    TimeManager(GameManager gameManager, Country country) {
         this.gameManager = gameManager;
         this.monthDuration = 60f; // 60 seconds in real life = 1 month in the game.
         this.updateInterval = 1f;
@@ -51,7 +49,50 @@ public class TimeManager {
         this.isRunning = false;
         this.cycleAccumulator = 0f;
         this.updateAccumulator = 0f;
+        this.country = country;
+        this.currentDay = 1;
+        this.currentMonth = 1;
+        this.currentYear = 2026;
+    }
 
+    public GameSpeed getCurrentSpeed() {
+        return currentSpeed;
+    }
+
+    public void setCurrentSpeed(GameSpeed speed) {
+        this.currentSpeed = speed;
+    }
+
+    public boolean isRunning() {
+        return isRunning;
+    }
+
+    public float getMonthDuration() {
+        return monthDuration;
+    }
+
+    public void setMonthDuration(float duration) {
+        this.monthDuration = duration;
+    }
+
+    public float getUpdateInterval() {
+        return updateInterval;
+    }
+
+    public void setUpdateInterval(float interval) {
+        this.updateInterval = interval;
+    }
+
+    public int getCurrentDay() {
+        return currentDay;
+    }
+
+    public int getCurrentMonth() {
+        return currentMonth;
+    }
+
+    public int getCurrentYear() {
+        return currentYear;
     }
 
     public void start() {
@@ -75,8 +116,9 @@ public class TimeManager {
     }
 
     public void update(float delta) {
-        if (!isRunning || currentSpeed == GameSpeed.PAUSED)
+        if (!isRunning || currentSpeed == GameSpeed.PAUSED) {
             return;
+        }
 
         float scaledDelta = delta * currentSpeed.multiplier;
 
@@ -87,6 +129,15 @@ public class TimeManager {
     }
 
     public void updateSimulationStep() {
+        if (cycleAccumulator > monthDuration) {
+            currentMonth = 1;
+            cycleAccumulator = 0f;
+            triggerAutoSave();
+        }
+
+        if (updateAccumulator > updateInterval) {
+            updateAccumulator = 0f;
+        }
 
     }
 
@@ -96,11 +147,10 @@ public class TimeManager {
             currentMonth = 1;
             currentYear++;
         }
-        currentDay = 1;
     }
 
     public void triggerAutoSave() {
-
+        gameManager.saveGame();
     }
 
 }
