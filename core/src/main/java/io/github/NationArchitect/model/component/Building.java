@@ -206,6 +206,11 @@ public class Building {
         return workerAmount;
     }
 
+    public void setWorkerAmount(int workerAmount) {
+        this.workerAmount = Math.max(0, Math.min(workerAmount, maxWorkerAmount));
+        calculateEfficiency();
+    }
+
     /**
      * Increases assigned worker count.
      *

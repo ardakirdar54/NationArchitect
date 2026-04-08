@@ -168,6 +168,12 @@ public class CountryEconomy extends Economy {
         return export;
     }
 
+    public void restoreTrade(double treasury, double importValue, double exportValue) {
+        this.treasury = treasury;
+        this.import_ = importValue;
+        this.export = exportValue;
+    }
+
     /**
      * Returns the regions of the given country land.
      *

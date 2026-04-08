@@ -32,6 +32,8 @@ public class Region extends Land {
         super(name, economy, population);
         this.activePolicies = new ArrayList<>();
         this.activeEffects = new ArrayList<>();
+        this.undergroundResources = new EnumMap<>(ResourceType.class);
+        this.components = new EnumMap<>(ComponentType.class);
 
     }
 
@@ -48,6 +50,40 @@ public class Region extends Land {
     public Region setComponents(EnumMap<ComponentType, Component> components) {
         this.components = components;
         return this;
+    }
+
+    public Region setBaseCrimeRate(double baseCrimeRate) {
+        this.baseCrimeRate = baseCrimeRate;
+        return this;
+    }
+
+    public Region setUndergroundResources(EnumMap<ResourceType, Double> undergroundResources) {
+        this.undergroundResources = undergroundResources;
+        return this;
+    }
+
+    public TerrainType getTerrainType() {
+        return terrainType;
+    }
+
+    public EnumMap<ResourceType, Double> getUndergroundResources() {
+        return undergroundResources;
+    }
+
+    public EnumMap<ComponentType, Component> getComponents() {
+        return components;
+    }
+
+    public ArrayList<Policy> getActivePolicies() {
+        return activePolicies;
+    }
+
+    public ArrayList<ActiveEffect> getActiveEffects() {
+        return activeEffects;
+    }
+
+    public double getLandValue() {
+        return landValue;
     }
 
     public double getComponentEffect(ComponentType affected, ComponentType affecter) {

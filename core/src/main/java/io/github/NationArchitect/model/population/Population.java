@@ -87,6 +87,16 @@ public class Population implements ReadOnlyPopulation{
         return this;
     }
 
+    public Population setBirths(int births) {
+        this.births = births;
+        return this;
+    }
+
+    public Population setDeaths(int deaths) {
+        this.deaths = deaths;
+        return this;
+    }
+
     public int getTotalPopulation(){
         int total = 0;
         for(int amount : ageDistribution.values()){

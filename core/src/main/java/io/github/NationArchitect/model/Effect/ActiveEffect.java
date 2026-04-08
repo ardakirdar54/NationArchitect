@@ -23,4 +23,8 @@ public class ActiveEffect {
     public boolean isExpired() {
         return remainingMonths <= 0;
     }
+
+    public int getRemainingMonths() {
+        return remainingMonths;
+    }
 }
