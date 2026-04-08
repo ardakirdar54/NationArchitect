@@ -1,6 +1,7 @@
 package io.github.NationArchitect.model.component;
 
 import io.github.NationArchitect.model.metric.MetricType;
+import java.util.Collections;
 import java.util.EnumMap;
 import java.util.Map;
 
@@ -13,21 +14,21 @@ public enum ComponentType {
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, -0.2
         )),
-        new EnumMap<>(Map.of())
+        null
     ),
 
     OFFICE("Supports administration and service sector.",
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, 0.3
         )),
-        new EnumMap<>(Map.of())
+        null
     ),
 
     TOURISM("Generates income from visitors.",
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, 0.6
         )),
-        new EnumMap<>(Map.of())
+        null
     ),
 
     AGRICULTURE("Produces food and raw materials.",
@@ -35,7 +36,7 @@ public enum ComponentType {
             MetricType.HEALTH_RATE, 0.5,
             MetricType.HAPPINESS, 0.3
         )),
-        new EnumMap<>(Map.of())
+        null
     ),
 
     HEALTH_SERVICES("Improves population health and lifespan.",
@@ -43,9 +44,9 @@ public enum ComponentType {
             MetricType.HEALTH_RATE, 1.0,
             MetricType.HAPPINESS, 0.3
         )),
-        new EnumMap<>(Map.of(
+        Map.of(
             ComponentType.AGRICULTURE, 0.2
-        ))
+        )
     ),
 
     EDUCATION("Increases knowledge and workforce quality.",
@@ -53,69 +54,69 @@ public enum ComponentType {
             MetricType.EDUCATION_LEVEL, 1.0,
             MetricType.HAPPINESS, 0.1
         )),
-        new EnumMap<>(Map.of(
+        Map.of(
             ComponentType.OFFICE, 0.5,
             ComponentType.FACTORY, 0.4,
             ComponentType.AGRICULTURE, 0.3,
             ComponentType.HEALTH_SERVICES, 0.4
-        ))
+        )
     ),
 
     SECURITY("Maintains public order and safety.",
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, 0.3
         )),
-        new EnumMap<>(Map.of())
+        null
     ),
 
     ROAD_TRANSPORT("Enables transport via trucks and cars.",
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, 0.3
         )),
-        new EnumMap<>(Map.of())
+        null
     ),
 
     RAIL_TRANSPORT("Supports large-scale rail transportation.",
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, 0.4
         )),
-        new EnumMap<>(Map.of())
+        null
     ),
 
     MARINE_TRANSPORT("Allows sea transport and trade.",
-        new EnumMap<>(Map.of()),
-        new EnumMap<>(Map.of())
+        null,
+        null
     ),
 
     AIR_TRANSPORT("Enables fast air transportation.",
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, 0.6
         )),
-        new EnumMap<>(Map.of())
+        null
     ),
 
     ROAD_NETWORK("Enables land transportation and logistics.",
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, 0.2
         )),
-        new EnumMap<>(Map.of(
+        Map.of(
             ComponentType.ROAD_TRANSPORT, 0.4,
             ComponentType.RAIL_TRANSPORT, 0.3,
             ComponentType.SECURITY, 0.2,
             ComponentType.HEALTH_SERVICES, 0.2
-        ))
+        )
     ),
 
     ELECTRICITY("Provides power for industry and services.",
-        new EnumMap<>(Map.of()),
-        new EnumMap<>(Map.of(
+        null,
+        Map.of(
             ComponentType.FACTORY, 0.5,
             ComponentType.OFFICE, 0.4,
             ComponentType.AGRICULTURE, 0.3,
             ComponentType.HEALTH_SERVICES, 0.3,
             ComponentType.EDUCATION, 0.3,
             ComponentType.SECURITY, 0.2
-        ))
+        )
         ),
 
     WATER_MANAGEMENT("Ensures water supply and sanitation.",
@@ -123,21 +124,21 @@ public enum ComponentType {
             MetricType.HEALTH_RATE, 0.5,
             MetricType.HAPPINESS, 0.2
         )),
-        new EnumMap<>(Map.of(
+        Map.of(
             ComponentType.AGRICULTURE, 0.5,
             ComponentType.HEALTH_SERVICES, 0.4
-        ))
+        )
     ),
 
     INTERNET("Improves communication and digital access.",
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, 0.2
         )),
-        new EnumMap<>(Map.of(
+        Map.of(
             ComponentType.OFFICE, 0.6,
             ComponentType.EDUCATION, 0.4,
             ComponentType.SECURITY, 0.2
-        ))
+        )
     );
 
     /** Description of the component type. */
@@ -147,7 +148,7 @@ public enum ComponentType {
     private final EnumMap<MetricType, Double> relatedMetrics;
 
     /** Component relationships defined for the component type. */
-    private final EnumMap<ComponentType, Double> relatedComponents;
+    private final Map<ComponentType, Double> relatedComponents;
 
     /**
      * Creates the enum value definition for {@link ComponentType}.
@@ -156,10 +157,10 @@ public enum ComponentType {
      * @param relatedMetrics metric effects applied by the building type
      * @param relatedComponents component effects applied by the building type
      */
-    ComponentType(String description, EnumMap<MetricType, Double> relatedMetrics, EnumMap<ComponentType, Double> relatedComponents) {
+    ComponentType(String description, EnumMap<MetricType, Double> relatedMetrics, Map<ComponentType, Double> relatedComponents) {
         this.description = description;
-        this.relatedMetrics = relatedMetrics;
-        this.relatedComponents = relatedComponents;
+        this.relatedMetrics = relatedMetrics == null ? new EnumMap<>(MetricType.class) : relatedMetrics;
+        this.relatedComponents = relatedComponents == null ? Collections.emptyMap() : relatedComponents;
     }
 
     /**
@@ -186,6 +187,9 @@ public enum ComponentType {
      * @return component effect map
      */
     public EnumMap<ComponentType, Double> getRelatedComponents() {
+        if (relatedComponents.isEmpty()) {
+            return new EnumMap<>(ComponentType.class);
+        }
         return new EnumMap<>(relatedComponents);
     }
 }

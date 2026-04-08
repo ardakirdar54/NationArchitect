@@ -14,7 +14,7 @@ public class ManufacturerBuilding extends Building {
      * @param name runtime name of the building
      * @param type type definition used to initialize the building
      */
-    ManufacturerBuilding(String name, BuildingType type) {
+    public ManufacturerBuilding(String name, BuildingType type) {
         super(name, type);
         this.production = type.getProduction() * getEfficiency();
     }

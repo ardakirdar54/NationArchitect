@@ -24,7 +24,7 @@ public enum WaterManagementBuilding implements BuildingType {
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_WM,
             MetricType.HEALTH_RATE, BASE_HEALTH_RATE_BOOST_WM
         )),
-        new EnumMap<>(Map.of()),
+        new EnumMap<>(ComponentType.class),
         1600,
         BASE_PERFORMANCE_MULTIPLIER_WM,
         1000,
@@ -142,7 +142,7 @@ public enum WaterManagementBuilding implements BuildingType {
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_WM * 0.5
         )),
-        new EnumMap<>(Map.of()),
+        new EnumMap<>(ComponentType.class),
         400,
         BASE_PERFORMANCE_MULTIPLIER_WM * 0.4,
         300,

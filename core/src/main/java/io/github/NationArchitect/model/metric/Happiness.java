@@ -14,7 +14,7 @@ public class Happiness extends Metric{
         if(region == null){
             throw new IllegalArgumentException("Region cannot be null! Metric can't be calculated");
         }
-        
+
         double healthRate = region.getLastMonthMetricValue(MetricType.HEALTH_RATE);
         double crimeRate = region.getLastMonthMetricValue(MetricType.CRIME_RATE);
         double taxBurden = taxAverage(region);
@@ -24,11 +24,11 @@ public class Happiness extends Metric{
 
         double positiveFactors = (healthRate * 0.35) + (education * 0.25) + (infrastructure * 0.1);
 
-        double taxPenalty = taxBurden * 1.2; 
+       // double taxPenalty = taxBurden * 1.2;
         double crimePenalty = crimeRate * 0.5;
         double unemploymentPenalty = unemployment * 0.8;
 
-        double negativeFactors = taxPenalty + crimePenalty + unemploymentPenalty;
+        double negativeFactors = /*taxPenalty*/ + crimePenalty + unemploymentPenalty;
 
         double rawHappiness = 50.0 + positiveFactors - negativeFactors;
 
