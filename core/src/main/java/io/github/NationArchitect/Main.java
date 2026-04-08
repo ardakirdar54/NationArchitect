@@ -1,32 +1,29 @@
 package io.github.NationArchitect;
 
-import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.utils.ScreenUtils;
+import io.github.NationArchitect.screens.MainMenuScreen;
 
-/** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
-public class Main extends ApplicationAdapter {
+public class Main extends Game {
     private SpriteBatch batch;
-    private Texture image;
 
     @Override
     public void create() {
         batch = new SpriteBatch();
-        image = new Texture("libgdx.png");
+        this.setScreen(new MainMenuScreen(this));
     }
 
     @Override
     public void render() {
-        ScreenUtils.clear(0.15f, 0.15f, 0.2f, 1f);
-        batch.begin();
-        batch.draw(image, 140, 210);
-        batch.end();
+        com.badlogic.gdx.utils.ScreenUtils.clear(0, 0, 0, 1);
+        super.render();
     }
+
+    public SpriteBatch getBatch() { return batch; }
 
     @Override
     public void dispose() {
+        if (screen != null) screen.hide();
         batch.dispose();
-        image.dispose();
     }
 }
