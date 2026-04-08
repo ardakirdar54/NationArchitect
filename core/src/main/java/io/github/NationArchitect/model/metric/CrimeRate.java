@@ -1,4 +1,4 @@
-﻿package io.github.NationArchitect.model.metric;
+package io.github.NationArchitect.model.metric;
 
 import io.github.NationArchitect.model.component.ComponentType;
 import io.github.NationArchitect.model.land.Region;
