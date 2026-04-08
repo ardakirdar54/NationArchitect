@@ -225,7 +225,7 @@ public enum FactoryBuilding implements BuildingType  {
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_PENALTY_F * 15
         )),
-        new EnumMap<>(Map.of()),
+        new EnumMap<>(ComponentType.class),
         1000.0,
         1500,
         new EnumMap<>(Map.of(
@@ -349,7 +349,7 @@ public enum FactoryBuilding implements BuildingType  {
         "Produces advanced technological goods with high efficiency.",
         150000,
         70000,
-        new EnumMap<MetricType, Double>(Map.of(
+        new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_PENALTY_F * 10
         )),
         new EnumMap<>(Map.of(
@@ -360,7 +360,7 @@ public enum FactoryBuilding implements BuildingType  {
         )),
         3500.0,
         2200,
-        new EnumMap<ProductType, Double>(Map.of(
+        new EnumMap<>(Map.of(
             ProductType.WATER, 1000.0,
             ProductType.ENERGY, 2000.0,
             ProductType.TECHNOLOGY, 1200.0
@@ -379,7 +379,7 @@ public enum FactoryBuilding implements BuildingType  {
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_PENALTY_F * 10
         )),
-        new EnumMap<ComponentType, Double>(Map.of(
+        new EnumMap<>(Map.of(
             ComponentType.MARINE_TRANSPORT, BASE_COMPONENT_PERFORMANCE_MULTIPLIER_F * 8
         )),
         4000,
@@ -494,6 +494,4 @@ public enum FactoryBuilding implements BuildingType  {
         return 0;
     }
 }
-
-
 

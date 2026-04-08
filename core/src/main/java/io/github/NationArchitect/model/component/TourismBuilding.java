@@ -22,7 +22,7 @@ public enum TourismBuilding implements BuildingType {
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_TO
         )),
-        new EnumMap<>(Map.of()),
+        new EnumMap<>(ComponentType.class),
         900,
         250,
         BASE_PERFORMANCE_MULTIPLIER_TO * 0.8,
@@ -66,7 +66,7 @@ public enum TourismBuilding implements BuildingType {
         new EnumMap<>(Map.of(
             MetricType.HAPPINESS, BASE_HAPPINESS_BOOST_TO * 3.7
         )),
-        new EnumMap<>(Map.of()),
+        new EnumMap<>(ComponentType.class),
         1500,
         0,
         BASE_PERFORMANCE_MULTIPLIER_TO * 4.4,

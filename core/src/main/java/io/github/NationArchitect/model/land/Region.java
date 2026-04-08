@@ -1,9 +1,10 @@
-﻿package io.github.NationArchitect.model.land;
+package io.github.NationArchitect.model.land;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.EnumMap;
 
+import io.github.NationArchitect.model.Effect.*;
 import io.github.NationArchitect.model.component.*;
 import io.github.NationArchitect.model.economy.Economy;
 import io.github.NationArchitect.model.economy.RegionEconomy;
@@ -128,16 +129,18 @@ public class Region extends Land {
                 totalCapacity += type.getCapacity();
             }
         }
+        return totalCapacity;
     }
 
     public int getTotalHealthServiceCapacity(){
         int totalCapacity = 0;
         HealthServices healthServices = (HealthServices) this.components.get(ComponentType.HEALTH_SERVICES);
         for(Building building : healthServices.getBuildings()){
-            totalCapacity += building.getCapacity();
+            totalCapacity += building.getType().getCapacity();
         }
+        return totalCapacity;
     }
-    
+
     @Override
     public void implementPolicy(Policy policy) {
         this.activePolicies.add(policy);

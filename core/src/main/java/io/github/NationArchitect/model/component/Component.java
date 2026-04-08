@@ -71,7 +71,7 @@ public abstract class Component {
      *
      * @param componentType type of the component to initialize
      */
-    Component(ComponentType componentType, Region region){
+    public Component(ComponentType componentType, Region region){
         this.region = region;
         this.description = null;
         this.buildings = new ArrayList<>();
@@ -105,9 +105,6 @@ public abstract class Component {
     public void constructBuilding(Building building) {
         if (building == null) {
             return;
-        }
-        if (!building.getClass().getSimpleName().equals(this.getClass().getSimpleName() + "Building")) {
-            throw new IllegalBuildingTypeException(building.getType(), this);
         }
 
         buildings.add(building);
@@ -169,7 +166,7 @@ public abstract class Component {
      * Sets the current budget multiplier from an external budget percentage value.
      */
     public void calculateBudgetMultiplier() {
-        double totalBudgetMultiplier = budgetPercentage / 100 - 1;
+        double totalBudgetMultiplier = budgetPercentage - 1;
 
         for (Effect effect : activeEffects) {
             totalBudgetMultiplier += effect.getRelatedComponents().getOrDefault(componentType, 0.0);

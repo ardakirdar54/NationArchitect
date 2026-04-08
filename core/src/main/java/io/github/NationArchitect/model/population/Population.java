@@ -1,4 +1,4 @@
-﻿package io.github.NationArchitect.model.population;
+package io.github.NationArchitect.model.population;
 
 import java.util.EnumMap;
 

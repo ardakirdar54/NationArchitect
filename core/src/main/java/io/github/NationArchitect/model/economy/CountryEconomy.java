@@ -25,7 +25,7 @@ public class CountryEconomy extends Economy {
      *
      * @param tax tax configuration used for calculations
      */
-    CountryEconomy(Tax tax) {
+    public CountryEconomy(Tax tax) {
         super(tax);
     }
 
