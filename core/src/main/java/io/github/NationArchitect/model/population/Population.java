@@ -8,6 +8,7 @@ public class Population implements ReadOnlyPopulation{
     private EnumMap<Gender, Integer> genderDistribution;
     private int deaths;
     private int births;
+    private int netMigration;
 
     private static double baseElderlyMortality = 0.08;
     private static double baseBabyMortality = 0.03;
@@ -129,5 +130,48 @@ public class Population implements ReadOnlyPopulation{
         return genderDistribution;
     }
 
-    
+    public int getNetMigration() { return netMigration; }
+
+    public void processMigration(int migrationVolume) {
+        this.netMigration = migrationVolume;
+        if (migrationVolume == 0) return;
+
+        boolean isImmigration = migrationVolume > 0;
+        int totalPeopleToMove = Math.abs(migrationVolume);
+
+        double youngAdultRatio = 0.50; 
+        double adultRatio = 0.30;      
+        double childRatio = 0.10;      
+        double teenRatio = 0.05;       
+        double babyRatio = 0.03;       
+        double elderlyRatio = 0.02;    
+
+        moveDemographic(Age.YOUNG_ADULT, (int)(totalPeopleToMove * youngAdultRatio), isImmigration);
+        moveDemographic(Age.ADULT, (int)(totalPeopleToMove * adultRatio), isImmigration);
+        moveDemographic(Age.CHILD, (int)(totalPeopleToMove * childRatio), isImmigration);
+        moveDemographic(Age.TEENAGER, (int)(totalPeopleToMove * teenRatio), isImmigration);
+        moveDemographic(Age.BABY, (int)(totalPeopleToMove * babyRatio), isImmigration);
+        moveDemographic(Age.ELDERLY, (int)(totalPeopleToMove * elderlyRatio), isImmigration);
+
+        
+        int maleMove = totalPeopleToMove / 2;
+        int femaleMove = totalPeopleToMove - maleMove;
+
+        if (isImmigration) {
+            genderDistribution.put(Gender.MALE, genderDistribution.get(Gender.MALE) + maleMove);
+            genderDistribution.put(Gender.FEMALE, genderDistribution.get(Gender.FEMALE) + femaleMove);
+        } else {
+            genderDistribution.put(Gender.MALE, Math.max(0, genderDistribution.get(Gender.MALE) - maleMove));
+            genderDistribution.put(Gender.FEMALE, Math.max(0, genderDistribution.get(Gender.FEMALE) - femaleMove));
+        }
+    }
+
+    private void moveDemographic(Age ageGroup, int amount, boolean isImmigration) {
+        int currentAmount = ageDistribution.get(ageGroup);
+        if (isImmigration) {
+            ageDistribution.put(ageGroup, currentAmount + amount);
+        } else {
+            ageDistribution.put(ageGroup, Math.max(0, currentAmount - amount));
+        }
+    }
 }
