@@ -1,4 +1,4 @@
-﻿package io.github.NationArchitect.model.land;
+package io.github.NationArchitect.model.land;
 
 import io.github.NationArchitect.model.Effect.Policy;
 import io.github.NationArchitect.model.economy.Economy;
@@ -11,7 +11,7 @@ public class Country extends Land {
 
     // private Date date;
 
-    Country(String name, Economy economy, Population population) {
+    public Country(String name, Economy economy, Population population) {
         super(name, economy, population);
         this.regions = new Region[10];
         // this.date = new Date();
