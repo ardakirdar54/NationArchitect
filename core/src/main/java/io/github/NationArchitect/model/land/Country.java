@@ -175,7 +175,10 @@ public class Country extends Land {
         }
     }
 
-    public Region[] getRegions() {
-        return this.regions;
+    public Region[] getRegions(){return this.regions;}
+
+    public Country setRegions(Region[] regions) {
+        this.regions = regions;
+        return this;
     }
 }

@@ -21,4 +21,12 @@ public class Policy extends Effect{
     boolean isActive(){
         return isActive;
     }
+
+    public boolean getIsActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
 }

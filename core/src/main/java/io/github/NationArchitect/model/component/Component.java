@@ -131,6 +131,10 @@ public abstract class Component {
         update();
     }
 
+    public void restoreBuilding(Building building) {
+        constructBuilding(building);
+    }
+
     /**
      * Removes a building from the component and reverses its maintenance, land, and performance impact.
      *
