@@ -14,6 +14,17 @@ public abstract class Land {
     protected Population population;
     protected EnumMap<MetricType, Metric> metrics;
 
+    Land() {
+        
+        this.metrics = new EnumMap<>(MetricType.class);
+        this.metrics.put(MetricType.HAPPINESS, new Happiness());
+        this.metrics.put(MetricType.UNEMPLOYMENT, new Unemployment());
+        this.metrics.put(MetricType.CRIME_RATE, new CrimeRate());
+        this.metrics.put(MetricType.EDUCATION_LEVEL, new EducationLevel());
+        this.metrics.put(MetricType.HEALTH_RATE, new HealthRate());
+        this.metrics.put(MetricType.STABILITY, new Stability());
+    }
+
     Land(String name, Economy economy, Population population){
         this.name = name;
         this.economy = economy;
@@ -33,8 +44,26 @@ public abstract class Land {
 
     public abstract void cancelPolicy(Policy policy);
 
-    public double calculateAttractiveness() throws Exception{
-        throw new Exception();
+    public double calculateAttractiveness() {
+        double happiness = this.getMetricValue(MetricType.HAPPINESS);
+        double stability = this.getMetricValue(MetricType.STABILITY);
+        double unemployment = this.getMetricValue(MetricType.UNEMPLOYMENT);
+        double crimeRate = this.getMetricValue(MetricType.CRIME_RATE);
+
+
+        double pullFactors = (happiness * 0.4) + (stability * 0.3);
+
+        double pushFactors = ((100.0 - unemployment) * 0.2) + ((100.0 - crimeRate) * 0.1);
+
+        double attractiveness = pullFactors + pushFactors;
+
+        return Math.max(0.0, Math.min(100.0, attractiveness));
+    }
+
+    public void updateLastMonthValues() {
+        for (Metric metric : this.metrics.values()) {
+            metric.updateLastMonthValue();
+        }
     }
 
     public abstract void update();
@@ -58,5 +87,7 @@ public abstract class Land {
         }
         return 0.0;
     }
+
+
 
 }

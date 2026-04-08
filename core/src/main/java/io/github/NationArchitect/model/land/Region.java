@@ -16,12 +16,19 @@ import io.github.NationArchitect.model.product.ProductType;
 public class Region extends Land {
 
     private TerrainType terrainType;
-    private EnumMap<ResourceType, Double> undergroundResources;
+    private EnumMap<ResourceType, Double> resources;
     private EnumMap<ComponentType, Component> components;
     private ArrayList<Policy> activePolicies;
     private ArrayList<ActiveEffect> activeEffects;
     private double landValue;
+    private double totalLand;
     private double baseCrimeRate;
+
+    public Region() {
+        super();
+        this.activePolicies = new ArrayList<>();
+        this.activeEffects = new ArrayList<>();
+    }
 
     public Region(String name, RegionEconomy economy, Population population) {
         super(name, economy, population);
@@ -165,9 +172,7 @@ public class Region extends Land {
     public void addTemporaryEffect(Effect effect, int duration) {
         if (duration > 0) {
             this.activeEffects.add(new ActiveEffect(effect, duration));
-        } else {
-
-        }
+        } 
     }
 
     public double getTotalActiveEffectModifierForMetric(MetricType type) {
@@ -186,6 +191,45 @@ public class Region extends Land {
         return totalModifier;
     }
 
+    public double getTotalActiveEffectModifierForComponent(ComponentType type) {
+        double totalModifier = 0.0;
+        for (ActiveEffect effect : activeEffects) {
+            totalModifier += effect.getEffect().getComponentModifier(type);
+        }
+        return totalModifier;
+    }
+
+    public double getTotalPolicyModifierForComponent(ComponentType type) {
+        double totalModifier = 0.0;
+        for (Policy policy : activePolicies) {
+            totalModifier += policy.getComponentModifier(type);
+        }
+        return totalModifier;
+    }
+
+    public double getTotalOccupiedLand(){
+        double totalLand = 0;
+        for(Component component : components.values()){
+            for(Building building : component.getBuildings()){
+                totalLand += building.getOccupiedLand();
+            }
+        }
+        return totalLand;
+    }
+    
+    public void calculateLandValue(){
+        double happiness = this.getMetricValue(MetricType.HAPPINESS);
+        double landRatio = getTotalOccupiedLand() / totalLand;
+        double crimeRate = this.getMetricValue(MetricType.CRIME_RATE);
+        double stability = this.getMetricValue(MetricType.STABILITY);
+
+        int factoryNumber = this.components.get(ComponentType.FACTORY).getBuildings().size();
+        
+        this.landValue = factoryNumber * happiness * landRatio * crimeRate * stability;
+    }
+
+    public double getLandValue(){return landValue;}
+
     @Override
     public void update() {
 
@@ -194,11 +238,7 @@ public class Region extends Land {
         }
         double birthRate = this.getMetricValue(MetricType.HAPPINESS);
         this.population.updateLifeCycle(birthRate, this.getMetricValue(MetricType.HEALTH_RATE));
-    }
-
-    public void shiftAllMetricsHistory() {
-        for (Metric metric : this.metrics.values()) {
-            metric.shiftHistory();
-        }
+        
+        
     }
 }
