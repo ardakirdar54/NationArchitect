@@ -14,7 +14,7 @@ public class HealthServices extends Component {
      *
      * @param region region that owns the component
      */
-    HealthServices(Region region) {
+    public HealthServices(Region region) {
         super(ComponentType.HEALTH_SERVICES, region);
     }
 }

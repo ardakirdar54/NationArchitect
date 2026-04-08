@@ -7,7 +7,7 @@ import io.github.NationArchitect.model.product.ProductType;
  */
 public class Tax {
     /** Default starting tax rate for all categories. */
-    private final static double INITIAL_TAX_RATE = 7.0;
+    private final static double INITIAL_TAX_RATE = 8.0;
     /** Minimum allowed tax rate. */
     private final static double MIN_TAX_RATE = 2.0;
     /** Maximum allowed tax rate. */
