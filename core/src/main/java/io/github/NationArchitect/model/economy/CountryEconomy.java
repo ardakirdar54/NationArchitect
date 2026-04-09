@@ -13,6 +13,9 @@ import java.util.EnumMap;
  */
 public class CountryEconomy extends Economy {
 
+    /** Starting treasury for a newly created country economy. */
+    private static final double INITIAL_TREASURY = 100_000.0;
+
     /** Current treasury balance of the country. */
     private double treasury;
     /** Total import spending accumulated by the country. */
@@ -27,6 +30,7 @@ public class CountryEconomy extends Economy {
      */
     public CountryEconomy(Tax tax) {
         super(tax);
+        this.treasury = INITIAL_TREASURY;
     }
 
     /** {@inheritDoc} */
@@ -46,8 +50,6 @@ public class CountryEconomy extends Economy {
 
     /** {@inheritDoc} */
     public void calculateTotalIncome(Land land) {
-        calculateTaxIncome(land);
-
         double totalIncome = export + calculateTaxIncome(land);
 
         setIncome(totalIncome);
@@ -58,7 +60,7 @@ public class CountryEconomy extends Economy {
         clearComponentBudgets();
 
         for (ComponentType componentType : ComponentType.values()) {
-            double totalBudget = export;
+            double totalBudget = 0;
             for (Region region : getRegions(land)) {
                 if (region == null) {
                     continue;
@@ -93,8 +95,52 @@ public class CountryEconomy extends Economy {
             }
             region.getEconomy().calculateBalance(region);
         }
+        calculateImport(land);
+        calculateExport(land);
         calculateBalance(land);
-        treasury += getBalance();
+    }
+
+    /**
+     * Applies a fraction of the current monthly cashflow to the treasury.
+     *
+     * @param monthFraction fraction of one in-game month to apply
+     */
+    public void applyMonthlyCashflow(double monthFraction) {
+        treasury += (getIncome() - getExpanse()) * monthFraction;
+    }
+
+    /**
+     * Applies a direct treasury delta.
+     *
+     * @param amount positive income or negative expense to apply
+     */
+    public void applyTreasuryDelta(double amount) {
+        treasury += amount;
+    }
+
+    /**
+     * Returns whether the country can afford the given amount.
+     *
+     * @param amount amount to check
+     * @return true if treasury is sufficient
+     */
+    public boolean canAfford(double amount) {
+        return treasury >= Math.max(0.0, amount);
+    }
+
+    /**
+     * Spends treasury if enough funds are available.
+     *
+     * @param amount amount to spend
+     * @return true when the spend succeeded
+     */
+    public boolean spend(double amount) {
+        double normalizedAmount = Math.max(0.0, amount);
+        if (!canAfford(normalizedAmount)) {
+            return false;
+        }
+        treasury -= normalizedAmount;
+        return true;
     }
 
     /**
@@ -103,20 +149,16 @@ public class CountryEconomy extends Economy {
      * @param land country land
      */
     public void calculateImport(Land land) {
-        double import_ = 0;
+        double totalImport = 0;
 
-        for (ProductType productType : ProductType.values()) {
-
-            for (Region region : getRegions(land)) {
-                if (region == null) {
-                    continue;
-                }
-
-                import_ += ((RegionEconomy)region.getEconomy()).getProductDeficit(productType) * productType.getPurchasePrice();
+        for (Region region : getRegions(land)) {
+            if (region == null) {
+                continue;
             }
+            totalImport += ((RegionEconomy) region.getEconomy()).getImport();
         }
 
-        this.import_ += import_;
+        this.import_ = totalImport;
     }
 
     /**
@@ -125,20 +167,16 @@ public class CountryEconomy extends Economy {
      * @param land country land
      */
     public void calculateExport(Land land) {
-        double export = 0;
+        double totalExport = 0;
 
-        for (ProductType productType : ProductType.values()) {
-
-            for (Region region : getRegions(land)) {
-                if (region == null) {
-                    continue;
-                }
-
-                export += ((RegionEconomy)region.getEconomy()).getProductSurplus(productType) * productType.getSalePrice();
+        for (Region region : getRegions(land)) {
+            if (region == null) {
+                continue;
             }
+            totalExport += ((RegionEconomy) region.getEconomy()).getExport();
         }
 
-        this.export += export;
+        this.export = totalExport;
     }
 
     /**

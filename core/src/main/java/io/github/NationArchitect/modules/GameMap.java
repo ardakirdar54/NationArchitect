@@ -13,7 +13,7 @@ public class GameMap {
     protected boolean isBlurred;
     protected Texture lastSnapshot;
     protected Camera mapCamera;
-    protected Array<Region> regions;
+    protected Array<UIRegion> regions;
 
     public GameMap(String mapName) {
         this.mapName = mapName;
@@ -23,23 +23,23 @@ public class GameMap {
         initRegions();
     }
     private void initRegions() {
-    regions.add(new Region(0, "Marmara",             0,   300, 220, 280));
-    regions.add(new Region(1, "Aegean",              0,    50, 220, 250));
-    regions.add(new Region(2, "Mediterranean",     150,     0, 450, 200));
-    regions.add(new Region(3, "Central Anatolia",  220,   150, 380, 280));
-    regions.add(new Region(4, "Black Sea",         240, 430, 600, 150));
-    regions.add(new Region(5, "Eastern Anatolia",  600, 300, 450, 280));
-    regions.add(new Region(6, "Southeastern Anatolia", 550, 50, 350, 180));
+    regions.add(new UIRegion(0, "Marmara",             0,   300, 220, 280));
+    regions.add(new UIRegion(1, "Aegean",              0,    50, 220, 250));
+    regions.add(new UIRegion(2, "Mediterranean",     150,     0, 450, 200));
+    regions.add(new UIRegion(3, "Central Anatolia",  220,   150, 380, 280));
+    regions.add(new UIRegion(4, "Black Sea",         240, 430, 600, 150));
+    regions.add(new UIRegion(5, "Eastern Anatolia",  600, 300, 450, 280));
+    regions.add(new UIRegion(6, "Southeastern Anatolia", 550, 50, 350, 180));
 }
 
-    public Region getRegionAt(float x, float y) {
-        for (Region r : regions) {
+    public UIRegion getRegionAt(float x, float y) {
+        for (UIRegion r : regions) {
             if (r.contains(x, y)) return r;
         }
         return null;
     }
 
-    public Array<Region> getRegions() { return regions; }
+    public Array<UIRegion> getRegions() { return regions; }
 
     public void prewatch() {
         if (previewTexture == null) {

@@ -40,7 +40,13 @@ public class SaveDevServer {
     }
 
     public static ServerHandle start(int port, String mongoUri, String databaseName) throws IOException {
-        DatabaseManager databaseManager = new DatabaseManager(mongoUri, databaseName);
+        DatabaseManager databaseManager;
+        try {
+            databaseManager = new DatabaseManager(mongoUri, databaseName);
+        } catch (RuntimeException exception) {
+            databaseManager = new DatabaseManager();
+            System.out.println("SaveDevServer falling back to in-memory storage: " + exception.getMessage());
+        }
         HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
         registerRoutes(server, databaseManager);
         server.start();

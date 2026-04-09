@@ -6,12 +6,12 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
-import io.github.NationArchitect.modules.Region;
+import io.github.NationArchitect.modules.UIRegion;
 import io.github.NationArchitect.screens.BaseScreen;
 
 public class RegionalDataPanel extends UIPanel {
 
-    private Region currentRegion;
+    private UIRegion currentRegion;
     private Label regionNameLabel;
     private Slider securitySlider, industrySlider, healthSlider,
                    educationSlider, happinessSlider, populationSlider;
@@ -58,7 +58,7 @@ public class RegionalDataPanel extends UIPanel {
         return slider;
     }
 
-    public void loadRegion(Region region) {
+    public void loadRegion(UIRegion region) {
         this.currentRegion = region;
         if (region == null) return;
 

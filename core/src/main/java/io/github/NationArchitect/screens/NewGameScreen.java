@@ -10,6 +10,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import io.github.NationArchitect.Main;
+import io.github.NationArchitect.controller.savemanager.SaveData;
 import io.github.NationArchitect.modules.GameMap;
 import io.github.NationArchitect.ui.AnimatedMenuButton;
 import io.github.NationArchitect.ui.ChangeableButton;
@@ -172,8 +173,15 @@ public class NewGameScreen extends BaseScreen {
 
     public void onStartClicked() {
         if (nicknameField.getText() != null && !nicknameField.getText().trim().isEmpty()) {
-            GameMap map = new GameMap("map1");
-            game.setScreen(new GameScreen(game, nicknameField.getText(), map));
+            GameMap map = mapSelector != null && mapSelector.getSelectedMap() != null
+                ? mapSelector.getSelectedMap()
+                : new GameMap("map1");
+            SaveData starterSave = loadStarterSave(map.getName(), nicknameField.getText().trim());
+            if (starterSave != null) {
+                game.setScreen(new GameScreen(game, starterSave));
+            } else {
+                game.setScreen(new GameScreen(game, nicknameField.getText().trim(), map));
+            }
         } else {
             Gdx.app.error("ERROR", "Please input a valid name.");
         }
@@ -181,11 +189,37 @@ public class NewGameScreen extends BaseScreen {
 
     public void onBackClicked() { game.setScreen(new MainMenuScreen(game)); }
 
+    private SaveData loadStarterSave(String mapName, String nationName) {
+        String path = "data/" + mapName + "-country.json";
+        if (!Gdx.files.internal(path).exists()) {
+            return null;
+        }
+        try {
+            SaveData saveData = SaveData.fromJson(Gdx.files.internal(path).readString("UTF-8"));
+            if (saveData != null && saveData.getCountry() != null && nationName != null && !nationName.isBlank()) {
+                saveData.getCountry().name = nationName;
+            }
+            if (saveData != null) {
+                saveData.setMapType(mapName);
+            }
+            return saveData;
+        } catch (Exception exception) {
+            Gdx.app.error("NewGameScreen", "Failed to load starter country from " + path, exception);
+            return null;
+        }
+    }
+
     @Override
     public void dispose() {
         super.dispose();
         if (localSkin != null) localSkin.dispose();
         if (backgroundTexture != null) backgroundTexture.dispose();
         if (mapPreviewTexture != null) mapPreviewTexture.dispose();
+    }
+
+    @Override
+    public void show() {
+        super.show();
+        game.playMenuMusic();
     }
 }

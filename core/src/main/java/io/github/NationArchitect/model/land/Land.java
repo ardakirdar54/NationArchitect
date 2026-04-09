@@ -37,6 +37,7 @@ public abstract class Land {
         metrics.put(MetricType.CRIME_RATE, new CrimeRate());
         metrics.put(MetricType.EDUCATION_LEVEL, new EducationLevel());
         metrics.put(MetricType.HEALTH_RATE, new HealthRate());
+        metrics.put(MetricType.STABILITY, new Stability());
 
     }
 
@@ -69,6 +70,10 @@ public abstract class Land {
     public abstract void update();
 
     public String getName(){return this.name;}
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Economy getEconomy(){return this.economy;}
 

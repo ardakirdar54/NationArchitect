@@ -4,10 +4,13 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
+import io.github.NationArchitect.controller.Settings;
 import io.github.NationArchitect.screens.BaseScreen;
 
 public class SettingsPanel extends UIPanel {
@@ -19,9 +22,11 @@ public class SettingsPanel extends UIPanel {
     private Label autosaveDurationLabel;
     private int autosaveDuration = 5;
     private AnimatedMenuButton closeBtn;
+    private Settings settings;
 
     public SettingsPanel(BaseScreen rootScreen) {
         super(rootScreen, "Settings");
+        this.settings = rootScreen.getGame().getSettings();
     }
 
     @Override
@@ -31,6 +36,8 @@ public class SettingsPanel extends UIPanel {
 
         this.clear();
         this.pad(20);
+        autosaveOn = settings.getAutoSave();
+        autosaveDuration = settings.getAutoSaveDurationMinutes();
 
         // Başlık
         Label title = makeLabel("SETTINGS", 0x222222FF, 2.2f, skin);
@@ -42,12 +49,12 @@ public class SettingsPanel extends UIPanel {
 
         this.add(makeLabel("Music:", 0x555555FF, 1.3f, skin)).left().width(200);
         musicSlider = makeSlider();
-        musicSlider.setValue(0.7f);
+        musicSlider.setValue((float) (settings.getMusicRate() / 100.0));
         this.add(musicSlider).width(220).height(18).padBottom(8).row();
 
         this.add(makeLabel("Sound Effect:", 0x555555FF, 1.3f, skin)).left().width(200);
         soundSlider = makeSlider();
-        soundSlider.setValue(0.5f);
+        soundSlider.setValue((float) (settings.getSoundRate() / 100.0));
         this.add(soundSlider).width(220).height(18).padBottom(16).row();
 
         // ── Autosave ──
@@ -55,23 +62,30 @@ public class SettingsPanel extends UIPanel {
         this.add(autosaveHeader).colspan(2).left().padBottom(10).row();
 
         this.add(makeLabel("Autosave:", 0x555555FF, 1.3f, skin)).left().width(200);
-        AnimatedMenuButton autosaveToggle = new AnimatedMenuButton("ON", skin);
-        autosaveStatusLabel = makeLabel("ON", 0x00AA55FF, 0.8f, skin);
+        AnimatedMenuButton autosaveToggle = new AnimatedMenuButton(autosaveOn ? "ON" : "OFF", skin);
+        autosaveStatusLabel = makeLabel(autosaveOn ? "ON" : "OFF",
+                autosaveOn ? 0x00AA55FF : 0xFF4444FF, 0.8f, skin);
         autosaveToggle.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent e, float x, float y) {
                 autosaveOn = !autosaveOn;
+                autosaveToggle.setText(autosaveOn ? "ON" : "OFF");
                 autosaveStatusLabel.setText(autosaveOn ? "ON" : "OFF");
                 autosaveStatusLabel.setColor(autosaveOn ?
                     new Color(0x00AA55FF) : new Color(0xFF4444FF));
+                settings.setAutoSave(autosaveOn);
+                rootScreen.getGame().saveSettings();
             }
         });
-        this.add(autosaveToggle).size(80, 36).left().padBottom(8).row();
+        Table autosaveRow = new Table();
+        autosaveRow.add(autosaveToggle).size(80, 36).padRight(10);
+        autosaveRow.add(autosaveStatusLabel).left();
+        this.add(autosaveRow).left().padBottom(8).row();
 
         this.add(makeLabel("Autosave Duration:", 0x555555FF, 1.3f, skin)).left().width(200);
         Table durationRow = new Table();
         AnimatedMenuButton minusBtn = new AnimatedMenuButton("-", skin);
-        autosaveDurationLabel = makeLabel("5 min", 0x333333FF, 1.3f, skin);
+        autosaveDurationLabel = makeLabel(autosaveDuration + " min", 0x333333FF, 1.3f, skin);
         AnimatedMenuButton plusBtn = new AnimatedMenuButton("+", skin);
 
         minusBtn.addListener(new ClickListener() {
@@ -79,7 +93,9 @@ public class SettingsPanel extends UIPanel {
             public void clicked(InputEvent e, float x, float y) {
                 if (autosaveDuration > 1) {
                     autosaveDuration--;
+                    settings.setAutoSaveDurationMinutes(autosaveDuration);
                     autosaveDurationLabel.setText(autosaveDuration + " min");
+                    rootScreen.getGame().saveSettings();
                 }
             }
         });
@@ -88,7 +104,9 @@ public class SettingsPanel extends UIPanel {
             public void clicked(InputEvent e, float x, float y) {
                 if (autosaveDuration < 60) {
                     autosaveDuration++;
+                    settings.setAutoSaveDurationMinutes(autosaveDuration);
                     autosaveDurationLabel.setText(autosaveDuration + " min");
+                    rootScreen.getGame().saveSettings();
                 }
             }
         });
@@ -125,9 +143,25 @@ public class SettingsPanel extends UIPanel {
     }
 
     private void addListeners() {
+        musicSlider.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+                rootScreen.getGame().setMusicVolume(musicSlider.getValue());
+            }
+        });
+
+        soundSlider.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+                settings.setSoundRate(Math.round(soundSlider.getValue() * 100f));
+                rootScreen.getGame().saveSettings();
+            }
+        });
+
         closeBtn.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
+                rootScreen.getGame().saveSettings();
                 hide();
             }
         });

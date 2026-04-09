@@ -31,8 +31,12 @@ public class Population implements ReadOnlyPopulation{
     }
 
     public void updateLifeCycle(double baseBirthRate, double healthRate){
+        double normalizedBirthRate = Math.max(0.0, Math.min(100.0, baseBirthRate)) / 100.0;
+        double effectiveBirthRate = 0.008 + (normalizedBirthRate * 0.020);
+        double normalizedHealthRate = Math.max(1.0, Math.min(100.0, healthRate)) / 100.0;
+
         int totalAdults = ageDistribution.get(Age.YOUNG_ADULT) + ageDistribution.get(Age.ADULT);
-        int newBirths = (int) (totalAdults * baseBirthRate);
+        int newBirths = (int) Math.round(totalAdults * effectiveBirthRate);
         ageDistribution.put(Age.BABY, ageDistribution.get(Age.BABY) + newBirths);
 
         int maleBirths = newBirths / 2;
@@ -44,27 +48,27 @@ public class Population implements ReadOnlyPopulation{
 
         int totalDeathsThisTurn = 0;
 
-        double elderlyMortality = baseElderlyMortality / healthRate;
+        double elderlyMortality = baseElderlyMortality * (1.00 - (normalizedHealthRate * 0.55));
         int elderDeaths = (int) (ageDistribution.get(Age.ELDERLY) * elderlyMortality);
         ageDistribution.put(Age.ELDERLY, ageDistribution.get(Age.ELDERLY) - elderDeaths);
         totalDeathsThisTurn += elderDeaths;
 
-        double adultMortality = baseOthersMortality / healthRate;
+        double adultMortality = baseOthersMortality * (0.90 - (normalizedHealthRate * 0.45));
         int adultDeaths = (int) (ageDistribution.get(Age.ADULT) * adultMortality);
         ageDistribution.put(Age.ADULT, ageDistribution.get(Age.ADULT) - adultDeaths);
         totalDeathsThisTurn += adultDeaths;
 
-        double youngAdultMortality = baseOthersMortality / healthRate;
+        double youngAdultMortality = baseOthersMortality * (0.85 - (normalizedHealthRate * 0.45));
         int youngAdultDeaths = (int) (ageDistribution.get(Age.YOUNG_ADULT) * youngAdultMortality);
         ageDistribution.put(Age.YOUNG_ADULT, ageDistribution.get(Age.YOUNG_ADULT) - youngAdultDeaths);
         totalDeathsThisTurn += youngAdultDeaths;
 
-        double childMortality = baseOthersMortality / healthRate;
+        double childMortality = baseOthersMortality * (0.75 - (normalizedHealthRate * 0.35));
         int childDeaths = (int) (ageDistribution.get(Age.CHILD) * childMortality);
         ageDistribution.put(Age.CHILD, ageDistribution.get(Age.CHILD) - childDeaths);
         totalDeathsThisTurn += childDeaths;
 
-        double babyMortality = baseBabyMortality / healthRate;
+        double babyMortality = baseBabyMortality * (0.95 - (normalizedHealthRate * 0.5));
         int babyDeaths = (int) (ageDistribution.get(Age.BABY) * babyMortality);
         ageDistribution.put(Age.BABY, ageDistribution.get(Age.BABY) - babyDeaths);
         totalDeathsThisTurn += babyDeaths;

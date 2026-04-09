@@ -19,7 +19,7 @@ public class TimeManager {
 
     }
 
-    private GameManager gameManager;
+    private final GameManager gameManager;
 
     private GameSpeed currentSpeed;
 
@@ -33,7 +33,9 @@ public class TimeManager {
 
     private float updateAccumulator;
 
-    private Country country;
+    private float dayAccumulator;
+
+    private final Country country;
 
     private boolean autoSave;
 
@@ -41,7 +43,7 @@ public class TimeManager {
     private int currentMonth;
     private int currentYear;
 
-    TimeManager(GameManager gameManager, Country country) {
+    public TimeManager(GameManager gameManager, Country country) {
         this.gameManager = gameManager;
         this.monthDuration = 60f; // 60 seconds in real life = 1 month in the game.
         this.updateInterval = 1f;
@@ -49,6 +51,7 @@ public class TimeManager {
         this.isRunning = false;
         this.cycleAccumulator = 0f;
         this.updateAccumulator = 0f;
+        this.dayAccumulator = 0f;
         this.country = country;
         this.currentDay = 1;
         this.currentMonth = 1;
@@ -123,22 +126,36 @@ public class TimeManager {
         float scaledDelta = delta * currentSpeed.multiplier;
 
         cycleAccumulator += scaledDelta;
-        updateAccumulator += scaledDelta;
+        updateAccumulator += delta;
+        dayAccumulator += scaledDelta;
 
         updateSimulationStep();
     }
 
     public void updateSimulationStep() {
-        if (cycleAccumulator > monthDuration) {
-            currentMonth = 1;
-            cycleAccumulator = 0f;
-            triggerAutoSave();
+        while (updateAccumulator >= updateInterval) {
+            updateAccumulator -= updateInterval;
+            gameManager.applyEconomyStep(updateInterval);
         }
 
-        if (updateAccumulator > updateInterval) {
-            updateAccumulator = 0f;
+        float dayDuration = monthDuration / 30f;
+        while (dayAccumulator >= dayDuration) {
+            dayAccumulator -= dayDuration;
+            onDayEnd();
         }
 
+    }
+
+    public void onDayEnd() {
+        currentDay++;
+        if (currentDay > 30) {
+            currentDay = 1;
+            onMonthEnd(null);
+            gameManager.simulationStep();
+            if (gameManager.getSettings().getAutoSave()) {
+                triggerAutoSave();
+            }
+        }
     }
 
     public void onMonthEnd(Date date) {

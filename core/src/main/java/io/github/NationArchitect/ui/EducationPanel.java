@@ -10,16 +10,16 @@ import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.Array;
-import io.github.NationArchitect.modules.Building;
+import io.github.NationArchitect.modules.UIBuilding;
 import io.github.NationArchitect.modules.BuildingRegistry;
-import io.github.NationArchitect.modules.Region;
+import io.github.NationArchitect.modules.UIRegion;
 import io.github.NationArchitect.screens.BaseScreen;
 
 public class EducationPanel extends UIPanel {
 
-    private Region currentRegion;
+    private UIRegion currentRegion;
     private Label regionNameLabel;
-    private Array<Building> buildings;
+    private Array<UIBuilding> buildings;
     private int currentPage = 0;      // 0 = bina 0-1, 1 = bina 2-3, 2 = bina 4
     private static final int PER_PAGE = 2;
 
@@ -117,7 +117,7 @@ public class EducationPanel extends UIPanel {
         pageLabel.setText((currentPage + 1) + " / " + totalPages);
 
         for (int i = start; i < end; i++) {
-            Building b = buildings.get(i);
+            UIBuilding b = buildings.get(i);
             Table card = buildCard(b, skin);
             cardContainer.add(card).expandX().fillY().padRight(i < end - 1 ? 12 : 0);
         }
@@ -128,7 +128,7 @@ public class EducationPanel extends UIPanel {
         }
     }
 
-    private Table buildCard(Building building, Skin skin) {
+    private Table buildCard(UIBuilding building, Skin skin) {
         Table card = new Table();
         card.setBackground(makeDarkBg(0.05f, 0.1f, 0.2f, 0.92f));
         card.pad(12);
@@ -199,21 +199,25 @@ public class EducationPanel extends UIPanel {
         parent.add(lbl).left().padBottom(2).row();
     }
 
-    private void onBuildClicked(Building building) {
+    private void onBuildClicked(UIBuilding building) {
         if (currentRegion == null) {
             Gdx.app.log("EducationPanel", "No region selected!");
             return;
         }
-        // TO DO: bütçe kontrolü ve region metrik güncelleme
-        Gdx.app.log("EducationPanel",
-            "Building: " + building.getName() + " in " + currentRegion.getName());
+        boolean constructed = getGameScreen() != null
+            && getGameScreen().getGameManager() != null
+            && currentRegion.constructBuilding(building, getGameScreen().getGameManager().getCountry());
+        Gdx.app.log(
+            "EducationPanel",
+            (constructed ? "Built: " : "Build failed: ") + building.getName() + " in " + currentRegion.getName()
+        );
     }
 
-    public void setRegion(Region region) {
+    public void setRegion(UIRegion region) {
         loadRegion(region);
     }
 
-    public void loadRegion(Region region) {
+    public void loadRegion(UIRegion region) {
         this.currentRegion = region;
         if (region == null) return;
         if (regionNameLabel != null)

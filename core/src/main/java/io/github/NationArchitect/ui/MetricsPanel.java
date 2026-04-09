@@ -8,16 +8,19 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
-import io.github.NationArchitect.modules.Region;
+import io.github.NationArchitect.model.land.Country;
+import io.github.NationArchitect.model.population.Population;
+import io.github.NationArchitect.modules.UIRegion;
 import io.github.NationArchitect.screens.BaseScreen;
+import io.github.NationArchitect.screens.GameScreen;
 
 public class MetricsPanel extends UIPanel {
 
-    private Region currentRegion;
+    private UIRegion currentRegion;
     private Label regionNameLabel;
 
-    private ProgressBar happinessBar, unemploymentBar, educationBar, healthBar, crimeBar;
-    private Label happinessVal, unemploymentVal, educationVal, healthVal, crimeVal;
+    private ProgressBar happinessBar, unemploymentBar, educationBar, healthBar, crimeBar, stabilityBar;
+    private Label happinessVal, unemploymentVal, educationVal, healthVal, crimeVal, stabilityVal;
     private Label populationTotalVal;
 
     // Pasta grafik için texture'lar
@@ -80,6 +83,7 @@ public class MetricsPanel extends UIPanel {
         educationBar    = addMetricRow(inner, "icons/education logo.jpeg",       "EDUCATION LEVEL",   0x00E5FFFF, skin);
         healthBar       = addMetricRow(inner, "icons/health status.png",        "HEALTH STATUS",     0x44FF88FF, skin);
         crimeBar        = addMetricRow(inner, "icons/crimerate v2.png",         "CRIME RATE",        0xFF8800FF, skin);
+        stabilityBar    = addMetricRow(inner, "icons/security_logo.png",        "STABILITY",         0xFFD700FF, skin);
 
         // ── 3. Population başlığı ──
         Table popHeader = new Table();
@@ -220,32 +224,39 @@ public class MetricsPanel extends UIPanel {
             case "EDUCATION LEVEL":   educationVal    = val; break;
             case "HEALTH STATUS":     healthVal       = val; break;
             case "CRIME RATE":        crimeVal        = val; break;
+            case "STABILITY":         stabilityVal    = val; break;
         }
     }
 
-    public void loadRegion(Region region) {
+    public void loadRegion(UIRegion region) {
         this.currentRegion = region;
-        if (region == null) return;
+        if (region == null) {
+            loadCountryMetrics();
+            return;
+        }
 
         regionNameLabel.setText(region.getName().toUpperCase());
 
         float happiness    = region.getHappiness();
-        float unemployment = 100f - region.getSecurity();
+        float unemployment = region.getUnemployment();
         float education    = region.getEducation();
         float health       = region.getHealth();
-        float crime        = 100f - region.getSecurity();
+        float crime        = region.getCrimeRate();
+        float stability    = 100f - crime;
 
         happinessBar.setValue(happiness);
         unemploymentBar.setValue(unemployment);
         educationBar.setValue(education);
         healthBar.setValue(health);
         crimeBar.setValue(crime);
+        stabilityBar.setValue(stability);
 
         if (happinessVal    != null) happinessVal.setText((int) happiness + "%");
         if (unemploymentVal != null) unemploymentVal.setText((int) unemployment + "%");
         if (educationVal    != null) educationVal.setText((int) education + "%");
         if (healthVal       != null) healthVal.setText((int) health + "%");
         if (crimeVal        != null) crimeVal.setText((int) crime + "%");
+        if (stabilityVal    != null) stabilityVal.setText((int) stability + "%");
 
         if (populationTotalVal != null)
             populationTotalVal.setText(String.format("%,d", region.getTotalPopulation()));
@@ -269,6 +280,84 @@ public class MetricsPanel extends UIPanel {
         updateAgeChart(a0, a18, a24, a65);
     }
 
+    private void loadCountryMetrics() {
+        Country country = getCountry();
+        if (country == null) {
+            return;
+        }
+
+        regionNameLabel.setText(country.getName() == null || country.getName().isBlank() ? "COUNTRY" : country.getName().toUpperCase());
+
+        float happiness = (float) country.getMetricValue(io.github.NationArchitect.model.metric.MetricType.HAPPINESS);
+        float unemployment = (float) country.getMetricValue(io.github.NationArchitect.model.metric.MetricType.UNEMPLOYMENT);
+        float education = (float) country.getMetricValue(io.github.NationArchitect.model.metric.MetricType.EDUCATION_LEVEL);
+        float health = (float) country.getMetricValue(io.github.NationArchitect.model.metric.MetricType.HEALTH_RATE);
+        float crime = (float) country.getMetricValue(io.github.NationArchitect.model.metric.MetricType.CRIME_RATE);
+        float stability = (float) country.getMetricValue(io.github.NationArchitect.model.metric.MetricType.STABILITY);
+
+        happinessBar.setValue(happiness);
+        unemploymentBar.setValue(unemployment);
+        educationBar.setValue(education);
+        healthBar.setValue(health);
+        crimeBar.setValue(crime);
+        stabilityBar.setValue(stability);
+
+        if (happinessVal != null) happinessVal.setText((int) happiness + "%");
+        if (unemploymentVal != null) unemploymentVal.setText((int) unemployment + "%");
+        if (educationVal != null) educationVal.setText((int) education + "%");
+        if (healthVal != null) healthVal.setText((int) health + "%");
+        if (crimeVal != null) crimeVal.setText((int) crime + "%");
+        if (stabilityVal != null) stabilityVal.setText((int) stability + "%");
+
+        long totalPopulation = country.getPopulation() == null ? 0 : country.getPopulation().getTotalPopulation();
+        if (populationTotalVal != null) {
+            populationTotalVal.setText(String.format("%,d", totalPopulation));
+        }
+
+        float male = getCountryGenderRatio(country, io.github.NationArchitect.model.population.Gender.MALE) * 100f;
+        float female = getCountryGenderRatio(country, io.github.NationArchitect.model.population.Gender.FEMALE) * 100f;
+        if (maleLbl != null) maleLbl.setText(String.format("\u25cf Male   %.0f%%", male));
+        if (femaleLbl != null) femaleLbl.setText(String.format("\u25cf Female %.0f%%", female));
+        updateGenderChart(male, female);
+
+        float a0 = getCountryAgeRatio(country,
+            io.github.NationArchitect.model.population.Age.BABY,
+            io.github.NationArchitect.model.population.Age.CHILD,
+            io.github.NationArchitect.model.population.Age.TEENAGER) * 100f;
+        float a18 = getCountryAgeRatio(country, io.github.NationArchitect.model.population.Age.YOUNG_ADULT) * 100f;
+        float a24 = getCountryAgeRatio(country, io.github.NationArchitect.model.population.Age.ADULT) * 100f;
+        float a65 = getCountryAgeRatio(country, io.github.NationArchitect.model.population.Age.ELDERLY) * 100f;
+        if (age0Lbl != null) age0Lbl.setText(String.format("\u25cf 0-18   %.0f%%", a0));
+        if (age18Lbl != null) age18Lbl.setText(String.format("\u25cf 18-24  %.0f%%", a18));
+        if (age24Lbl != null) age24Lbl.setText(String.format("\u25cf 24-65  %.0f%%", a24));
+        if (age65Lbl != null) age65Lbl.setText(String.format("\u25cf 65+    %.0f%%", a65));
+        updateAgeChart(a0, a18, a24, a65);
+    }
+
+    private Country getCountry() {
+        GameScreen gameScreen = rootScreen instanceof GameScreen ? (GameScreen) rootScreen : null;
+        return gameScreen == null || gameScreen.getGameManager() == null ? null : gameScreen.getGameManager().getCountry();
+    }
+
+    private float getCountryGenderRatio(Country country, io.github.NationArchitect.model.population.Gender gender) {
+        if (!(country.getMutablePopulation() instanceof Population) || country.getPopulation() == null || country.getPopulation().getTotalPopulation() == 0) {
+            return 0f;
+        }
+        Population population = country.getMutablePopulation();
+        return population.getGenderDistribution().getOrDefault(gender, 0) / (float) country.getPopulation().getTotalPopulation();
+    }
+
+    private float getCountryAgeRatio(Country country, io.github.NationArchitect.model.population.Age... ages) {
+        if (country.getPopulation() == null || country.getPopulation().getTotalPopulation() == 0) {
+            return 0f;
+        }
+        int total = 0;
+        for (io.github.NationArchitect.model.population.Age age : ages) {
+            total += country.getPopulation().getAgeDistribution(age);
+        }
+        return total / (float) country.getPopulation().getTotalPopulation();
+    }
+
     private void updateGenderChart(float male, float female) {
         if (genderChartTex != null) genderChartTex.dispose();
         genderChartTex = buildPieChart(
@@ -289,7 +378,7 @@ public class MetricsPanel extends UIPanel {
     }
 
     @Override
-    public void refreshData() { if (currentRegion != null) loadRegion(currentRegion); }
+    public void refreshData() { loadRegion(currentRegion); }
 
     private ProgressBar.ProgressBarStyle makeBarStyle(int rgbaColor) {
         Color c = new Color(rgbaColor);

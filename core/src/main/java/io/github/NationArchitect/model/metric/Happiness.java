@@ -22,15 +22,15 @@ public class Happiness extends Metric{
         double education = region.getLastMonthMetricValue(MetricType.EDUCATION_LEVEL);
         double infrastructure = region.getInfrastructurePerformance();
 
-        double positiveFactors = (healthRate * 0.35) + (education * 0.25) + (infrastructure * 0.1);
+        double positiveFactors = (healthRate * 0.30) + (education * 0.22) + (infrastructure * 0.18);
 
-       double taxPenalty = taxBurden * 1.2;
-        double crimePenalty = crimeRate * 0.5;
-        double unemploymentPenalty = unemployment * 0.8;
+        double taxPenalty = taxBurden * 0.9;
+        double crimePenalty = crimeRate * 0.35;
+        double unemploymentPenalty = unemployment * 0.55;
 
         double negativeFactors = taxPenalty + crimePenalty + unemploymentPenalty;
 
-        double rawHappiness = 50.0 + positiveFactors - negativeFactors;
+        double rawHappiness = 52.0 + positiveFactors - negativeFactors;
 
         double policyBonus = region.getTotalPolicyModifierForMetric(MetricType.HAPPINESS);
         double activeEffectBonus = region.getTotalActiveEffectModifierForMetric(MetricType.HAPPINESS);
@@ -59,4 +59,3 @@ public class Happiness extends Metric{
     }
 
 }
-

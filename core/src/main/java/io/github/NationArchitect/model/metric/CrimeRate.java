@@ -20,12 +20,12 @@ public class CrimeRate extends Metric{
         double securityPerformance = region.getComponentPerformance(ComponentType.SECURITY);
         double baseCrimeRate = region.getBaseCrimeRate();
 
-        double unemploymentPenalty = unemployment * 0.5;
-        double unhappinessPenalty = (100.0 - happiness) * 0.2;
+        double unemploymentPenalty = unemployment * 0.35;
+        double unhappinessPenalty = (100.0 - happiness) * 0.12;
         double rawCrime = baseCrimeRate + unemploymentPenalty + unhappinessPenalty;
 
-        double securityMultiplier = 1.0 - (securityPerformance * 0.007);
-        securityMultiplier = Math.max(0.1, securityMultiplier);
+        double securityMultiplier = 1.0 - (securityPerformance * 0.005);
+        securityMultiplier = Math.max(0.2, securityMultiplier);
 
         double policyBonus = region.getTotalPolicyModifierForMetric(MetricType.CRIME_RATE);
         double activeEffectBonus = region.getTotalActiveEffectModifierForMetric(MetricType.CRIME_RATE);
@@ -39,4 +39,3 @@ public class CrimeRate extends Metric{
 
     
 }
-

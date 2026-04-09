@@ -28,9 +28,13 @@ public abstract class Metric {
         return this.value - this.lastMonthValue;
     }
 
-    public void setValue(double value){this.value = value;}
+    public void setValue(double value){
+        this.value = Double.isFinite(value) ? Math.max(0.0, Math.min(100.0, value)) : 0.0;
+    }
 
-    public void setLastMonthValue(double lastMonthValue){this.lastMonthValue = lastMonthValue;}
+    public void setLastMonthValue(double lastMonthValue){
+        this.lastMonthValue = Double.isFinite(lastMonthValue) ? Math.max(0.0, Math.min(100.0, lastMonthValue)) : 0.0;
+    }
 
     public abstract void calculateForRegion(Region region);
 
@@ -74,4 +78,3 @@ public abstract class Metric {
         this.lastMonthValue = this.value;
     }
 }
-

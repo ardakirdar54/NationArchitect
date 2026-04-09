@@ -12,18 +12,18 @@ public final class SaveStateMapper {
     }
 
     public static SaveData.CountryState serializeCountryState(Country country) {
-        return SaveStateCodec.serializeCountryState(country);
+        return MinimalSaveStateCodec.serializeCountryState(country);
     }
 
     public static Country deserializeCountryState(SaveData.CountryState state) {
-        return SaveStateCodec.deserializeCountryState(state);
+        return MinimalSaveStateCodec.deserializeCountryState(state);
     }
 
     public static SaveData.RegionState serializeRegionState(Region region) {
-        return SaveStateCodec.serializeRegionState(region);
+        return MinimalSaveStateCodec.serializeRegionState(region);
     }
 
     public static Region deserializeRegionState(SaveData.RegionState state) {
-        return SaveStateCodec.deserializeRegionState(state);
+        return MinimalSaveStateCodec.deserializeRegionState(state);
     }
 }

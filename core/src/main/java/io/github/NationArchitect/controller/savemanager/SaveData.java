@@ -44,7 +44,7 @@ public class SaveData {
         String snapshotPath
     ) {
         return new SaveData(
-            SaveStateCodec.serializeCountryState(country),
+            MinimalSaveStateCodec.serializeCountryState(country),
             mapType,
             playTime,
             version,
@@ -58,11 +58,19 @@ public class SaveData {
     }
 
     public static SaveData fromJson(String rawJson) {
-        return createJson().fromJson(SaveData.class, rawJson);
+        String normalizedJson = rawJson;
+        if (normalizedJson != null && !normalizedJson.isEmpty() && normalizedJson.charAt(0) == '\uFEFF') {
+            normalizedJson = normalizedJson.substring(1);
+        }
+        SaveData saveData = createJson().fromJson(SaveData.class, normalizedJson);
+        if (saveData != null) {
+            MinimalSaveStateCodec.hydrateCountryState(saveData.country);
+        }
+        return saveData;
     }
 
     public static Document serializeCountry(Country country) {
-        CountryState countryState = SaveStateCodec.serializeCountryState(country);
+        CountryState countryState = MinimalSaveStateCodec.serializeCountryState(country);
         return countryState == null ? new Document() : Document.parse(createJson().toJson(countryState));
     }
 
@@ -71,7 +79,7 @@ public class SaveData {
             return null;
         }
         CountryState countryState = createJson().fromJson(CountryState.class, document.toJson());
-        return SaveStateCodec.deserializeCountryState(countryState);
+        return MinimalSaveStateCodec.deserializeCountryState(countryState);
     }
 
     public Document dataToDocument(int slot, String username) {
@@ -113,7 +121,7 @@ public class SaveData {
     }
 
     public Country restoreCountry() {
-        return SaveStateCodec.deserializeCountryState(country);
+        return MinimalSaveStateCodec.deserializeCountryState(country);
     }
 
     public CountryState getCountry() {
@@ -126,6 +134,10 @@ public class SaveData {
 
     public String getMapType() {
         return mapType;
+    }
+
+    public void setMapType(String mapType) {
+        this.mapType = mapType;
     }
 
     public double getPlayTime() {
@@ -149,6 +161,7 @@ public class SaveData {
         json.setOutputType(JsonWriter.OutputType.json);
         json.setTypeName(null);
         json.setUsePrototypes(false);
+        json.setIgnoreUnknownFields(true);
         return json;
     }
 

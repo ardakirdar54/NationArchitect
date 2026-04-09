@@ -22,7 +22,7 @@ public class Unemployment extends Metric{
         }
 
         int unemployedPeople = Math.max(0, workForce - totalWorkers);
-        double unemploymentRate = ((double) (unemployedPeople / workForce)) * 100;
+        double unemploymentRate = (((double) unemployedPeople) / workForce) * 100.0;
 
         double policyBonus = region.getTotalPolicyModifierForMetric(MetricType.UNEMPLOYMENT);
         double activeEffectBonus = region.getTotalActiveEffectModifierForMetric(MetricType.UNEMPLOYMENT);
@@ -32,4 +32,3 @@ public class Unemployment extends Metric{
         this.setValue(finalUnemployment);
     }
 }
-

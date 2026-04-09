@@ -1,8 +1,9 @@
-﻿package io.github.NationArchitect.model.land;
+package io.github.NationArchitect.model.land;
 
 import java.util.EnumMap;
 
 import io.github.NationArchitect.model.Effect.Policy;
+import io.github.NationArchitect.model.economy.CountryEconomy;
 import io.github.NationArchitect.model.economy.Economy;
 import io.github.NationArchitect.model.metric.*;
 import io.github.NationArchitect.model.population.Age;
@@ -27,14 +28,18 @@ public class Country extends Land {
     @Override
     public void implementPolicy(Policy policy) {
         for (Region region : regions) {
-            region.implementPolicy(policy);
+            if (region != null) {
+                region.implementPolicy(policy);
+            }
         }
     }
 
     @Override
     public void cancelPolicy(Policy policy) {
         for (Region region : regions) {
-            region.cancelPolicy(policy);
+            if (region != null) {
+                region.cancelPolicy(policy);
+            }
         }
     }
 
@@ -52,6 +57,11 @@ public class Country extends Land {
 
         for (Metric metric : this.metrics.values()) {
             metric.calculateForCountry(this);
+        }
+
+        calculatePopulation();
+        if (this.getEconomy() instanceof CountryEconomy) {
+            ((CountryEconomy) this.getEconomy()).update(this);
         }
     }
 
@@ -177,11 +187,6 @@ public class Country extends Land {
         }
     }
 
-    public Region[] getRegions(){return this.regions;}
-
-    public Country setRegions(Region[] regions) {
-        this.regions = regions;
-        return this;
     public void calculatePopulation(){
         EnumMap<Age, Integer> ageDistribution = new EnumMap<>(Age.class);
         EnumMap<Gender, Integer> genderDistribution = new EnumMap<>(Gender.class);
@@ -189,19 +194,30 @@ public class Country extends Land {
         for(Age age : Age.values()){
             int total = 0;
             for(Region region : this.regions){
-                total += region.population.getAgeDistribution().get(age);
+                if (region != null && region.population != null && region.population.getAgeDistribution() != null) {
+                    total += region.population.getAgeDistribution().getOrDefault(age, 0);
+                }
             }
             ageDistribution.put(age, total);
         }
         for(Gender gender : Gender.values()){
             int total = 0;
             for(Region region : this.regions){
-                total += region.population.getGenderDistribution().get(gender);
+                if (region != null && region.population != null && region.population.getGenderDistribution() != null) {
+                    total += region.population.getGenderDistribution().getOrDefault(gender, 0);
+                }
             }
             genderDistribution.put(gender, total);
         }
         this.population.setAgeDistribution(ageDistribution);
         this.population.setGenderDistribution(genderDistribution);
 
+    }
+
+    public Region[] getRegions(){return this.regions;}
+
+    public Country setRegions(Region[] regions) {
+        this.regions = regions;
+        return this;
     }
 }

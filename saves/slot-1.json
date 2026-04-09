@@ -1,0 +1,7526 @@
+{
+"country": {
+	"name": "jghhg",
+	"population": {
+		"ageDistribution": [
+			{
+				"key": "BABY",
+				"value": 0
+			},
+			{
+				"key": "CHILD",
+				"value": 0
+			},
+			{
+				"key": "TEENAGER",
+				"value": 1968358
+			},
+			{
+				"key": "YOUNG_ADULT",
+				"value": 0
+			},
+			{
+				"key": "ADULT",
+				"value": 0
+			},
+			{
+				"key": "ELDERLY",
+				"value": 0
+			}
+		],
+		"genderDistribution": [
+			{
+				"key": "MALE",
+				"value": 0
+			},
+			{
+				"key": "FEMALE",
+				"value": 0
+			}
+		],
+		"births": 0,
+		"deaths": 0
+	},
+	"metrics": [
+		{
+			"type": "HAPPINESS",
+			"value": 6.056606322222221,
+			"lastMonthValue": 50
+		},
+		{
+			"type": "UNEMPLOYMENT",
+			"value": 12.49751111111111,
+			"lastMonthValue": 0
+		},
+		{
+			"type": "CRIME_RATE",
+			"value": 1.2410028533333333,
+			"lastMonthValue": 50
+		},
+		{
+			"type": "EDUCATION_LEVEL",
+			"value": 0,
+			"lastMonthValue": 50
+		},
+		{
+			"type": "HEALTH_RATE",
+			"value": 0,
+			"lastMonthValue": 50
+		},
+		{
+			"type": "STABILITY",
+			"value": 0,
+			"lastMonthValue": 0
+		}
+	],
+	"economy": {
+		"kind": "CountryEconomy",
+		"income": 65001.201,
+		"expanse": 47500,
+		"balance": 17501.201,
+		"tax": {
+			"incomeTaxRate": 7,
+			"propertyTaxRate": 7,
+			"vatRate": 7,
+			"exciseTaxRate": 7,
+			"corporateTaxRate": 7,
+			"productionTaxRate": 7
+		},
+		"taxRevenues": [
+			{
+				"key": "INCOME_TAX",
+				"value": 678.475
+			},
+			{
+				"key": "PROPERTY_TAX",
+				"value": 41772.626000000004
+			},
+			{
+				"key": "VAT",
+				"value": 94.50000000000001
+			},
+			{
+				"key": "EXCISE_TAX",
+				"value": 5.6000000000000005
+			},
+			{
+				"key": "CORPORATE_TAX",
+				"value": 1050
+			},
+			{
+				"key": "PRODUCTION_TAX",
+				"value": 1400.0000000000002
+			}
+		],
+		"componentBudgets": [
+			{
+				"key": "FACTORY",
+				"value": 5000
+			},
+			{
+				"key": "OFFICE",
+				"value": 0
+			},
+			{
+				"key": "TOURISM",
+				"value": 0
+			},
+			{
+				"key": "AGRICULTURE",
+				"value": 0
+			},
+			{
+				"key": "HEALTH_SERVICES",
+				"value": 4500
+			},
+			{
+				"key": "EDUCATION",
+				"value": 0
+			},
+			{
+				"key": "SECURITY",
+				"value": 6000
+			},
+			{
+				"key": "ROAD_TRANSPORT",
+				"value": 0
+			},
+			{
+				"key": "RAIL_TRANSPORT",
+				"value": 0
+			},
+			{
+				"key": "MARINE_TRANSPORT",
+				"value": 0
+			},
+			{
+				"key": "AIR_TRANSPORT",
+				"value": 0
+			},
+			{
+				"key": "ROAD_NETWORK",
+				"value": 0
+			},
+			{
+				"key": "ELECTRICITY",
+				"value": 0
+			},
+			{
+				"key": "WATER_MANAGEMENT",
+				"value": 0
+			},
+			{
+				"key": "INTERNET",
+				"value": 0
+			}
+		],
+		"production": [],
+		"demand": [],
+		"treasury": 67135.10828333333,
+		"importValue": 32000,
+		"exportValue": 20000
+	},
+	"regions": [
+		{
+			"name": "Marmara",
+			"terrainType": "",
+			"undergroundResources": [],
+			"components": [
+				{
+					"componentType": "FACTORY",
+					"description": "Produces industrial goods.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.0647107369924282,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": -0.2
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "OFFICE",
+					"description": "Supports administration and service sector.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.252762968495368,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "TOURISM",
+					"description": "Generates income from visitors.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.6
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "AGRICULTURE",
+					"description": "Produces food and raw materials.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.1939224684724346,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 0.5
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "HEALTH_SERVICES",
+					"description": "Improves population health and lifespan.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.1939224684724346,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 1
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "AGRICULTURE",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "EDUCATION",
+					"description": "Increases knowledge and workforce quality.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.9932517730102834,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.1
+						},
+						{
+							"key": "EDUCATION_LEVEL",
+							"value": 1
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "FACTORY",
+							"value": 0.4
+						},
+						{
+							"key": "OFFICE",
+							"value": 0.5
+						},
+						{
+							"key": "AGRICULTURE",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.4
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "SECURITY",
+					"description": "Maintains public order and safety.",
+					"baseMonthlyBudget": 6000,
+					"finalMonthlyBudget": 6000,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.8820670490105383,
+					"totalOccupiedLand": 900,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.31
+						},
+						{
+							"key": "CRIME_RATE",
+							"value": -0.05
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 120
+						},
+						{
+							"key": "ENERGY",
+							"value": 180
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 40
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [
+						{
+							"name": "POLICE_STATION 1",
+							"typeName": "POLICE_STATION",
+							"workerAmount": 50,
+							"maxWorkerAmount": 50,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 16000,
+							"maintenanceCost": 6000,
+							"occupiedLand": 900,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.01
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.05
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 120
+								},
+								{
+									"key": "ENERGY",
+									"value": 180
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 40
+								}
+							]
+						}
+					],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ROAD_TRANSPORT",
+					"description": "Enables transport via trucks and cars.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.8754687373538999,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "RAIL_TRANSPORT",
+					"description": "Supports large-scale rail transportation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.8329091229351039,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.4
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "MARINE_TRANSPORT",
+					"description": "Allows sea transport and trade.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "AIR_TRANSPORT",
+					"description": "Enables fast air transportation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.6
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ROAD_NETWORK",
+					"description": "Enables land transportation and logistics.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.2
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						},
+						{
+							"key": "ROAD_TRANSPORT",
+							"value": 0.4
+						},
+						{
+							"key": "RAIL_TRANSPORT",
+							"value": 0.3
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ELECTRICITY",
+					"description": "Provides power for industry and services.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [],
+					"relatedComponents": [
+						{
+							"key": "FACTORY",
+							"value": 0.5
+						},
+						{
+							"key": "OFFICE",
+							"value": 0.4
+						},
+						{
+							"key": "AGRICULTURE",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.3
+						},
+						{
+							"key": "EDUCATION",
+							"value": 0.3
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "WATER_MANAGEMENT",
+					"description": "Ensures water supply and sanitation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 0.5
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "AGRICULTURE",
+							"value": 0.5
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.4
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "INTERNET",
+					"description": "Improves communication and digital access.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "OFFICE",
+							"value": 0.6
+						},
+						{
+							"key": "EDUCATION",
+							"value": 0.4
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				}
+			],
+			"activeEffects": [],
+			"activePolicies": [],
+			"landValue": 0,
+			"baseCrimeRate": 0,
+			"population": {
+				"ageDistribution": [
+					{
+						"key": "BABY",
+						"value": 0
+					},
+					{
+						"key": "CHILD",
+						"value": 0
+					},
+					{
+						"key": "TEENAGER",
+						"value": 187444
+					},
+					{
+						"key": "YOUNG_ADULT",
+						"value": 0
+					},
+					{
+						"key": "ADULT",
+						"value": 0
+					},
+					{
+						"key": "ELDERLY",
+						"value": 0
+					}
+				],
+				"genderDistribution": [
+					{
+						"key": "MALE",
+						"value": 0
+					},
+					{
+						"key": "FEMALE",
+						"value": 0
+					}
+				],
+				"births": 42162374,
+				"deaths": 2147483643
+			},
+			"metrics": [
+				{
+					"type": "HAPPINESS",
+					"value": 48.46249999999999,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "UNEMPLOYMENT",
+					"value": 100,
+					"lastMonthValue": 0
+				},
+				{
+					"type": "CRIME_RATE",
+					"value": 9.93,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "EDUCATION_LEVEL",
+					"value": 0,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "HEALTH_RATE",
+					"value": 0,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "STABILITY",
+					"value": 0,
+					"lastMonthValue": 0
+				}
+			],
+			"economy": {
+				"kind": "RegionEconomy",
+				"income": 11834.256000000001,
+				"expanse": 14300,
+				"balance": -2465.743999999999,
+				"tax": {
+					"incomeTaxRate": 7,
+					"propertyTaxRate": 7,
+					"vatRate": 7,
+					"exciseTaxRate": 7,
+					"corporateTaxRate": 7,
+					"productionTaxRate": 7
+				},
+				"taxRevenues": [
+					{
+						"key": "INCOME_TAX",
+						"value": 0
+					},
+					{
+						"key": "PROPERTY_TAX",
+						"value": 11808.972000000002
+					},
+					{
+						"key": "VAT",
+						"value": 23.8
+					},
+					{
+						"key": "EXCISE_TAX",
+						"value": 1.4840000000000002
+					},
+					{
+						"key": "CORPORATE_TAX",
+						"value": 0
+					},
+					{
+						"key": "PRODUCTION_TAX",
+						"value": 0
+					}
+				],
+				"componentBudgets": [
+					{
+						"key": "FACTORY",
+						"value": 0
+					},
+					{
+						"key": "OFFICE",
+						"value": 0
+					},
+					{
+						"key": "TOURISM",
+						"value": 0
+					},
+					{
+						"key": "AGRICULTURE",
+						"value": 0
+					},
+					{
+						"key": "HEALTH_SERVICES",
+						"value": 0
+					},
+					{
+						"key": "EDUCATION",
+						"value": 0
+					},
+					{
+						"key": "SECURITY",
+						"value": 6000
+					},
+					{
+						"key": "ROAD_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "RAIL_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "MARINE_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "AIR_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "ROAD_NETWORK",
+						"value": 0
+					},
+					{
+						"key": "ELECTRICITY",
+						"value": 0
+					},
+					{
+						"key": "WATER_MANAGEMENT",
+						"value": 0
+					},
+					{
+						"key": "INTERNET",
+						"value": 0
+					}
+				],
+				"production": [
+					{
+						"type": "WATER",
+						"amount": 0,
+						"salePrice": 8,
+						"purchasePrice": 10
+					},
+					{
+						"type": "ENERGY",
+						"amount": 0,
+						"salePrice": 12,
+						"purchasePrice": 15
+					},
+					{
+						"type": "TECHNOLOGY",
+						"amount": 0,
+						"salePrice": 90,
+						"purchasePrice": 110
+					},
+					{
+						"type": "INDUSTRIAL_GOOD",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 70
+					},
+					{
+						"type": "FOOD",
+						"amount": 0,
+						"salePrice": 15,
+						"purchasePrice": 20
+					},
+					{
+						"type": "TOURISM_SERVICE",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 0
+					}
+				],
+				"demand": [
+					{
+						"type": "WATER",
+						"amount": 120,
+						"salePrice": 8,
+						"purchasePrice": 10
+					},
+					{
+						"type": "ENERGY",
+						"amount": 180,
+						"salePrice": 12,
+						"purchasePrice": 15
+					},
+					{
+						"type": "TECHNOLOGY",
+						"amount": 40,
+						"salePrice": 90,
+						"purchasePrice": 110
+					},
+					{
+						"type": "INDUSTRIAL_GOOD",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 70
+					},
+					{
+						"type": "FOOD",
+						"amount": 0,
+						"salePrice": 15,
+						"purchasePrice": 20
+					},
+					{
+						"type": "TOURISM_SERVICE",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 0
+					}
+				],
+				"treasury": 0,
+				"importValue": 8300,
+				"exportValue": 0
+			}
+		},
+		{
+			"name": "Aegean",
+			"terrainType": "",
+			"undergroundResources": [],
+			"components": [
+				{
+					"componentType": "FACTORY",
+					"description": "Produces industrial goods.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.0647107369924282,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": -0.2
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "OFFICE",
+					"description": "Supports administration and service sector.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.252762968495368,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "TOURISM",
+					"description": "Generates income from visitors.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.6
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "AGRICULTURE",
+					"description": "Produces food and raw materials.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.1939224684724346,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 0.5
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "HEALTH_SERVICES",
+					"description": "Improves population health and lifespan.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.1939224684724346,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 1
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "AGRICULTURE",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "EDUCATION",
+					"description": "Increases knowledge and workforce quality.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.9932517730102834,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.1
+						},
+						{
+							"key": "EDUCATION_LEVEL",
+							"value": 1
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "FACTORY",
+							"value": 0.4
+						},
+						{
+							"key": "OFFICE",
+							"value": 0.5
+						},
+						{
+							"key": "AGRICULTURE",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.4
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "SECURITY",
+					"description": "Maintains public order and safety.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.9555114450274362,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ROAD_TRANSPORT",
+					"description": "Enables transport via trucks and cars.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.8754687373538999,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "RAIL_TRANSPORT",
+					"description": "Supports large-scale rail transportation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.8329091229351039,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.4
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "MARINE_TRANSPORT",
+					"description": "Allows sea transport and trade.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "AIR_TRANSPORT",
+					"description": "Enables fast air transportation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.6
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ROAD_NETWORK",
+					"description": "Enables land transportation and logistics.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.2
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						},
+						{
+							"key": "ROAD_TRANSPORT",
+							"value": 0.4
+						},
+						{
+							"key": "RAIL_TRANSPORT",
+							"value": 0.3
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ELECTRICITY",
+					"description": "Provides power for industry and services.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [],
+					"relatedComponents": [
+						{
+							"key": "FACTORY",
+							"value": 0.5
+						},
+						{
+							"key": "OFFICE",
+							"value": 0.4
+						},
+						{
+							"key": "AGRICULTURE",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.3
+						},
+						{
+							"key": "EDUCATION",
+							"value": 0.3
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "WATER_MANAGEMENT",
+					"description": "Ensures water supply and sanitation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 0.5
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "AGRICULTURE",
+							"value": 0.5
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.4
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "INTERNET",
+					"description": "Improves communication and digital access.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "OFFICE",
+							"value": 0.6
+						},
+						{
+							"key": "EDUCATION",
+							"value": 0.4
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				}
+			],
+			"activeEffects": [],
+			"activePolicies": [],
+			"landValue": 0,
+			"baseCrimeRate": 0,
+			"population": {
+				"ageDistribution": [
+					{
+						"key": "BABY",
+						"value": 0
+					},
+					{
+						"key": "CHILD",
+						"value": 0
+					},
+					{
+						"key": "TEENAGER",
+						"value": 218694
+					},
+					{
+						"key": "YOUNG_ADULT",
+						"value": 0
+					},
+					{
+						"key": "ADULT",
+						"value": 0
+					},
+					{
+						"key": "ELDERLY",
+						"value": 0
+					}
+				],
+				"genderDistribution": [
+					{
+						"key": "MALE",
+						"value": 0
+					},
+					{
+						"key": "FEMALE",
+						"value": 0
+					}
+				],
+				"births": 49189437,
+				"deaths": 2147483643
+			},
+			"metrics": [
+				{
+					"type": "HAPPINESS",
+					"value": 48.46249999999999,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "UNEMPLOYMENT",
+					"value": 100,
+					"lastMonthValue": 0
+				},
+				{
+					"type": "CRIME_RATE",
+					"value": 9.93,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "EDUCATION_LEVEL",
+					"value": 0,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "HEALTH_RATE",
+					"value": 0,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "STABILITY",
+					"value": 0,
+					"lastMonthValue": 0
+				}
+			],
+			"economy": {
+				"kind": "RegionEconomy",
+				"income": 0,
+				"expanse": 0,
+				"balance": 0,
+				"tax": {
+					"incomeTaxRate": 7,
+					"propertyTaxRate": 7,
+					"vatRate": 7,
+					"exciseTaxRate": 7,
+					"corporateTaxRate": 7,
+					"productionTaxRate": 7
+				},
+				"taxRevenues": [
+					{
+						"key": "INCOME_TAX",
+						"value": 0
+					},
+					{
+						"key": "PROPERTY_TAX",
+						"value": 0
+					},
+					{
+						"key": "VAT",
+						"value": 0
+					},
+					{
+						"key": "EXCISE_TAX",
+						"value": 0
+					},
+					{
+						"key": "CORPORATE_TAX",
+						"value": 0
+					},
+					{
+						"key": "PRODUCTION_TAX",
+						"value": 0
+					}
+				],
+				"componentBudgets": [
+					{
+						"key": "FACTORY",
+						"value": 0
+					},
+					{
+						"key": "OFFICE",
+						"value": 0
+					},
+					{
+						"key": "TOURISM",
+						"value": 0
+					},
+					{
+						"key": "AGRICULTURE",
+						"value": 0
+					},
+					{
+						"key": "HEALTH_SERVICES",
+						"value": 0
+					},
+					{
+						"key": "EDUCATION",
+						"value": 0
+					},
+					{
+						"key": "SECURITY",
+						"value": 0
+					},
+					{
+						"key": "ROAD_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "RAIL_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "MARINE_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "AIR_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "ROAD_NETWORK",
+						"value": 0
+					},
+					{
+						"key": "ELECTRICITY",
+						"value": 0
+					},
+					{
+						"key": "WATER_MANAGEMENT",
+						"value": 0
+					},
+					{
+						"key": "INTERNET",
+						"value": 0
+					}
+				],
+				"production": [
+					{
+						"type": "WATER",
+						"amount": 0,
+						"salePrice": 8,
+						"purchasePrice": 10
+					},
+					{
+						"type": "ENERGY",
+						"amount": 0,
+						"salePrice": 12,
+						"purchasePrice": 15
+					},
+					{
+						"type": "TECHNOLOGY",
+						"amount": 0,
+						"salePrice": 90,
+						"purchasePrice": 110
+					},
+					{
+						"type": "INDUSTRIAL_GOOD",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 70
+					},
+					{
+						"type": "FOOD",
+						"amount": 0,
+						"salePrice": 15,
+						"purchasePrice": 20
+					},
+					{
+						"type": "TOURISM_SERVICE",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 0
+					}
+				],
+				"demand": [
+					{
+						"type": "WATER",
+						"amount": 0,
+						"salePrice": 8,
+						"purchasePrice": 10
+					},
+					{
+						"type": "ENERGY",
+						"amount": 0,
+						"salePrice": 12,
+						"purchasePrice": 15
+					},
+					{
+						"type": "TECHNOLOGY",
+						"amount": 0,
+						"salePrice": 90,
+						"purchasePrice": 110
+					},
+					{
+						"type": "INDUSTRIAL_GOOD",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 70
+					},
+					{
+						"type": "FOOD",
+						"amount": 0,
+						"salePrice": 15,
+						"purchasePrice": 20
+					},
+					{
+						"type": "TOURISM_SERVICE",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 0
+					}
+				],
+				"treasury": 0,
+				"importValue": 0,
+				"exportValue": 0
+			}
+		},
+		{
+			"name": "Mediterranean",
+			"terrainType": "",
+			"undergroundResources": [],
+			"components": [
+				{
+					"componentType": "FACTORY",
+					"description": "Produces industrial goods.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.0647107369924282,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": -0.2
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "OFFICE",
+					"description": "Supports administration and service sector.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.252762968495368,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "TOURISM",
+					"description": "Generates income from visitors.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.6
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "AGRICULTURE",
+					"description": "Produces food and raw materials.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.1939224684724346,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 0.5
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "HEALTH_SERVICES",
+					"description": "Improves population health and lifespan.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.1939224684724346,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 1
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "AGRICULTURE",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "EDUCATION",
+					"description": "Increases knowledge and workforce quality.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.9932517730102834,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.1
+						},
+						{
+							"key": "EDUCATION_LEVEL",
+							"value": 1
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "FACTORY",
+							"value": 0.4
+						},
+						{
+							"key": "OFFICE",
+							"value": 0.5
+						},
+						{
+							"key": "AGRICULTURE",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.4
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "SECURITY",
+					"description": "Maintains public order and safety.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.9555114450274362,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ROAD_TRANSPORT",
+					"description": "Enables transport via trucks and cars.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.8754687373538999,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "RAIL_TRANSPORT",
+					"description": "Supports large-scale rail transportation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.8329091229351039,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.4
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "MARINE_TRANSPORT",
+					"description": "Allows sea transport and trade.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "AIR_TRANSPORT",
+					"description": "Enables fast air transportation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.6
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ROAD_NETWORK",
+					"description": "Enables land transportation and logistics.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.2
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						},
+						{
+							"key": "ROAD_TRANSPORT",
+							"value": 0.4
+						},
+						{
+							"key": "RAIL_TRANSPORT",
+							"value": 0.3
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ELECTRICITY",
+					"description": "Provides power for industry and services.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [],
+					"relatedComponents": [
+						{
+							"key": "FACTORY",
+							"value": 0.5
+						},
+						{
+							"key": "OFFICE",
+							"value": 0.4
+						},
+						{
+							"key": "AGRICULTURE",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.3
+						},
+						{
+							"key": "EDUCATION",
+							"value": 0.3
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "WATER_MANAGEMENT",
+					"description": "Ensures water supply and sanitation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 0.5
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "AGRICULTURE",
+							"value": 0.5
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.4
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "INTERNET",
+					"description": "Improves communication and digital access.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "OFFICE",
+							"value": 0.6
+						},
+						{
+							"key": "EDUCATION",
+							"value": 0.4
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				}
+			],
+			"activeEffects": [],
+			"activePolicies": [],
+			"landValue": 0,
+			"baseCrimeRate": 0,
+			"population": {
+				"ageDistribution": [
+					{
+						"key": "BABY",
+						"value": 0
+					},
+					{
+						"key": "CHILD",
+						"value": 0
+					},
+					{
+						"key": "TEENAGER",
+						"value": 249944
+					},
+					{
+						"key": "YOUNG_ADULT",
+						"value": 0
+					},
+					{
+						"key": "ADULT",
+						"value": 0
+					},
+					{
+						"key": "ELDERLY",
+						"value": 0
+					}
+				],
+				"genderDistribution": [
+					{
+						"key": "MALE",
+						"value": 0
+					},
+					{
+						"key": "FEMALE",
+						"value": 0
+					}
+				],
+				"births": 56216499,
+				"deaths": 2147483643
+			},
+			"metrics": [
+				{
+					"type": "HAPPINESS",
+					"value": 48.46249999999999,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "UNEMPLOYMENT",
+					"value": 100,
+					"lastMonthValue": 0
+				},
+				{
+					"type": "CRIME_RATE",
+					"value": 9.93,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "EDUCATION_LEVEL",
+					"value": 0,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "HEALTH_RATE",
+					"value": 0,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "STABILITY",
+					"value": 0,
+					"lastMonthValue": 0
+				}
+			],
+			"economy": {
+				"kind": "RegionEconomy",
+				"income": 0,
+				"expanse": 0,
+				"balance": 0,
+				"tax": {
+					"incomeTaxRate": 7,
+					"propertyTaxRate": 7,
+					"vatRate": 7,
+					"exciseTaxRate": 7,
+					"corporateTaxRate": 7,
+					"productionTaxRate": 7
+				},
+				"taxRevenues": [
+					{
+						"key": "INCOME_TAX",
+						"value": 0
+					},
+					{
+						"key": "PROPERTY_TAX",
+						"value": 0
+					},
+					{
+						"key": "VAT",
+						"value": 0
+					},
+					{
+						"key": "EXCISE_TAX",
+						"value": 0
+					},
+					{
+						"key": "CORPORATE_TAX",
+						"value": 0
+					},
+					{
+						"key": "PRODUCTION_TAX",
+						"value": 0
+					}
+				],
+				"componentBudgets": [
+					{
+						"key": "FACTORY",
+						"value": 0
+					},
+					{
+						"key": "OFFICE",
+						"value": 0
+					},
+					{
+						"key": "TOURISM",
+						"value": 0
+					},
+					{
+						"key": "AGRICULTURE",
+						"value": 0
+					},
+					{
+						"key": "HEALTH_SERVICES",
+						"value": 0
+					},
+					{
+						"key": "EDUCATION",
+						"value": 0
+					},
+					{
+						"key": "SECURITY",
+						"value": 0
+					},
+					{
+						"key": "ROAD_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "RAIL_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "MARINE_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "AIR_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "ROAD_NETWORK",
+						"value": 0
+					},
+					{
+						"key": "ELECTRICITY",
+						"value": 0
+					},
+					{
+						"key": "WATER_MANAGEMENT",
+						"value": 0
+					},
+					{
+						"key": "INTERNET",
+						"value": 0
+					}
+				],
+				"production": [
+					{
+						"type": "WATER",
+						"amount": 0,
+						"salePrice": 8,
+						"purchasePrice": 10
+					},
+					{
+						"type": "ENERGY",
+						"amount": 0,
+						"salePrice": 12,
+						"purchasePrice": 15
+					},
+					{
+						"type": "TECHNOLOGY",
+						"amount": 0,
+						"salePrice": 90,
+						"purchasePrice": 110
+					},
+					{
+						"type": "INDUSTRIAL_GOOD",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 70
+					},
+					{
+						"type": "FOOD",
+						"amount": 0,
+						"salePrice": 15,
+						"purchasePrice": 20
+					},
+					{
+						"type": "TOURISM_SERVICE",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 0
+					}
+				],
+				"demand": [
+					{
+						"type": "WATER",
+						"amount": 0,
+						"salePrice": 8,
+						"purchasePrice": 10
+					},
+					{
+						"type": "ENERGY",
+						"amount": 0,
+						"salePrice": 12,
+						"purchasePrice": 15
+					},
+					{
+						"type": "TECHNOLOGY",
+						"amount": 0,
+						"salePrice": 90,
+						"purchasePrice": 110
+					},
+					{
+						"type": "INDUSTRIAL_GOOD",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 70
+					},
+					{
+						"type": "FOOD",
+						"amount": 0,
+						"salePrice": 15,
+						"purchasePrice": 20
+					},
+					{
+						"type": "TOURISM_SERVICE",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 0
+					}
+				],
+				"treasury": 0,
+				"importValue": 0,
+				"exportValue": 0
+			}
+		},
+		{
+			"name": "Central Anatolia",
+			"terrainType": "",
+			"undergroundResources": [],
+			"components": [
+				{
+					"componentType": "FACTORY",
+					"description": "Produces industrial goods.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.0647107369924282,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": -0.2
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "OFFICE",
+					"description": "Supports administration and service sector.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.252762968495368,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "TOURISM",
+					"description": "Generates income from visitors.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.6
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "AGRICULTURE",
+					"description": "Produces food and raw materials.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.1939224684724346,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 0.5
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "HEALTH_SERVICES",
+					"description": "Improves population health and lifespan.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.1939224684724346,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 1
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "AGRICULTURE",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "EDUCATION",
+					"description": "Increases knowledge and workforce quality.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.9932517730102834,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.1
+						},
+						{
+							"key": "EDUCATION_LEVEL",
+							"value": 1
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "FACTORY",
+							"value": 0.4
+						},
+						{
+							"key": "OFFICE",
+							"value": 0.5
+						},
+						{
+							"key": "AGRICULTURE",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.4
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "SECURITY",
+					"description": "Maintains public order and safety.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.9555114450274362,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ROAD_TRANSPORT",
+					"description": "Enables transport via trucks and cars.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.8754687373538999,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "RAIL_TRANSPORT",
+					"description": "Supports large-scale rail transportation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.8329091229351039,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.4
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "MARINE_TRANSPORT",
+					"description": "Allows sea transport and trade.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "AIR_TRANSPORT",
+					"description": "Enables fast air transportation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.6
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ROAD_NETWORK",
+					"description": "Enables land transportation and logistics.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.2
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						},
+						{
+							"key": "ROAD_TRANSPORT",
+							"value": 0.4
+						},
+						{
+							"key": "RAIL_TRANSPORT",
+							"value": 0.3
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ELECTRICITY",
+					"description": "Provides power for industry and services.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [],
+					"relatedComponents": [
+						{
+							"key": "FACTORY",
+							"value": 0.5
+						},
+						{
+							"key": "OFFICE",
+							"value": 0.4
+						},
+						{
+							"key": "AGRICULTURE",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.3
+						},
+						{
+							"key": "EDUCATION",
+							"value": 0.3
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "WATER_MANAGEMENT",
+					"description": "Ensures water supply and sanitation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 0.5
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "AGRICULTURE",
+							"value": 0.5
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.4
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "INTERNET",
+					"description": "Improves communication and digital access.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "OFFICE",
+							"value": 0.6
+						},
+						{
+							"key": "EDUCATION",
+							"value": 0.4
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				}
+			],
+			"activeEffects": [],
+			"activePolicies": [],
+			"landValue": 0,
+			"baseCrimeRate": 0,
+			"population": {
+				"ageDistribution": [
+					{
+						"key": "BABY",
+						"value": 0
+					},
+					{
+						"key": "CHILD",
+						"value": 0
+					},
+					{
+						"key": "TEENAGER",
+						"value": 281194
+					},
+					{
+						"key": "YOUNG_ADULT",
+						"value": 0
+					},
+					{
+						"key": "ADULT",
+						"value": 0
+					},
+					{
+						"key": "ELDERLY",
+						"value": 0
+					}
+				],
+				"genderDistribution": [
+					{
+						"key": "MALE",
+						"value": 0
+					},
+					{
+						"key": "FEMALE",
+						"value": 0
+					}
+				],
+				"births": 63243562,
+				"deaths": 2147483643
+			},
+			"metrics": [
+				{
+					"type": "HAPPINESS",
+					"value": 48.46249999999999,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "UNEMPLOYMENT",
+					"value": 100,
+					"lastMonthValue": 0
+				},
+				{
+					"type": "CRIME_RATE",
+					"value": 9.93,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "EDUCATION_LEVEL",
+					"value": 0,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "HEALTH_RATE",
+					"value": 0,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "STABILITY",
+					"value": 0,
+					"lastMonthValue": 0
+				}
+			],
+			"economy": {
+				"kind": "RegionEconomy",
+				"income": 0,
+				"expanse": 0,
+				"balance": 0,
+				"tax": {
+					"incomeTaxRate": 7,
+					"propertyTaxRate": 7,
+					"vatRate": 7,
+					"exciseTaxRate": 7,
+					"corporateTaxRate": 7,
+					"productionTaxRate": 7
+				},
+				"taxRevenues": [
+					{
+						"key": "INCOME_TAX",
+						"value": 0
+					},
+					{
+						"key": "PROPERTY_TAX",
+						"value": 0
+					},
+					{
+						"key": "VAT",
+						"value": 0
+					},
+					{
+						"key": "EXCISE_TAX",
+						"value": 0
+					},
+					{
+						"key": "CORPORATE_TAX",
+						"value": 0
+					},
+					{
+						"key": "PRODUCTION_TAX",
+						"value": 0
+					}
+				],
+				"componentBudgets": [
+					{
+						"key": "FACTORY",
+						"value": 0
+					},
+					{
+						"key": "OFFICE",
+						"value": 0
+					},
+					{
+						"key": "TOURISM",
+						"value": 0
+					},
+					{
+						"key": "AGRICULTURE",
+						"value": 0
+					},
+					{
+						"key": "HEALTH_SERVICES",
+						"value": 0
+					},
+					{
+						"key": "EDUCATION",
+						"value": 0
+					},
+					{
+						"key": "SECURITY",
+						"value": 0
+					},
+					{
+						"key": "ROAD_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "RAIL_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "MARINE_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "AIR_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "ROAD_NETWORK",
+						"value": 0
+					},
+					{
+						"key": "ELECTRICITY",
+						"value": 0
+					},
+					{
+						"key": "WATER_MANAGEMENT",
+						"value": 0
+					},
+					{
+						"key": "INTERNET",
+						"value": 0
+					}
+				],
+				"production": [
+					{
+						"type": "WATER",
+						"amount": 0,
+						"salePrice": 8,
+						"purchasePrice": 10
+					},
+					{
+						"type": "ENERGY",
+						"amount": 0,
+						"salePrice": 12,
+						"purchasePrice": 15
+					},
+					{
+						"type": "TECHNOLOGY",
+						"amount": 0,
+						"salePrice": 90,
+						"purchasePrice": 110
+					},
+					{
+						"type": "INDUSTRIAL_GOOD",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 70
+					},
+					{
+						"type": "FOOD",
+						"amount": 0,
+						"salePrice": 15,
+						"purchasePrice": 20
+					},
+					{
+						"type": "TOURISM_SERVICE",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 0
+					}
+				],
+				"demand": [
+					{
+						"type": "WATER",
+						"amount": 0,
+						"salePrice": 8,
+						"purchasePrice": 10
+					},
+					{
+						"type": "ENERGY",
+						"amount": 0,
+						"salePrice": 12,
+						"purchasePrice": 15
+					},
+					{
+						"type": "TECHNOLOGY",
+						"amount": 0,
+						"salePrice": 90,
+						"purchasePrice": 110
+					},
+					{
+						"type": "INDUSTRIAL_GOOD",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 70
+					},
+					{
+						"type": "FOOD",
+						"amount": 0,
+						"salePrice": 15,
+						"purchasePrice": 20
+					},
+					{
+						"type": "TOURISM_SERVICE",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 0
+					}
+				],
+				"treasury": 0,
+				"importValue": 0,
+				"exportValue": 0
+			}
+		},
+		{
+			"name": "Black Sea",
+			"terrainType": "",
+			"undergroundResources": [],
+			"components": [
+				{
+					"componentType": "FACTORY",
+					"description": "Produces industrial goods.",
+					"baseMonthlyBudget": 5000,
+					"finalMonthlyBudget": 5000,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.009370899588448,
+					"totalOccupiedLand": 600,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": -0.2015
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 200
+						},
+						{
+							"key": "ENERGY",
+							"value": 300
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 50
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [
+						{
+							"name": "BASIC_FACTORY 1",
+							"typeName": "BASIC_FACTORY",
+							"workerAmount": 60,
+							"maxWorkerAmount": 60,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 12000,
+							"maintenanceCost": 5000,
+							"occupiedLand": 600,
+							"production": 400,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": -0.0015
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 300
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 50
+								}
+							]
+						}
+					],
+					"activeEffects": []
+				},
+				{
+					"componentType": "OFFICE",
+					"description": "Supports administration and service sector.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.252762968495368,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "TOURISM",
+					"description": "Generates income from visitors.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.6
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "AGRICULTURE",
+					"description": "Produces food and raw materials.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.1939224684724346,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 0.5
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "HEALTH_SERVICES",
+					"description": "Improves population health and lifespan.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.1939224684724346,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 1
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "AGRICULTURE",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "EDUCATION",
+					"description": "Increases knowledge and workforce quality.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.9932517730102834,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.1
+						},
+						{
+							"key": "EDUCATION_LEVEL",
+							"value": 1
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "FACTORY",
+							"value": 0.4
+						},
+						{
+							"key": "OFFICE",
+							"value": 0.5
+						},
+						{
+							"key": "AGRICULTURE",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.4
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "SECURITY",
+					"description": "Maintains public order and safety.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.9555114450274362,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ROAD_TRANSPORT",
+					"description": "Enables transport via trucks and cars.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.8754687373538999,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "RAIL_TRANSPORT",
+					"description": "Supports large-scale rail transportation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.8329091229351039,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.4
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "MARINE_TRANSPORT",
+					"description": "Allows sea transport and trade.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "AIR_TRANSPORT",
+					"description": "Enables fast air transportation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.6
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ROAD_NETWORK",
+					"description": "Enables land transportation and logistics.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.2
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						},
+						{
+							"key": "ROAD_TRANSPORT",
+							"value": 0.4
+						},
+						{
+							"key": "RAIL_TRANSPORT",
+							"value": 0.3
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ELECTRICITY",
+					"description": "Provides power for industry and services.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [],
+					"relatedComponents": [
+						{
+							"key": "FACTORY",
+							"value": 0.5
+						},
+						{
+							"key": "OFFICE",
+							"value": 0.4
+						},
+						{
+							"key": "AGRICULTURE",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.3
+						},
+						{
+							"key": "EDUCATION",
+							"value": 0.3
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "WATER_MANAGEMENT",
+					"description": "Ensures water supply and sanitation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 0.5
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "AGRICULTURE",
+							"value": 0.5
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.4
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "INTERNET",
+					"description": "Improves communication and digital access.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "OFFICE",
+							"value": 0.6
+						},
+						{
+							"key": "EDUCATION",
+							"value": 0.4
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				}
+			],
+			"activeEffects": [],
+			"activePolicies": [],
+			"landValue": 0,
+			"baseCrimeRate": 0,
+			"population": {
+				"ageDistribution": [
+					{
+						"key": "BABY",
+						"value": 0
+					},
+					{
+						"key": "CHILD",
+						"value": 0
+					},
+					{
+						"key": "TEENAGER",
+						"value": 312444
+					},
+					{
+						"key": "YOUNG_ADULT",
+						"value": 0
+					},
+					{
+						"key": "ADULT",
+						"value": 0
+					},
+					{
+						"key": "ELDERLY",
+						"value": 0
+					}
+				],
+				"genderDistribution": [
+					{
+						"key": "MALE",
+						"value": 0
+					},
+					{
+						"key": "FEMALE",
+						"value": 0
+					}
+				],
+				"births": 70270624,
+				"deaths": 2147483643
+			},
+			"metrics": [
+				{
+					"type": "HAPPINESS",
+					"value": 48.46249999999999,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "UNEMPLOYMENT",
+					"value": 100,
+					"lastMonthValue": 0
+				},
+				{
+					"type": "CRIME_RATE",
+					"value": 9.93,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "EDUCATION_LEVEL",
+					"value": 0,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "HEALTH_RATE",
+					"value": 0,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "STABILITY",
+					"value": 0,
+					"lastMonthValue": 0
+				}
+			],
+			"economy": {
+				"kind": "RegionEconomy",
+				"income": 36291.513000000006,
+				"expanse": 17000,
+				"balance": 19291.513000000006,
+				"tax": {
+					"incomeTaxRate": 7,
+					"propertyTaxRate": 7,
+					"vatRate": 7,
+					"exciseTaxRate": 7,
+					"corporateTaxRate": 7,
+					"productionTaxRate": 7
+				},
+				"taxRevenues": [
+					{
+						"key": "INCOME_TAX",
+						"value": 678.475
+					},
+					{
+						"key": "PROPERTY_TAX",
+						"value": 13122.648000000003
+					},
+					{
+						"key": "VAT",
+						"value": 38.50000000000001
+					},
+					{
+						"key": "EXCISE_TAX",
+						"value": 1.8900000000000001
+					},
+					{
+						"key": "CORPORATE_TAX",
+						"value": 1050
+					},
+					{
+						"key": "PRODUCTION_TAX",
+						"value": 1400.0000000000002
+					}
+				],
+				"componentBudgets": [
+					{
+						"key": "FACTORY",
+						"value": 5000
+					},
+					{
+						"key": "OFFICE",
+						"value": 0
+					},
+					{
+						"key": "TOURISM",
+						"value": 0
+					},
+					{
+						"key": "AGRICULTURE",
+						"value": 0
+					},
+					{
+						"key": "HEALTH_SERVICES",
+						"value": 0
+					},
+					{
+						"key": "EDUCATION",
+						"value": 0
+					},
+					{
+						"key": "SECURITY",
+						"value": 0
+					},
+					{
+						"key": "ROAD_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "RAIL_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "MARINE_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "AIR_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "ROAD_NETWORK",
+						"value": 0
+					},
+					{
+						"key": "ELECTRICITY",
+						"value": 0
+					},
+					{
+						"key": "WATER_MANAGEMENT",
+						"value": 0
+					},
+					{
+						"key": "INTERNET",
+						"value": 0
+					}
+				],
+				"production": [
+					{
+						"type": "WATER",
+						"amount": 0,
+						"salePrice": 8,
+						"purchasePrice": 10
+					},
+					{
+						"type": "ENERGY",
+						"amount": 0,
+						"salePrice": 12,
+						"purchasePrice": 15
+					},
+					{
+						"type": "TECHNOLOGY",
+						"amount": 0,
+						"salePrice": 90,
+						"purchasePrice": 110
+					},
+					{
+						"type": "INDUSTRIAL_GOOD",
+						"amount": 400,
+						"salePrice": 50,
+						"purchasePrice": 70
+					},
+					{
+						"type": "FOOD",
+						"amount": 0,
+						"salePrice": 15,
+						"purchasePrice": 20
+					},
+					{
+						"type": "TOURISM_SERVICE",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 0
+					}
+				],
+				"demand": [
+					{
+						"type": "WATER",
+						"amount": 200,
+						"salePrice": 8,
+						"purchasePrice": 10
+					},
+					{
+						"type": "ENERGY",
+						"amount": 300,
+						"salePrice": 12,
+						"purchasePrice": 15
+					},
+					{
+						"type": "TECHNOLOGY",
+						"amount": 50,
+						"salePrice": 90,
+						"purchasePrice": 110
+					},
+					{
+						"type": "INDUSTRIAL_GOOD",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 70
+					},
+					{
+						"type": "FOOD",
+						"amount": 0,
+						"salePrice": 15,
+						"purchasePrice": 20
+					},
+					{
+						"type": "TOURISM_SERVICE",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 0
+					}
+				],
+				"treasury": 0,
+				"importValue": 12000,
+				"exportValue": 20000
+			}
+		},
+		{
+			"name": "Eastern Anatolia",
+			"terrainType": "",
+			"undergroundResources": [],
+			"components": [
+				{
+					"componentType": "FACTORY",
+					"description": "Produces industrial goods.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.0647107369924282,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": -0.2
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "OFFICE",
+					"description": "Supports administration and service sector.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.252762968495368,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "TOURISM",
+					"description": "Generates income from visitors.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.6
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "AGRICULTURE",
+					"description": "Produces food and raw materials.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.1939224684724346,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 0.5
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "HEALTH_SERVICES",
+					"description": "Improves population health and lifespan.",
+					"baseMonthlyBudget": 4500,
+					"finalMonthlyBudget": 4500,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.1056319834283392,
+					"totalOccupiedLand": 700,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.312
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 1.045
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "AGRICULTURE",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 180
+						},
+						{
+							"key": "ENERGY",
+							"value": 220
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 60
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [
+						{
+							"name": "CLINIC 1",
+							"typeName": "CLINIC",
+							"workerAmount": 35,
+							"maxWorkerAmount": 35,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 12000,
+							"maintenanceCost": 4500,
+							"occupiedLand": 700,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.012
+								},
+								{
+									"key": "HEALTH_RATE",
+									"value": 0.045
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 180
+								},
+								{
+									"key": "ENERGY",
+									"value": 220
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 60
+								}
+							]
+						}
+					],
+					"activeEffects": []
+				},
+				{
+					"componentType": "EDUCATION",
+					"description": "Increases knowledge and workforce quality.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.9932517730102834,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.1
+						},
+						{
+							"key": "EDUCATION_LEVEL",
+							"value": 1
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "FACTORY",
+							"value": 0.4
+						},
+						{
+							"key": "OFFICE",
+							"value": 0.5
+						},
+						{
+							"key": "AGRICULTURE",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.4
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "SECURITY",
+					"description": "Maintains public order and safety.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.9555114450274362,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ROAD_TRANSPORT",
+					"description": "Enables transport via trucks and cars.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.8754687373538999,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "RAIL_TRANSPORT",
+					"description": "Supports large-scale rail transportation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.8329091229351039,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.4
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "MARINE_TRANSPORT",
+					"description": "Allows sea transport and trade.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "AIR_TRANSPORT",
+					"description": "Enables fast air transportation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.6
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ROAD_NETWORK",
+					"description": "Enables land transportation and logistics.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.2
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						},
+						{
+							"key": "ROAD_TRANSPORT",
+							"value": 0.4
+						},
+						{
+							"key": "RAIL_TRANSPORT",
+							"value": 0.3
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ELECTRICITY",
+					"description": "Provides power for industry and services.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [],
+					"relatedComponents": [
+						{
+							"key": "FACTORY",
+							"value": 0.5
+						},
+						{
+							"key": "OFFICE",
+							"value": 0.4
+						},
+						{
+							"key": "AGRICULTURE",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.3
+						},
+						{
+							"key": "EDUCATION",
+							"value": 0.3
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "WATER_MANAGEMENT",
+					"description": "Ensures water supply and sanitation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 0.5
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "AGRICULTURE",
+							"value": 0.5
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.4
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "INTERNET",
+					"description": "Improves communication and digital access.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "OFFICE",
+							"value": 0.6
+						},
+						{
+							"key": "EDUCATION",
+							"value": 0.4
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				}
+			],
+			"activeEffects": [],
+			"activePolicies": [],
+			"landValue": 0,
+			"baseCrimeRate": 0,
+			"population": {
+				"ageDistribution": [
+					{
+						"key": "BABY",
+						"value": 0
+					},
+					{
+						"key": "CHILD",
+						"value": 0
+					},
+					{
+						"key": "TEENAGER",
+						"value": 343694
+					},
+					{
+						"key": "YOUNG_ADULT",
+						"value": 0
+					},
+					{
+						"key": "ADULT",
+						"value": 0
+					},
+					{
+						"key": "ELDERLY",
+						"value": 0
+					}
+				],
+				"genderDistribution": [
+					{
+						"key": "MALE",
+						"value": 0
+					},
+					{
+						"key": "FEMALE",
+						"value": 0
+					}
+				],
+				"births": 77297687,
+				"deaths": 2147483643
+			},
+			"metrics": [
+				{
+					"type": "HAPPINESS",
+					"value": 48.46249999999999,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "UNEMPLOYMENT",
+					"value": 100,
+					"lastMonthValue": 0
+				},
+				{
+					"type": "CRIME_RATE",
+					"value": 9.93,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "EDUCATION_LEVEL",
+					"value": 0,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "HEALTH_RATE",
+					"value": 0,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "STABILITY",
+					"value": 0,
+					"lastMonthValue": 0
+				}
+			],
+			"economy": {
+				"kind": "RegionEconomy",
+				"income": 16875.432000000004,
+				"expanse": 16200,
+				"balance": 675.4320000000043,
+				"tax": {
+					"incomeTaxRate": 7,
+					"propertyTaxRate": 7,
+					"vatRate": 7,
+					"exciseTaxRate": 7,
+					"corporateTaxRate": 7,
+					"productionTaxRate": 7
+				},
+				"taxRevenues": [
+					{
+						"key": "INCOME_TAX",
+						"value": 0
+					},
+					{
+						"key": "PROPERTY_TAX",
+						"value": 16841.006000000005
+					},
+					{
+						"key": "VAT",
+						"value": 32.2
+					},
+					{
+						"key": "EXCISE_TAX",
+						"value": 2.226
+					},
+					{
+						"key": "CORPORATE_TAX",
+						"value": 0
+					},
+					{
+						"key": "PRODUCTION_TAX",
+						"value": 0
+					}
+				],
+				"componentBudgets": [
+					{
+						"key": "FACTORY",
+						"value": 0
+					},
+					{
+						"key": "OFFICE",
+						"value": 0
+					},
+					{
+						"key": "TOURISM",
+						"value": 0
+					},
+					{
+						"key": "AGRICULTURE",
+						"value": 0
+					},
+					{
+						"key": "HEALTH_SERVICES",
+						"value": 4500
+					},
+					{
+						"key": "EDUCATION",
+						"value": 0
+					},
+					{
+						"key": "SECURITY",
+						"value": 0
+					},
+					{
+						"key": "ROAD_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "RAIL_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "MARINE_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "AIR_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "ROAD_NETWORK",
+						"value": 0
+					},
+					{
+						"key": "ELECTRICITY",
+						"value": 0
+					},
+					{
+						"key": "WATER_MANAGEMENT",
+						"value": 0
+					},
+					{
+						"key": "INTERNET",
+						"value": 0
+					}
+				],
+				"production": [
+					{
+						"type": "WATER",
+						"amount": 0,
+						"salePrice": 8,
+						"purchasePrice": 10
+					},
+					{
+						"type": "ENERGY",
+						"amount": 0,
+						"salePrice": 12,
+						"purchasePrice": 15
+					},
+					{
+						"type": "TECHNOLOGY",
+						"amount": 0,
+						"salePrice": 90,
+						"purchasePrice": 110
+					},
+					{
+						"type": "INDUSTRIAL_GOOD",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 70
+					},
+					{
+						"type": "FOOD",
+						"amount": 0,
+						"salePrice": 15,
+						"purchasePrice": 20
+					},
+					{
+						"type": "TOURISM_SERVICE",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 0
+					}
+				],
+				"demand": [
+					{
+						"type": "WATER",
+						"amount": 180,
+						"salePrice": 8,
+						"purchasePrice": 10
+					},
+					{
+						"type": "ENERGY",
+						"amount": 220,
+						"salePrice": 12,
+						"purchasePrice": 15
+					},
+					{
+						"type": "TECHNOLOGY",
+						"amount": 60,
+						"salePrice": 90,
+						"purchasePrice": 110
+					},
+					{
+						"type": "INDUSTRIAL_GOOD",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 70
+					},
+					{
+						"type": "FOOD",
+						"amount": 0,
+						"salePrice": 15,
+						"purchasePrice": 20
+					},
+					{
+						"type": "TOURISM_SERVICE",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 0
+					}
+				],
+				"treasury": 0,
+				"importValue": 11700,
+				"exportValue": 0
+			}
+		},
+		{
+			"name": "Southeastern Anatolia",
+			"terrainType": "",
+			"undergroundResources": [],
+			"components": [
+				{
+					"componentType": "FACTORY",
+					"description": "Produces industrial goods.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.0647107369924282,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": -0.2
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "OFFICE",
+					"description": "Supports administration and service sector.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.252762968495368,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "TOURISM",
+					"description": "Generates income from visitors.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.6
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "AGRICULTURE",
+					"description": "Produces food and raw materials.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.1939224684724346,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 0.5
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "HEALTH_SERVICES",
+					"description": "Improves population health and lifespan.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 1.1939224684724346,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 1
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "AGRICULTURE",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "EDUCATION",
+					"description": "Increases knowledge and workforce quality.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.9932517730102834,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.1
+						},
+						{
+							"key": "EDUCATION_LEVEL",
+							"value": 1
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "FACTORY",
+							"value": 0.4
+						},
+						{
+							"key": "OFFICE",
+							"value": 0.5
+						},
+						{
+							"key": "AGRICULTURE",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.4
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "SECURITY",
+					"description": "Maintains public order and safety.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.9555114450274362,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ROAD_TRANSPORT",
+					"description": "Enables transport via trucks and cars.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.8754687373538999,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.3
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "RAIL_TRANSPORT",
+					"description": "Supports large-scale rail transportation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.8329091229351039,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.4
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "MARINE_TRANSPORT",
+					"description": "Allows sea transport and trade.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "AIR_TRANSPORT",
+					"description": "Enables fast air transportation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.6
+						}
+					],
+					"relatedComponents": [],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ROAD_NETWORK",
+					"description": "Enables land transportation and logistics.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.2
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						},
+						{
+							"key": "ROAD_TRANSPORT",
+							"value": 0.4
+						},
+						{
+							"key": "RAIL_TRANSPORT",
+							"value": 0.3
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "ELECTRICITY",
+					"description": "Provides power for industry and services.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [],
+					"relatedComponents": [
+						{
+							"key": "FACTORY",
+							"value": 0.5
+						},
+						{
+							"key": "OFFICE",
+							"value": 0.4
+						},
+						{
+							"key": "AGRICULTURE",
+							"value": 0.3
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.3
+						},
+						{
+							"key": "EDUCATION",
+							"value": 0.3
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "WATER_MANAGEMENT",
+					"description": "Ensures water supply and sanitation.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						},
+						{
+							"key": "HEALTH_RATE",
+							"value": 0.5
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "AGRICULTURE",
+							"value": 0.5
+						},
+						{
+							"key": "HEALTH_SERVICES",
+							"value": 0.4
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				},
+				{
+					"componentType": "INTERNET",
+					"description": "Improves communication and digital access.",
+					"baseMonthlyBudget": 0,
+					"finalMonthlyBudget": 0,
+					"budgetMultiplier": 1,
+					"budgetPercentage": 100,
+					"performance": 0.6931471805599453,
+					"totalOccupiedLand": 0,
+					"relatedMetrics": [
+						{
+							"key": "HAPPINESS",
+							"value": 0.2
+						}
+					],
+					"relatedComponents": [
+						{
+							"key": "OFFICE",
+							"value": 0.6
+						},
+						{
+							"key": "EDUCATION",
+							"value": 0.4
+						},
+						{
+							"key": "SECURITY",
+							"value": 0.2
+						}
+					],
+					"demand": [
+						{
+							"key": "WATER",
+							"value": 0
+						},
+						{
+							"key": "ENERGY",
+							"value": 0
+						},
+						{
+							"key": "TECHNOLOGY",
+							"value": 0
+						},
+						{
+							"key": "INDUSTRIAL_GOOD",
+							"value": 0
+						},
+						{
+							"key": "FOOD",
+							"value": 0
+						},
+						{
+							"key": "TOURISM_SERVICE",
+							"value": 0
+						}
+					],
+					"buildings": [],
+					"activeEffects": []
+				}
+			],
+			"activeEffects": [],
+			"activePolicies": [],
+			"landValue": 0,
+			"baseCrimeRate": 0,
+			"population": {
+				"ageDistribution": [
+					{
+						"key": "BABY",
+						"value": 0
+					},
+					{
+						"key": "CHILD",
+						"value": 0
+					},
+					{
+						"key": "TEENAGER",
+						"value": 374944
+					},
+					{
+						"key": "YOUNG_ADULT",
+						"value": 0
+					},
+					{
+						"key": "ADULT",
+						"value": 0
+					},
+					{
+						"key": "ELDERLY",
+						"value": 0
+					}
+				],
+				"genderDistribution": [
+					{
+						"key": "MALE",
+						"value": 0
+					},
+					{
+						"key": "FEMALE",
+						"value": 0
+					}
+				],
+				"births": 84324749,
+				"deaths": 2147483643
+			},
+			"metrics": [
+				{
+					"type": "HAPPINESS",
+					"value": 48.46249999999999,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "UNEMPLOYMENT",
+					"value": 100,
+					"lastMonthValue": 0
+				},
+				{
+					"type": "CRIME_RATE",
+					"value": 9.93,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "EDUCATION_LEVEL",
+					"value": 0,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "HEALTH_RATE",
+					"value": 0,
+					"lastMonthValue": 50
+				},
+				{
+					"type": "STABILITY",
+					"value": 0,
+					"lastMonthValue": 0
+				}
+			],
+			"economy": {
+				"kind": "RegionEconomy",
+				"income": 0,
+				"expanse": 0,
+				"balance": 0,
+				"tax": {
+					"incomeTaxRate": 7,
+					"propertyTaxRate": 7,
+					"vatRate": 7,
+					"exciseTaxRate": 7,
+					"corporateTaxRate": 7,
+					"productionTaxRate": 7
+				},
+				"taxRevenues": [
+					{
+						"key": "INCOME_TAX",
+						"value": 0
+					},
+					{
+						"key": "PROPERTY_TAX",
+						"value": 0
+					},
+					{
+						"key": "VAT",
+						"value": 0
+					},
+					{
+						"key": "EXCISE_TAX",
+						"value": 0
+					},
+					{
+						"key": "CORPORATE_TAX",
+						"value": 0
+					},
+					{
+						"key": "PRODUCTION_TAX",
+						"value": 0
+					}
+				],
+				"componentBudgets": [
+					{
+						"key": "FACTORY",
+						"value": 0
+					},
+					{
+						"key": "OFFICE",
+						"value": 0
+					},
+					{
+						"key": "TOURISM",
+						"value": 0
+					},
+					{
+						"key": "AGRICULTURE",
+						"value": 0
+					},
+					{
+						"key": "HEALTH_SERVICES",
+						"value": 0
+					},
+					{
+						"key": "EDUCATION",
+						"value": 0
+					},
+					{
+						"key": "SECURITY",
+						"value": 0
+					},
+					{
+						"key": "ROAD_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "RAIL_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "MARINE_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "AIR_TRANSPORT",
+						"value": 0
+					},
+					{
+						"key": "ROAD_NETWORK",
+						"value": 0
+					},
+					{
+						"key": "ELECTRICITY",
+						"value": 0
+					},
+					{
+						"key": "WATER_MANAGEMENT",
+						"value": 0
+					},
+					{
+						"key": "INTERNET",
+						"value": 0
+					}
+				],
+				"production": [
+					{
+						"type": "WATER",
+						"amount": 0,
+						"salePrice": 8,
+						"purchasePrice": 10
+					},
+					{
+						"type": "ENERGY",
+						"amount": 0,
+						"salePrice": 12,
+						"purchasePrice": 15
+					},
+					{
+						"type": "TECHNOLOGY",
+						"amount": 0,
+						"salePrice": 90,
+						"purchasePrice": 110
+					},
+					{
+						"type": "INDUSTRIAL_GOOD",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 70
+					},
+					{
+						"type": "FOOD",
+						"amount": 0,
+						"salePrice": 15,
+						"purchasePrice": 20
+					},
+					{
+						"type": "TOURISM_SERVICE",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 0
+					}
+				],
+				"demand": [
+					{
+						"type": "WATER",
+						"amount": 0,
+						"salePrice": 8,
+						"purchasePrice": 10
+					},
+					{
+						"type": "ENERGY",
+						"amount": 0,
+						"salePrice": 12,
+						"purchasePrice": 15
+					},
+					{
+						"type": "TECHNOLOGY",
+						"amount": 0,
+						"salePrice": 90,
+						"purchasePrice": 110
+					},
+					{
+						"type": "INDUSTRIAL_GOOD",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 70
+					},
+					{
+						"type": "FOOD",
+						"amount": 0,
+						"salePrice": 15,
+						"purchasePrice": 20
+					},
+					{
+						"type": "TOURISM_SERVICE",
+						"amount": 0,
+						"salePrice": 50,
+						"purchasePrice": 0
+					}
+				],
+				"treasury": 0,
+				"importValue": 0,
+				"exportValue": 0
+			}
+		}
+	]
+},
+"mapType": "map1",
+"playTime": 38.74763488769531,
+"version": "1.0.0",
+"saveTimestamp": {
+	"epochMillis": 1775708540784,
+	"hour": 7,
+	"minute": 22
+},
+"snapshotPath": "snapshots/slot-1.png"
+}

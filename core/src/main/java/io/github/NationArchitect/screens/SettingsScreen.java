@@ -62,4 +62,10 @@ public void render(float delta) {
         if (backgroundTexture != null) backgroundTexture.dispose();
         if (localSkin != null) localSkin.dispose();
     }
+
+    @Override
+    public void show() {
+        super.show();
+        game.playMenuMusic();
+    }
 }

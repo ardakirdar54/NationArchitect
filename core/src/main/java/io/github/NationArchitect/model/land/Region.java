@@ -32,7 +32,7 @@ public class Region extends Land {
         super(name, economy, population);
         this.activePolicies = new ArrayList<>();
         this.activeEffects = new ArrayList<>();
-        this.undergroundResources = new EnumMap<>(ResourceType.class);
+        this.resources = new EnumMap<>(ResourceType.class);
         this.components = new EnumMap<>(ComponentType.class);
 
     }
@@ -57,8 +57,8 @@ public class Region extends Land {
         return this;
     }
 
-    public Region setUndergroundResources(EnumMap<ResourceType, Double> undergroundResources) {
-        this.undergroundResources = undergroundResources;
+    public Region setResources(EnumMap<ResourceType, Double> undergroundResources) {
+        this.resources = undergroundResources;
         return this;
     }
 
@@ -66,8 +66,8 @@ public class Region extends Land {
         return terrainType;
     }
 
-    public EnumMap<ResourceType, Double> getUndergroundResources() {
-        return undergroundResources;
+    public EnumMap<ResourceType, Double> getResources() {
+        return resources;
     }
 
     public EnumMap<ComponentType, Component> getComponents() {
@@ -80,10 +80,6 @@ public class Region extends Land {
 
     public ArrayList<ActiveEffect> getActiveEffects() {
         return activeEffects;
-    }
-
-    public double getLandValue() {
-        return landValue;
     }
 
     public double getComponentEffect(ComponentType affected, ComponentType affecter) {
@@ -206,7 +202,7 @@ public class Region extends Land {
     public void addTemporaryEffect(Effect effect, int duration) {
         if (duration > 0) {
             this.activeEffects.add(new ActiveEffect(effect, duration));
-        } 
+        }
     }
 
     public double getTotalActiveEffectModifierForMetric(MetricType type) {
@@ -250,16 +246,17 @@ public class Region extends Land {
         }
         return totalLand;
     }
-    
+
     public void calculateLandValue(){
         double happiness = this.getMetricValue(MetricType.HAPPINESS);
-        double landRatio = getTotalOccupiedLand() / totalLand;
+        double landRatio = totalLand <= 0 ? 0 : getTotalOccupiedLand() / totalLand;
         double crimeRate = this.getMetricValue(MetricType.CRIME_RATE);
         double stability = this.getMetricValue(MetricType.STABILITY);
 
         int factoryNumber = this.components.get(ComponentType.FACTORY).getBuildings().size();
-        
-        this.landValue = factoryNumber * happiness * landRatio * crimeRate * stability;
+
+        double value = factoryNumber * happiness * landRatio * crimeRate * stability;
+        this.landValue = Double.isFinite(value) ? value : 0.0;
     }
 
     public double getLandValue(){return landValue;}
@@ -272,7 +269,8 @@ public class Region extends Land {
         }
         double birthRate = this.getMetricValue(MetricType.HAPPINESS);
         this.population.updateLifeCycle(birthRate, this.getMetricValue(MetricType.HEALTH_RATE));
-        
-        
+        this.getEconomy().calculateBalance(this);
+
+
     }
 }
