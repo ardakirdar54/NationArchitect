@@ -7,6 +7,8 @@ import io.github.NationArchitect.model.metric.MetricType;
 
 public class WinLoseManager {
 
+    private static final int REQUIRED_CONSECUTIVE_LOSE_CHECKS = 3;
+
     public enum GameResult {
         CONTINUE,
         LOSE,
@@ -15,6 +17,8 @@ public class WinLoseManager {
     }
 
     private Country country;
+    private int consecutiveLoseChecks;
+    private String lastLoseReason;
 
     public static final double MIN_HAPPINESS = 10.0;
     public static final double MIN_STABILITY = 20.0;
@@ -24,27 +28,55 @@ public class WinLoseManager {
 
     WinLoseManager(Country country) {
         this.country = country;
+        this.consecutiveLoseChecks = 0;
+        this.lastLoseReason = "";
     }
 
     public GameResult checkGameState(Date date) {
         if (checkWinCondition(date)) {
             return GameResult.WIN;
         } else if (checkLoseCondition()) {
-            return GameResult.LOSE;
+            consecutiveLoseChecks++;
+            return consecutiveLoseChecks >= REQUIRED_CONSECUTIVE_LOSE_CHECKS
+                ? GameResult.LOSE
+                : GameResult.CONTINUE;
         } else {
+            consecutiveLoseChecks = 0;
+            lastLoseReason = "";
             return GameResult.CONTINUE;
         }
     }
 
     public boolean checkLoseCondition() {
-        if (country.getMetricValue(MetricType.HAPPINESS) < MIN_HAPPINESS
-                || country.getMetricValue(MetricType.STABILITY) < MIN_STABILITY
-                || country.getMetricValue(MetricType.CRIME_RATE) > MAX_CRIME
-                || country.getMetricValue(MetricType.UNEMPLOYMENT) > MAX_UNEMPLOYMENT) {
+        if (country == null) {
+            lastLoseReason = "";
+            return false;
+        }
+
+        double happiness = country.getMetricValue(MetricType.HAPPINESS);
+        double stability = country.getMetricValue(MetricType.STABILITY);
+        double crimeRate = country.getMetricValue(MetricType.CRIME_RATE);
+        double unemployment = country.getMetricValue(MetricType.UNEMPLOYMENT);
+
+        if (happiness < MIN_HAPPINESS) {
+            lastLoseReason = String.format("National happiness collapsed to %.1f.", happiness);
             return true;
         }
-        return false;
+        if (stability < MIN_STABILITY) {
+            lastLoseReason = String.format("National stability collapsed to %.1f.", stability);
+            return true;
+        }
+        if (crimeRate > MAX_CRIME) {
+            lastLoseReason = String.format("Crime rate surged to %.1f.", crimeRate);
+            return true;
+        }
+        if (unemployment > MAX_UNEMPLOYMENT) {
+            lastLoseReason = String.format("Unemployment surged to %.1f.", unemployment);
+            return true;
+        }
 
+        lastLoseReason = "";
+        return false;
     }
 
     public boolean checkWinCondition(Date date) {
@@ -52,6 +84,10 @@ public class WinLoseManager {
             return true;
         }
         return false;
+    }
+
+    public String getLastLoseReason() {
+        return lastLoseReason == null ? "" : lastLoseReason;
     }
 
 }

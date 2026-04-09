@@ -43,7 +43,7 @@ public abstract class Component {
     private double budgetMultiplier;
 
     /** The budget percentage of component */
-    private double budgetPercentage = 1.0;
+    private double budgetPercentage = 100.0;
 
     /** Current effective performance of the component. */
     private double performance;
@@ -170,7 +170,7 @@ public abstract class Component {
      * Sets the current budget multiplier from an external budget percentage value.
      */
     public void calculateBudgetMultiplier() {
-        double totalBudgetMultiplier = budgetPercentage - 1;
+        double totalBudgetMultiplier = budgetPercentage / 100.0;
 
         for (Effect effect : activeEffects) {
             totalBudgetMultiplier += effect.getRelatedComponents().getOrDefault(componentType, 0.0);
@@ -434,5 +434,6 @@ public abstract class Component {
      */
     public void setBudgetPercentage(double budgetPercentage) {
         this.budgetPercentage = budgetPercentage;
+        update();
     }
 }

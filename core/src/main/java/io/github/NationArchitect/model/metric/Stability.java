@@ -22,17 +22,17 @@ public class Stability extends Metric {
 
         double securityPerformance = region.getComponentPerformance(ComponentType.SECURITY);
 
-        double happinessImpact = (happiness - 50.0) * 0.6;
+        double happinessImpact = (happiness - 50.0) * 0.45;
 
-        double crimePenalty = crimeRate * 0.4;
-        double unemploymentPenalty = unemployment * 0.3;
+        double crimePenalty = crimeRate * 0.22;
+        double unemploymentPenalty = unemployment * 0.18;
 
-        double securityBonus = securityPerformance * 0.5;
+        double securityBonus = securityPerformance * 0.35;
 
         double policyBonus = region.getTotalPolicyModifierForMetric(MetricType.STABILITY);
         double activeEffectBonus = region.getTotalActiveEffectModifierForMetric(MetricType.STABILITY);
 
-        double targetStability = 50.0 + happinessImpact + securityBonus + policyBonus + activeEffectBonus
+        double targetStability = 58.0 + happinessImpact + securityBonus + policyBonus + activeEffectBonus
          - crimePenalty - unemploymentPenalty;
         targetStability = Math.max(0.0, Math.min(100.0, targetStability));
         this.targetStability = targetStability;
@@ -40,10 +40,10 @@ public class Stability extends Metric {
         double currentStability = this.getValue();
         double difference = targetStability - currentStability;
 
-        double driftSpeed = 0.10;
+        double driftSpeed = 0.06;
 
         if (difference < 0 && crimeRate > 70.0) {
-            driftSpeed = 0.25;
+            driftSpeed = 0.12;
         }
 
         double finalStability = currentStability + (difference * driftSpeed);
@@ -57,4 +57,3 @@ public class Stability extends Metric {
 
     public double getTargetStability(){return this.targetStability;}
 }
-

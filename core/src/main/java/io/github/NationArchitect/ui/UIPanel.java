@@ -2,6 +2,7 @@ package io.github.NationArchitect.ui;
 
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import io.github.NationArchitect.screens.BaseScreen;
+import io.github.NationArchitect.screens.GameScreen;
 
 public abstract class UIPanel extends Table {
     public boolean isOpen = false;
@@ -36,6 +37,10 @@ public abstract class UIPanel extends Table {
     public Table getContainer() { return this; }
 
     public boolean isOpen() { return isOpen; }
+
+    protected GameScreen getGameScreen() {
+        return rootScreen instanceof GameScreen ? (GameScreen) rootScreen : null;
+    }
 
     public abstract void buildLayout();
      public void dispose() {}

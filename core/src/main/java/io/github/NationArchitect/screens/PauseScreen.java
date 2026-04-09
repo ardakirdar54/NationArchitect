@@ -66,6 +66,7 @@ public class PauseScreen extends BaseScreen {
         returnToGameBtn.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
+                gameScreen.resumeGame();
                 game.setScreen(gameScreen);
             }
         });
@@ -73,14 +74,14 @@ public class PauseScreen extends BaseScreen {
         saveGameBtn.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                // TO DO: save logic
+                game.setScreen(new SaveGameScreen(game, gameScreen, PauseScreen.this));
             }
         });
 
         loadGameBtn.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                // TO DO: load logic
+                game.setScreen(new LoadGameScreen(game, PauseScreen.this));
             }
         });
 

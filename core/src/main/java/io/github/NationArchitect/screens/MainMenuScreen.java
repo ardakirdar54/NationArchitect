@@ -93,6 +93,12 @@ public void addListeners() {
 }
 
     @Override
+    public void show() {
+        super.show();
+        game.playMenuMusic();
+    }
+
+    @Override
     public void dispose() {
         super.dispose();
         if (localSkin != null) localSkin.dispose();

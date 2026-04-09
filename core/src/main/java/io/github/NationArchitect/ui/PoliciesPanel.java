@@ -10,20 +10,32 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
+import io.github.NationArchitect.controller.GameManager;
+import io.github.NationArchitect.model.Effect.Policy;
+import io.github.NationArchitect.model.component.ComponentType;
+import io.github.NationArchitect.model.economy.CountryEconomy;
+import io.github.NationArchitect.model.economy.RegionEconomy;
+import io.github.NationArchitect.model.land.Country;
+import io.github.NationArchitect.model.land.Region;
+import io.github.NationArchitect.model.metric.MetricType;
 import io.github.NationArchitect.screens.BaseScreen;
+import io.github.NationArchitect.screens.GameScreen;
 
+import java.util.EnumMap;
 import java.util.HashMap;
 
 public class PoliciesPanel extends UIPanel {
 
     private Table infoTooltip;
     private HashMap<String, Boolean> policyStates;
+    private HashMap<String, Policy> activePolicies;
     private Texture frameTex;
     private TextureRegionDrawable cellBg;
 
     public PoliciesPanel(BaseScreen rootScreen) {
         super(rootScreen, "Policies");
         policyStates = new HashMap<>();
+        activePolicies = new HashMap<>();
         policyStates.put("Free Transportation", false);
         policyStates.put("Government Transparency", false);
         policyStates.put("Freedom of the Press", false);
@@ -195,7 +207,97 @@ public class PoliciesPanel extends UIPanel {
     }
 
     private void applyPolicyEffects(String name, boolean active) {
+        GameScreen gameScreen = rootScreen instanceof GameScreen ? (GameScreen) rootScreen : null;
+        GameManager gameManager = gameScreen == null ? null : gameScreen.getGameManager();
+        Country country = gameManager == null ? null : gameManager.getCountry();
+
+        if (country == null) {
+            Gdx.app.error("Policy", "Country not available for policy " + name);
+            return;
+        }
+
+        if (active) {
+            Policy policy = createPolicy(name);
+            if (policy == null) {
+                Gdx.app.error("Policy", "Unknown policy " + name);
+                return;
+            }
+            policy.setActive(true);
+            activePolicies.put(name, policy);
+            country.implementPolicy(policy);
+        } else {
+            Policy policy = activePolicies.remove(name);
+            if (policy != null) {
+                policy.setActive(false);
+                country.cancelPolicy(policy);
+            }
+        }
+
+        refreshCountryState(country);
         Gdx.app.log("Policy", name + " is now " + (active ? "Active" : "Inactive"));
+    }
+
+    private Policy createPolicy(String name) {
+        EnumMap<ComponentType, Double> componentModifiers = new EnumMap<>(ComponentType.class);
+        EnumMap<MetricType, Double> metricModifiers = new EnumMap<>(MetricType.class);
+
+        switch (name) {
+            case "Free Transportation":
+                metricModifiers.put(MetricType.HAPPINESS, 15.0);
+                componentModifiers.put(ComponentType.ROAD_TRANSPORT, 5.0);
+                componentModifiers.put(ComponentType.RAIL_TRANSPORT, 5.0);
+                componentModifiers.put(ComponentType.MARINE_TRANSPORT, 5.0);
+                componentModifiers.put(ComponentType.AIR_TRANSPORT, 5.0);
+                break;
+            case "Government Transparency":
+                metricModifiers.put(MetricType.HAPPINESS, 6.0);
+                metricModifiers.put(MetricType.STABILITY, 4.0);
+                componentModifiers.put(ComponentType.SECURITY, -10.0);
+                break;
+            case "Freedom of the Press":
+                metricModifiers.put(MetricType.EDUCATION_LEVEL, 10.0);
+                metricModifiers.put(MetricType.HAPPINESS, 4.0);
+                metricModifiers.put(MetricType.STABILITY, -4.0);
+                break;
+            case "Labor Unions":
+                metricModifiers.put(MetricType.HAPPINESS, 12.0);
+                metricModifiers.put(MetricType.UNEMPLOYMENT, -4.0);
+                componentModifiers.put(ComponentType.FACTORY, -10.0);
+                componentModifiers.put(ComponentType.OFFICE, -5.0);
+                break;
+            default:
+                return null;
+        }
+
+        return new Policy(name, name, componentModifiers, metricModifiers);
+    }
+
+    private void refreshCountryState(Country country) {
+        Region[] regions = country.getRegions();
+        if (regions != null) {
+            for (Region region : regions) {
+                if (region == null) {
+                    continue;
+                }
+                if (region.getComponents() != null) {
+                    region.getComponents().values().forEach(component -> {
+                        if (component != null) {
+                            component.update();
+                        }
+                    });
+                }
+                region.update();
+                region.calculateLandValue();
+                if (region.getEconomy() instanceof RegionEconomy) {
+                    ((RegionEconomy) region.getEconomy()).update(region);
+                }
+            }
+        }
+
+        country.calculatePopulation();
+        if (country.getEconomy() instanceof CountryEconomy) {
+            ((CountryEconomy) country.getEconomy()).update(country);
+        }
     }
 
     private TextureRegionDrawable makeDarkBg(float r, float g, float b, float a) {

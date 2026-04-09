@@ -11,6 +11,8 @@ import java.util.EnumMap;
  */
 public class Building {
 
+    private static final double MAINTENANCE_COST_MULTIPLIER = 0.30;
+
     /** Name of the building. */
     private String name;
 
@@ -61,7 +63,7 @@ public class Building {
         this.type = type;
         this.description = type.getDescription();
         this.constructionCost = type.getConstructionCost();
-        this.maintenanceCost = type.getMaintenanceCost();
+        this.maintenanceCost = type.getMaintenanceCost() * MAINTENANCE_COST_MULTIPLIER;
         this.relatedMetrics = type.getRelatedMetrics() == null
             ? new EnumMap<>(MetricType.class)
             : new EnumMap<>(type.getRelatedMetrics());

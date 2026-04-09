@@ -39,8 +39,12 @@ public class JsonSaveManager extends SaveManager {
         if (!handle.exists()) {
             return null;
         }
-        currentSlot = slot;
-        return SaveData.fromJson(handle.readString("UTF-8"));
+        try {
+            currentSlot = slot;
+            return SaveData.fromJson(handle.readString("UTF-8"));
+        } catch (RuntimeException exception) {
+            return null;
+        }
     }
 
     @Override
@@ -71,9 +75,12 @@ public class JsonSaveManager extends SaveManager {
         }
         for (File file : files) {
             if (file.isFile() && file.getName().endsWith(".json")) {
-                SaveData saveData = SaveData.fromJson(new FileHandle(file).readString("UTF-8"));
-                if (saveData != null) {
-                    saves.add(saveData);
+                try {
+                    SaveData saveData = SaveData.fromJson(new FileHandle(file).readString("UTF-8"));
+                    if (saveData != null) {
+                        saves.add(saveData);
+                    }
+                } catch (RuntimeException ignored) {
                 }
             }
         }

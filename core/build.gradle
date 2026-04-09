@@ -16,3 +16,11 @@ java.targetCompatibility = JavaVersion.VERSION_11
 jar {
   duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
+
+sourceSets {
+  main {
+    java {
+      exclude 'io/github/NationArchitect/controller/savemanager/SaveStateCodec.java'
+    }
+  }
+}

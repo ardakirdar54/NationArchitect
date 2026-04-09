@@ -73,7 +73,7 @@ public final class SaveStateCodec {
         state.population = serializePopulation(region.getMutablePopulation());
         state.metrics = serializeMetrics(region);
         state.economy = serializeEconomy(region.getEconomy());
-        state.undergroundResources = serializeNamedDoubles(region.getUndergroundResources());
+        state.undergroundResources = serializeNamedDoubles(region.getResources());
         state.components = serializeComponents(region);
         state.activeEffects = serializeRegionEffects(region.getActiveEffects());
         state.activePolicies = serializePolicies(region.getActivePolicies());
@@ -87,7 +87,7 @@ public final class SaveStateCodec {
         region.setTerrainType(state.terrainType == null ? null : TerrainType.valueOf(state.terrainType));
         region.setLandValue(state.landValue);
         region.setBaseCrimeRate(state.baseCrimeRate);
-        region.setUndergroundResources(deserializeResourceMap(state.undergroundResources));
+        region.setResources(deserializeResourceMap(state.undergroundResources));
         applyMetrics(region, state.metrics);
 
         EnumMap<ComponentType, Component> components = new EnumMap<ComponentType, Component>(ComponentType.class);
