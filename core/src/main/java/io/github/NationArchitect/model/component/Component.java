@@ -24,6 +24,12 @@ public abstract class Component {
     /** Initial occupied land value for a component with no buildings. */
     private final static double INITIAL_TOTAL_OCCUPIED_LAND = 0;
 
+    /**
+     * Global scaling factor for all component monthly budgets.
+     * Helps keep expenses manageable while we tune building/base costs.
+     */
+    private static final double GLOBAL_BUDGET_MULTIPLIER = 0.20;
+
     /** Type definition of the component. */
     private final ComponentType componentType;
 
@@ -184,7 +190,8 @@ public abstract class Component {
      */
     public void calculateFinalMonthlyBudget() {
         calculateBudgetMultiplier();
-        setFinalMonthlyBudget(budgetMultiplier * baseMonthlyBudget);
+        double budget = budgetMultiplier * baseMonthlyBudget * GLOBAL_BUDGET_MULTIPLIER;
+        setFinalMonthlyBudget(Double.isFinite(budget) ? Math.max(0.0, budget) : 0.0);
     }
 
     /**

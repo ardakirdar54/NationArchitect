@@ -14,7 +14,7 @@ import java.util.EnumMap;
  */
 public class RegionEconomy extends Economy {
 
-    private static final double IMPORT_COST_MULTIPLIER = 0.35;
+    private static final double IMPORT_COST_MULTIPLIER = 0.12;
 
     /** Produced products grouped by product type. */
     EnumMap<ProductType, Product> production;

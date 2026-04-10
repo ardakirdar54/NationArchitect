@@ -1,41 +1,41 @@
 {
 "country": {
-	"name": "arda",
+	"name": "hhh",
 	"population": {
 		"ageDistribution": [
 			{
 				"key": "BABY",
-				"value": 914579
+				"value": 1042
 			},
 			{
 				"key": "CHILD",
-				"value": 1955630
+				"value": 1550
 			},
 			{
 				"key": "TEENAGER",
-				"value": 1969534
+				"value": 1575
 			},
 			{
 				"key": "YOUNG_ADULT",
-				"value": 3912082
+				"value": 3096
 			},
 			{
 				"key": "ADULT",
-				"value": 5155681
+				"value": 4046
 			},
 			{
 				"key": "ELDERLY",
-				"value": 1739946
+				"value": 1160
 			}
 		],
 		"genderDistribution": [
 			{
 				"key": "MALE",
-				"value": 7823732
+				"value": 6243
 			},
 			{
 				"key": "FEMALE",
-				"value": 7823737
+				"value": 6254
 			}
 		],
 		"births": 0,
@@ -44,40 +44,40 @@
 	"metrics": [
 		{
 			"type": "HAPPINESS",
-			"value": 43.610565929780506,
+			"value": 43.79242796283321,
 			"lastMonthValue": 50
 		},
 		{
 			"type": "UNEMPLOYMENT",
-			"value": 98.97741467565837,
+			"value": 0,
 			"lastMonthValue": 0
 		},
 		{
 			"type": "CRIME_RATE",
-			"value": 21.395224248968148,
+			"value": 21.492278343543788,
 			"lastMonthValue": 50
 		},
 		{
 			"type": "EDUCATION_LEVEL",
-			"value": 0.0750586260000458,
+			"value": 58.34778583836812,
 			"lastMonthValue": 50
 		},
 		{
 			"type": "HEALTH_RATE",
-			"value": 0.023652928361358974,
+			"value": 30.51201004691026,
 			"lastMonthValue": 50
 		},
 		{
 			"type": "STABILITY",
-			"value": 60.19148744806436,
+			"value": 58.00841562665833,
 			"lastMonthValue": 50
 		}
 	],
 	"economy": {
 		"kind": "CountryEconomy",
-		"income": 3999136.590329656,
-		"expanse": 2087575,
-		"balance": 1911561.590329656,
+		"income": 1449511.1420789647,
+		"expanse": 774402,
+		"balance": 675109.1420789647,
 		"tax": {
 			"incomeTaxRate": 8,
 			"propertyTaxRate": 8,
@@ -89,96 +89,96 @@
 		"taxRevenues": [
 			{
 				"key": "INCOME_TAX",
-				"value": 53990.66904965599
+				"value": 69893.2107189647
 			},
 			{
 				"key": "PROPERTY_TAX",
-				"value": 3202094.57728
+				"value": 2721.78736
 			},
 			{
 				"key": "VAT",
-				"value": 13706
+				"value": 16747.6
 			},
 			{
 				"key": "EXCISE_TAX",
-				"value": 1121.3439999999998
+				"value": 1378.944
 			},
 			{
 				"key": "CORPORATE_TAX",
-				"value": 88956
+				"value": 143701.59999999998
 			},
 			{
 				"key": "PRODUCTION_TAX",
-				"value": 117768
+				"value": 162568
 			}
 		],
 		"componentBudgets": [
 			{
 				"key": "FACTORY",
-				"value": 33600
+				"value": 15960
 			},
 			{
 				"key": "OFFICE",
-				"value": 26250
+				"value": 5250
 			},
 			{
 				"key": "TOURISM",
-				"value": 54600
+				"value": 10920
 			},
 			{
 				"key": "AGRICULTURE",
-				"value": 28350
+				"value": 5670
 			},
 			{
 				"key": "HEALTH_SERVICES",
-				"value": 43050
+				"value": 8610
 			},
 			{
 				"key": "EDUCATION",
-				"value": 21000
+				"value": 4200
 			},
 			{
 				"key": "SECURITY",
-				"value": 37800
+				"value": 33960
 			},
 			{
 				"key": "ROAD_TRANSPORT",
-				"value": 19950
+				"value": 3990
 			},
 			{
 				"key": "RAIL_TRANSPORT",
-				"value": 46200
+				"value": 9240
 			},
 			{
 				"key": "MARINE_TRANSPORT",
-				"value": 102900
+				"value": 20580
 			},
 			{
 				"key": "AIR_TRANSPORT",
-				"value": 134400
+				"value": 26880
 			},
 			{
 				"key": "ROAD_NETWORK",
-				"value": 67200
+				"value": 13440
 			},
 			{
 				"key": "ELECTRICITY",
-				"value": 39900
+				"value": 7980
 			},
 			{
 				"key": "WATER_MANAGEMENT",
-				"value": 24150
+				"value": 4830
 			},
 			{
 				"key": "INTERNET",
-				"value": 54600
+				"value": 10920
 			}
 		],
 		"production": [],
 		"demand": [],
-		"treasury": 3194594.344000006,
-		"importValue": 1353625,
-		"exportValue": 521500
+		"treasury": 2324596.3389281174,
+		"importValue": 591972,
+		"exportValue": 1052500
 	},
 	"regions": [
 		{
@@ -190,7 +190,7 @@
 					"componentType": "FACTORY",
 					"description": "Produces industrial goods.",
 					"baseMonthlyBudget": 4800,
-					"finalMonthlyBudget": 4800,
+					"finalMonthlyBudget": 960,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.0044207607746127,
@@ -302,7 +302,7 @@
 					"componentType": "OFFICE",
 					"description": "Supports administration and service sector.",
 					"baseMonthlyBudget": 3750,
-					"finalMonthlyBudget": 3750,
+					"finalMonthlyBudget": 750,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.1555062732736814,
@@ -410,7 +410,7 @@
 					"componentType": "TOURISM",
 					"description": "Generates income from visitors.",
 					"baseMonthlyBudget": 7800,
-					"finalMonthlyBudget": 7800,
+					"finalMonthlyBudget": 1560,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.7643093960909664,
@@ -532,7 +532,7 @@
 					"componentType": "AGRICULTURE",
 					"description": "Produces food and raw materials.",
 					"baseMonthlyBudget": 4050,
-					"finalMonthlyBudget": 4050,
+					"finalMonthlyBudget": 810,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.1185587655254356,
@@ -648,7 +648,7 @@
 					"componentType": "HEALTH_SERVICES",
 					"description": "Improves population health and lifespan.",
 					"baseMonthlyBudget": 6150,
-					"finalMonthlyBudget": 6150,
+					"finalMonthlyBudget": 1230,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.0951555535130484,
@@ -777,7 +777,7 @@
 					"componentType": "EDUCATION",
 					"description": "Increases knowledge and workforce quality.",
 					"baseMonthlyBudget": 3000,
-					"finalMonthlyBudget": 3000,
+					"finalMonthlyBudget": 600,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.9145380873082587,
@@ -918,7 +918,7 @@
 					"componentType": "SECURITY",
 					"description": "Maintains public order and safety.",
 					"baseMonthlyBudget": 5400,
-					"finalMonthlyBudget": 5400,
+					"finalMonthlyBudget": 1080,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.8820670490105383,
@@ -1042,7 +1042,7 @@
 					"componentType": "ROAD_TRANSPORT",
 					"description": "Enables transport via trucks and cars.",
 					"baseMonthlyBudget": 2850,
-					"finalMonthlyBudget": 2850,
+					"finalMonthlyBudget": 570,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.826375705107296,
@@ -1181,7 +1181,7 @@
 					"componentType": "RAIL_TRANSPORT",
 					"description": "Supports large-scale rail transportation.",
 					"baseMonthlyBudget": 6600,
-					"finalMonthlyBudget": 6600,
+					"finalMonthlyBudget": 1320,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.793943663611095,
@@ -1320,7 +1320,7 @@
 					"componentType": "MARINE_TRANSPORT",
 					"description": "Allows sea transport and trade.",
 					"baseMonthlyBudget": 14700,
-					"finalMonthlyBudget": 14700,
+					"finalMonthlyBudget": 2940,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -1439,7 +1439,7 @@
 					"componentType": "AIR_TRANSPORT",
 					"description": "Enables fast air transportation.",
 					"baseMonthlyBudget": 19200,
-					"finalMonthlyBudget": 19200,
+					"finalMonthlyBudget": 3840,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6949798427588469,
@@ -1569,7 +1569,7 @@
 					"componentType": "ROAD_NETWORK",
 					"description": "Enables land transportation and logistics.",
 					"baseMonthlyBudget": 9600,
-					"finalMonthlyBudget": 9600,
+					"finalMonthlyBudget": 1920,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -1728,7 +1728,7 @@
 					"componentType": "ELECTRICITY",
 					"description": "Provides power for industry and services.",
 					"baseMonthlyBudget": 5700,
-					"finalMonthlyBudget": 5700,
+					"finalMonthlyBudget": 1140,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -1853,7 +1853,7 @@
 					"componentType": "WATER_MANAGEMENT",
 					"description": "Ensures water supply and sanitation.",
 					"baseMonthlyBudget": 3450,
-					"finalMonthlyBudget": 3450,
+					"finalMonthlyBudget": 690,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -1979,7 +1979,7 @@
 					"componentType": "INTERNET",
 					"description": "Improves communication and digital access.",
 					"baseMonthlyBudget": 7800,
-					"finalMonthlyBudget": 7800,
+					"finalMonthlyBudget": 1560,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -2119,41 +2119,41 @@
 				"ageDistribution": [
 					{
 						"key": "BABY",
-						"value": 86376
+						"value": 99
 					},
 					{
 						"key": "CHILD",
-						"value": 186255
+						"value": 150
 					},
 					{
 						"key": "TEENAGER",
-						"value": 187577
+						"value": 150
 					},
 					{
 						"key": "YOUNG_ADULT",
-						"value": 372602
+						"value": 299
 					},
 					{
 						"key": "ADULT",
-						"value": 491031
+						"value": 388
 					},
 					{
 						"key": "ELDERLY",
-						"value": 165710
+						"value": 114
 					}
 				],
 				"genderDistribution": [
 					{
 						"key": "MALE",
-						"value": 744777
+						"value": 600
 					},
 					{
 						"key": "FEMALE",
-						"value": 744777
+						"value": 604
 					}
 				],
-				"births": 13848,
-				"deaths": 25839
+				"births": 44,
+				"deaths": 12
 			},
 			"metrics": [
 				{
@@ -2163,7 +2163,7 @@
 				},
 				{
 					"type": "UNEMPLOYMENT",
-					"value": 99.43908045977011,
+					"value": 0,
 					"lastMonthValue": 35
 				},
 				{
@@ -2173,25 +2173,25 @@
 				},
 				{
 					"type": "EDUCATION_LEVEL",
-					"value": 0.11333333333333333,
+					"value": 60,
 					"lastMonthValue": 45
 				},
 				{
 					"type": "HEALTH_RATE",
-					"value": 0.03571428571428571,
+					"value": 45.42013626040878,
 					"lastMonthValue": 55
 				},
 				{
 					"type": "STABILITY",
-					"value": 58.99252340802922,
+					"value": 56.318495157245856,
 					"lastMonthValue": 60
 				}
 			],
 			"economy": {
 				"kind": "RegionEconomy",
-				"income": 418018.1242185223,
-				"expanse": 298225,
-				"balance": 119793.12421852228,
+				"income": 114636.41173671617,
+				"expanse": 87270,
+				"balance": 27366.411736716167,
 				"tax": {
 					"incomeTaxRate": 8,
 					"propertyTaxRate": 8,
@@ -2203,11 +2203,11 @@
 				"taxRevenues": [
 					{
 						"key": "INCOME_TAX",
-						"value": 7046.215578522282
+						"value": 6714.251736716172
 					},
 					{
 						"key": "PROPERTY_TAX",
-						"value": 304821.71664
+						"value": 245.56799999999998
 					},
 					{
 						"key": "VAT",
@@ -2219,7 +2219,7 @@
 					},
 					{
 						"key": "CORPORATE_TAX",
-						"value": 12708
+						"value": 14234.4
 					},
 					{
 						"key": "PRODUCTION_TAX",
@@ -2229,63 +2229,63 @@
 				"componentBudgets": [
 					{
 						"key": "FACTORY",
-						"value": 4800
+						"value": 960
 					},
 					{
 						"key": "OFFICE",
-						"value": 3750
+						"value": 750
 					},
 					{
 						"key": "TOURISM",
-						"value": 7800
+						"value": 1560
 					},
 					{
 						"key": "AGRICULTURE",
-						"value": 4050
+						"value": 810
 					},
 					{
 						"key": "HEALTH_SERVICES",
-						"value": 6150
+						"value": 1230
 					},
 					{
 						"key": "EDUCATION",
-						"value": 3000
+						"value": 600
 					},
 					{
 						"key": "SECURITY",
-						"value": 5400
+						"value": 1080
 					},
 					{
 						"key": "ROAD_TRANSPORT",
-						"value": 2850
+						"value": 570
 					},
 					{
 						"key": "RAIL_TRANSPORT",
-						"value": 6600
+						"value": 1320
 					},
 					{
 						"key": "MARINE_TRANSPORT",
-						"value": 14700
+						"value": 2940
 					},
 					{
 						"key": "AIR_TRANSPORT",
-						"value": 19200
+						"value": 3840
 					},
 					{
 						"key": "ROAD_NETWORK",
-						"value": 9600
+						"value": 1920
 					},
 					{
 						"key": "ELECTRICITY",
-						"value": 5700
+						"value": 1140
 					},
 					{
 						"key": "WATER_MANAGEMENT",
-						"value": 3450
+						"value": 690
 					},
 					{
 						"key": "INTERNET",
-						"value": 7800
+						"value": 1560
 					}
 				],
 				"production": [
@@ -2365,7 +2365,7 @@
 					}
 				],
 				"treasury": 0,
-				"importValue": 193375,
+				"importValue": 66300,
 				"exportValue": 74500
 			}
 		},
@@ -2377,31 +2377,31 @@
 				{
 					"componentType": "FACTORY",
 					"description": "Produces industrial goods.",
-					"baseMonthlyBudget": 4800,
-					"finalMonthlyBudget": 4800,
+					"baseMonthlyBudget": 51000,
+					"finalMonthlyBudget": 10200,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.0044207607746127,
-					"totalOccupiedLand": 1600,
+					"totalOccupiedLand": 15600,
 					"relatedMetrics": [
 						{
 							"key": "HAPPINESS",
-							"value": -0.20420000000000002
+							"value": -0.24200000000000013
 						}
 					],
 					"relatedComponents": [],
 					"demand": [
 						{
 							"key": "WATER",
-							"value": 700
+							"value": 7700
 						},
 						{
 							"key": "ENERGY",
-							"value": 1000
+							"value": 10800
 						},
 						{
 							"key": "TECHNOLOGY",
-							"value": 180
+							"value": 2000
 						},
 						{
 							"key": "INDUSTRIAL_GOOD",
@@ -2482,6 +2482,468 @@
 									"value": 130
 								}
 							]
+						},
+						{
+							"name": "ADVANCED_FACTORY 3",
+							"typeName": "ADVANCED_FACTORY",
+							"workerAmount": 150,
+							"maxWorkerAmount": 150,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 25000,
+							"maintenanceCost": 3300,
+							"occupiedLand": 1000,
+							"production": 800,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": -0.0027
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 500
+								},
+								{
+									"key": "ENERGY",
+									"value": 700
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 130
+								}
+							]
+						},
+						{
+							"name": "ADVANCED_FACTORY 4",
+							"typeName": "ADVANCED_FACTORY",
+							"workerAmount": 150,
+							"maxWorkerAmount": 150,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 25000,
+							"maintenanceCost": 3300,
+							"occupiedLand": 1000,
+							"production": 800,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": -0.0027
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 500
+								},
+								{
+									"key": "ENERGY",
+									"value": 700
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 130
+								}
+							]
+						},
+						{
+							"name": "ADVANCED_FACTORY 5",
+							"typeName": "ADVANCED_FACTORY",
+							"workerAmount": 150,
+							"maxWorkerAmount": 150,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 25000,
+							"maintenanceCost": 3300,
+							"occupiedLand": 1000,
+							"production": 800,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": -0.0027
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 500
+								},
+								{
+									"key": "ENERGY",
+									"value": 700
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 130
+								}
+							]
+						},
+						{
+							"name": "ADVANCED_FACTORY 6",
+							"typeName": "ADVANCED_FACTORY",
+							"workerAmount": 150,
+							"maxWorkerAmount": 150,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 25000,
+							"maintenanceCost": 3300,
+							"occupiedLand": 1000,
+							"production": 800,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": -0.0027
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 500
+								},
+								{
+									"key": "ENERGY",
+									"value": 700
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 130
+								}
+							]
+						},
+						{
+							"name": "ADVANCED_FACTORY 7",
+							"typeName": "ADVANCED_FACTORY",
+							"workerAmount": 150,
+							"maxWorkerAmount": 150,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 25000,
+							"maintenanceCost": 3300,
+							"occupiedLand": 1000,
+							"production": 800,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": -0.0027
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 500
+								},
+								{
+									"key": "ENERGY",
+									"value": 700
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 130
+								}
+							]
+						},
+						{
+							"name": "ADVANCED_FACTORY 8",
+							"typeName": "ADVANCED_FACTORY",
+							"workerAmount": 150,
+							"maxWorkerAmount": 150,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 25000,
+							"maintenanceCost": 3300,
+							"occupiedLand": 1000,
+							"production": 800,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": -0.0027
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 500
+								},
+								{
+									"key": "ENERGY",
+									"value": 700
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 130
+								}
+							]
+						},
+						{
+							"name": "ADVANCED_FACTORY 9",
+							"typeName": "ADVANCED_FACTORY",
+							"workerAmount": 150,
+							"maxWorkerAmount": 150,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 25000,
+							"maintenanceCost": 3300,
+							"occupiedLand": 1000,
+							"production": 800,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": -0.0027
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 500
+								},
+								{
+									"key": "ENERGY",
+									"value": 700
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 130
+								}
+							]
+						},
+						{
+							"name": "ADVANCED_FACTORY 10",
+							"typeName": "ADVANCED_FACTORY",
+							"workerAmount": 150,
+							"maxWorkerAmount": 150,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 25000,
+							"maintenanceCost": 3300,
+							"occupiedLand": 1000,
+							"production": 800,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": -0.0027
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 500
+								},
+								{
+									"key": "ENERGY",
+									"value": 700
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 130
+								}
+							]
+						},
+						{
+							"name": "ADVANCED_FACTORY 11",
+							"typeName": "ADVANCED_FACTORY",
+							"workerAmount": 150,
+							"maxWorkerAmount": 150,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 25000,
+							"maintenanceCost": 3300,
+							"occupiedLand": 1000,
+							"production": 800,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": -0.0027
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 500
+								},
+								{
+									"key": "ENERGY",
+									"value": 700
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 130
+								}
+							]
+						},
+						{
+							"name": "ADVANCED_FACTORY 12",
+							"typeName": "ADVANCED_FACTORY",
+							"workerAmount": 150,
+							"maxWorkerAmount": 150,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 25000,
+							"maintenanceCost": 3300,
+							"occupiedLand": 1000,
+							"production": 800,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": -0.0027
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 500
+								},
+								{
+									"key": "ENERGY",
+									"value": 700
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 130
+								}
+							]
+						},
+						{
+							"name": "ADVANCED_FACTORY 13",
+							"typeName": "ADVANCED_FACTORY",
+							"workerAmount": 150,
+							"maxWorkerAmount": 150,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 25000,
+							"maintenanceCost": 3300,
+							"occupiedLand": 1000,
+							"production": 800,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": -0.0027
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 500
+								},
+								{
+									"key": "ENERGY",
+									"value": 700
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 130
+								}
+							]
+						},
+						{
+							"name": "ADVANCED_FACTORY 14",
+							"typeName": "ADVANCED_FACTORY",
+							"workerAmount": 150,
+							"maxWorkerAmount": 150,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 25000,
+							"maintenanceCost": 3300,
+							"occupiedLand": 1000,
+							"production": 800,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": -0.0027
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 500
+								},
+								{
+									"key": "ENERGY",
+									"value": 700
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 130
+								}
+							]
+						},
+						{
+							"name": "ADVANCED_FACTORY 15",
+							"typeName": "ADVANCED_FACTORY",
+							"workerAmount": 150,
+							"maxWorkerAmount": 150,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 25000,
+							"maintenanceCost": 3300,
+							"occupiedLand": 1000,
+							"production": 800,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": -0.0027
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 500
+								},
+								{
+									"key": "ENERGY",
+									"value": 700
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 130
+								}
+							]
+						},
+						{
+							"name": "ADVANCED_FACTORY 16",
+							"typeName": "ADVANCED_FACTORY",
+							"workerAmount": 150,
+							"maxWorkerAmount": 150,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 25000,
+							"maintenanceCost": 3300,
+							"occupiedLand": 1000,
+							"production": 800,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": -0.0027
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 500
+								},
+								{
+									"key": "ENERGY",
+									"value": 700
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 130
+								}
+							]
 						}
 					],
 					"activeEffects": []
@@ -2490,7 +2952,7 @@
 					"componentType": "OFFICE",
 					"description": "Supports administration and service sector.",
 					"baseMonthlyBudget": 3750,
-					"finalMonthlyBudget": 3750,
+					"finalMonthlyBudget": 750,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.1555062732736814,
@@ -2598,7 +3060,7 @@
 					"componentType": "TOURISM",
 					"description": "Generates income from visitors.",
 					"baseMonthlyBudget": 7800,
-					"finalMonthlyBudget": 7800,
+					"finalMonthlyBudget": 1560,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.7643093960909664,
@@ -2720,7 +3182,7 @@
 					"componentType": "AGRICULTURE",
 					"description": "Produces food and raw materials.",
 					"baseMonthlyBudget": 4050,
-					"finalMonthlyBudget": 4050,
+					"finalMonthlyBudget": 810,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.1185587655254356,
@@ -2836,7 +3298,7 @@
 					"componentType": "HEALTH_SERVICES",
 					"description": "Improves population health and lifespan.",
 					"baseMonthlyBudget": 6150,
-					"finalMonthlyBudget": 6150,
+					"finalMonthlyBudget": 1230,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.0951555535130484,
@@ -2965,7 +3427,7 @@
 					"componentType": "EDUCATION",
 					"description": "Increases knowledge and workforce quality.",
 					"baseMonthlyBudget": 3000,
-					"finalMonthlyBudget": 3000,
+					"finalMonthlyBudget": 600,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.9145380873082587,
@@ -3106,7 +3568,7 @@
 					"componentType": "SECURITY",
 					"description": "Maintains public order and safety.",
 					"baseMonthlyBudget": 5400,
-					"finalMonthlyBudget": 5400,
+					"finalMonthlyBudget": 1080,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.8820670490105383,
@@ -3230,7 +3692,7 @@
 					"componentType": "ROAD_TRANSPORT",
 					"description": "Enables transport via trucks and cars.",
 					"baseMonthlyBudget": 2850,
-					"finalMonthlyBudget": 2850,
+					"finalMonthlyBudget": 570,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.826375705107296,
@@ -3369,7 +3831,7 @@
 					"componentType": "RAIL_TRANSPORT",
 					"description": "Supports large-scale rail transportation.",
 					"baseMonthlyBudget": 6600,
-					"finalMonthlyBudget": 6600,
+					"finalMonthlyBudget": 1320,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.793943663611095,
@@ -3508,7 +3970,7 @@
 					"componentType": "MARINE_TRANSPORT",
 					"description": "Allows sea transport and trade.",
 					"baseMonthlyBudget": 14700,
-					"finalMonthlyBudget": 14700,
+					"finalMonthlyBudget": 2940,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -3627,7 +4089,7 @@
 					"componentType": "AIR_TRANSPORT",
 					"description": "Enables fast air transportation.",
 					"baseMonthlyBudget": 19200,
-					"finalMonthlyBudget": 19200,
+					"finalMonthlyBudget": 3840,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6949798427588469,
@@ -3757,7 +4219,7 @@
 					"componentType": "ROAD_NETWORK",
 					"description": "Enables land transportation and logistics.",
 					"baseMonthlyBudget": 9600,
-					"finalMonthlyBudget": 9600,
+					"finalMonthlyBudget": 1920,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -3916,7 +4378,7 @@
 					"componentType": "ELECTRICITY",
 					"description": "Provides power for industry and services.",
 					"baseMonthlyBudget": 5700,
-					"finalMonthlyBudget": 5700,
+					"finalMonthlyBudget": 1140,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -4041,7 +4503,7 @@
 					"componentType": "WATER_MANAGEMENT",
 					"description": "Ensures water supply and sanitation.",
 					"baseMonthlyBudget": 3450,
-					"finalMonthlyBudget": 3450,
+					"finalMonthlyBudget": 690,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -4167,7 +4629,7 @@
 					"componentType": "INTERNET",
 					"description": "Improves communication and digital access.",
 					"baseMonthlyBudget": 7800,
-					"finalMonthlyBudget": 7800,
+					"finalMonthlyBudget": 1560,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -4307,41 +4769,41 @@
 				"ageDistribution": [
 					{
 						"key": "BABY",
-						"value": 100988
+						"value": 115
 					},
 					{
 						"key": "CHILD",
-						"value": 217283
+						"value": 171
 					},
 					{
 						"key": "TEENAGER",
-						"value": 218832
+						"value": 175
 					},
 					{
 						"key": "YOUNG_ADULT",
-						"value": 434622
+						"value": 345
 					},
 					{
 						"key": "ADULT",
-						"value": 572822
+						"value": 450
 					},
 					{
 						"key": "ELDERLY",
-						"value": 193326
+						"value": 132
 					}
 				],
 				"genderDistribution": [
 					{
 						"key": "MALE",
-						"value": 868935
+						"value": 695
 					},
 					{
 						"key": "FEMALE",
-						"value": 868937
+						"value": 697
 					}
 				],
-				"births": 16383,
-				"deaths": 30154
+				"births": 52,
+				"deaths": 16
 			},
 			"metrics": [
 				{
@@ -4351,7 +4813,7 @@
 				},
 				{
 					"type": "UNEMPLOYMENT",
-					"value": 99.5192118226601,
+					"value": 0,
 					"lastMonthValue": 34
 				},
 				{
@@ -4361,25 +4823,25 @@
 				},
 				{
 					"type": "EDUCATION_LEVEL",
-					"value": 0.09714285714285714,
+					"value": 60,
 					"lastMonthValue": 46
 				},
 				{
 					"type": "HEALTH_RATE",
-					"value": 0.030612244897959183,
+					"value": 39.21568627450981,
 					"lastMonthValue": 55
 				},
 				{
 					"type": "STABILITY",
-					"value": 59.04352340802922,
+					"value": 56.50485854124586,
 					"lastMonthValue": 60
 				}
 			],
 			"economy": {
 				"kind": "RegionEconomy",
-				"income": 469034.09829852224,
-				"expanse": 298225,
-				"balance": 170809.09829852224,
+				"income": 754569.5907092046,
+				"expanse": 141702,
+				"balance": 612867.5907092046,
 				"tax": {
 					"incomeTaxRate": 8,
 					"propertyTaxRate": 8,
@@ -4391,89 +4853,89 @@
 				"taxRevenues": [
 					{
 						"key": "INCOME_TAX",
-						"value": 7245.575578522284
+						"value": 25149.06718920462
 					},
 					{
 						"key": "PROPERTY_TAX",
-						"value": 355638.33071999997
+						"value": 315.13151999999997
 					},
 					{
 						"key": "VAT",
-						"value": 1958
+						"value": 3447.6
 					},
 					{
 						"key": "EXCISE_TAX",
-						"value": 160.19199999999998
+						"value": 238.59199999999998
 					},
 					{
 						"key": "CORPORATE_TAX",
-						"value": 12708
+						"value": 58295.200000000004
 					},
 					{
 						"key": "PRODUCTION_TAX",
-						"value": 16824
+						"value": 61624
 					}
 				],
 				"componentBudgets": [
 					{
 						"key": "FACTORY",
-						"value": 4800
+						"value": 10200
 					},
 					{
 						"key": "OFFICE",
-						"value": 3750
+						"value": 750
 					},
 					{
 						"key": "TOURISM",
-						"value": 7800
+						"value": 1560
 					},
 					{
 						"key": "AGRICULTURE",
-						"value": 4050
+						"value": 810
 					},
 					{
 						"key": "HEALTH_SERVICES",
-						"value": 6150
+						"value": 1230
 					},
 					{
 						"key": "EDUCATION",
-						"value": 3000
+						"value": 600
 					},
 					{
 						"key": "SECURITY",
-						"value": 5400
+						"value": 1080
 					},
 					{
 						"key": "ROAD_TRANSPORT",
-						"value": 2850
+						"value": 570
 					},
 					{
 						"key": "RAIL_TRANSPORT",
-						"value": 6600
+						"value": 1320
 					},
 					{
 						"key": "MARINE_TRANSPORT",
-						"value": 14700
+						"value": 2940
 					},
 					{
 						"key": "AIR_TRANSPORT",
-						"value": 19200
+						"value": 3840
 					},
 					{
 						"key": "ROAD_NETWORK",
-						"value": 9600
+						"value": 1920
 					},
 					{
 						"key": "ELECTRICITY",
-						"value": 5700
+						"value": 1140
 					},
 					{
 						"key": "WATER_MANAGEMENT",
-						"value": 3450
+						"value": 690
 					},
 					{
 						"key": "INTERNET",
-						"value": 7800
+						"value": 1560
 					}
 				],
 				"production": [
@@ -4497,7 +4959,7 @@
 					},
 					{
 						"type": "INDUSTRIAL_GOOD",
-						"amount": 1200,
+						"amount": 12400,
 						"salePrice": 50,
 						"purchasePrice": 70
 					},
@@ -4517,19 +4979,19 @@
 				"demand": [
 					{
 						"type": "WATER",
-						"amount": 6890,
+						"amount": 13890,
 						"salePrice": 8,
 						"purchasePrice": 10
 					},
 					{
 						"type": "ENERGY",
-						"amount": 12650,
+						"amount": 22450,
 						"salePrice": 12,
 						"purchasePrice": 15
 					},
 					{
 						"type": "TECHNOLOGY",
-						"amount": 3155,
+						"amount": 4975,
 						"salePrice": 90,
 						"purchasePrice": 110
 					},
@@ -4553,8 +5015,8 @@
 					}
 				],
 				"treasury": 0,
-				"importValue": 193375,
-				"exportValue": 74500
+				"importValue": 111492,
+				"exportValue": 605500
 			}
 		},
 		{
@@ -4566,7 +5028,7 @@
 					"componentType": "FACTORY",
 					"description": "Produces industrial goods.",
 					"baseMonthlyBudget": 4800,
-					"finalMonthlyBudget": 4800,
+					"finalMonthlyBudget": 960,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.0044207607746127,
@@ -4678,7 +5140,7 @@
 					"componentType": "OFFICE",
 					"description": "Supports administration and service sector.",
 					"baseMonthlyBudget": 3750,
-					"finalMonthlyBudget": 3750,
+					"finalMonthlyBudget": 750,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.1555062732736814,
@@ -4786,7 +5248,7 @@
 					"componentType": "TOURISM",
 					"description": "Generates income from visitors.",
 					"baseMonthlyBudget": 7800,
-					"finalMonthlyBudget": 7800,
+					"finalMonthlyBudget": 1560,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.7643093960909664,
@@ -4908,7 +5370,7 @@
 					"componentType": "AGRICULTURE",
 					"description": "Produces food and raw materials.",
 					"baseMonthlyBudget": 4050,
-					"finalMonthlyBudget": 4050,
+					"finalMonthlyBudget": 810,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.1185587655254356,
@@ -5024,7 +5486,7 @@
 					"componentType": "HEALTH_SERVICES",
 					"description": "Improves population health and lifespan.",
 					"baseMonthlyBudget": 6150,
-					"finalMonthlyBudget": 6150,
+					"finalMonthlyBudget": 1230,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.0951555535130484,
@@ -5153,7 +5615,7 @@
 					"componentType": "EDUCATION",
 					"description": "Increases knowledge and workforce quality.",
 					"baseMonthlyBudget": 3000,
-					"finalMonthlyBudget": 3000,
+					"finalMonthlyBudget": 600,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.9145380873082587,
@@ -5294,7 +5756,7 @@
 					"componentType": "SECURITY",
 					"description": "Maintains public order and safety.",
 					"baseMonthlyBudget": 5400,
-					"finalMonthlyBudget": 5400,
+					"finalMonthlyBudget": 1080,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.8820670490105383,
@@ -5418,7 +5880,7 @@
 					"componentType": "ROAD_TRANSPORT",
 					"description": "Enables transport via trucks and cars.",
 					"baseMonthlyBudget": 2850,
-					"finalMonthlyBudget": 2850,
+					"finalMonthlyBudget": 570,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.826375705107296,
@@ -5557,7 +6019,7 @@
 					"componentType": "RAIL_TRANSPORT",
 					"description": "Supports large-scale rail transportation.",
 					"baseMonthlyBudget": 6600,
-					"finalMonthlyBudget": 6600,
+					"finalMonthlyBudget": 1320,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.793943663611095,
@@ -5696,7 +6158,7 @@
 					"componentType": "MARINE_TRANSPORT",
 					"description": "Allows sea transport and trade.",
 					"baseMonthlyBudget": 14700,
-					"finalMonthlyBudget": 14700,
+					"finalMonthlyBudget": 2940,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -5815,7 +6277,7 @@
 					"componentType": "AIR_TRANSPORT",
 					"description": "Enables fast air transportation.",
 					"baseMonthlyBudget": 19200,
-					"finalMonthlyBudget": 19200,
+					"finalMonthlyBudget": 3840,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6949798427588469,
@@ -5945,7 +6407,7 @@
 					"componentType": "ROAD_NETWORK",
 					"description": "Enables land transportation and logistics.",
 					"baseMonthlyBudget": 9600,
-					"finalMonthlyBudget": 9600,
+					"finalMonthlyBudget": 1920,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -6104,7 +6566,7 @@
 					"componentType": "ELECTRICITY",
 					"description": "Provides power for industry and services.",
 					"baseMonthlyBudget": 5700,
-					"finalMonthlyBudget": 5700,
+					"finalMonthlyBudget": 1140,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -6229,7 +6691,7 @@
 					"componentType": "WATER_MANAGEMENT",
 					"description": "Ensures water supply and sanitation.",
 					"baseMonthlyBudget": 3450,
-					"finalMonthlyBudget": 3450,
+					"finalMonthlyBudget": 690,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -6355,7 +6817,7 @@
 					"componentType": "INTERNET",
 					"description": "Improves communication and digital access.",
 					"baseMonthlyBudget": 7800,
-					"finalMonthlyBudget": 7800,
+					"finalMonthlyBudget": 1560,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -6495,41 +6957,41 @@
 				"ageDistribution": [
 					{
 						"key": "BABY",
-						"value": 115737
+						"value": 131
 					},
 					{
 						"key": "CHILD",
-						"value": 248331
+						"value": 196
 					},
 					{
 						"key": "TEENAGER",
-						"value": 250098
+						"value": 200
 					},
 					{
 						"key": "YOUNG_ADULT",
-						"value": 496758
+						"value": 395
 					},
 					{
 						"key": "ADULT",
-						"value": 654682
+						"value": 516
 					},
 					{
 						"key": "ELDERLY",
-						"value": 220946
+						"value": 149
 					}
 				],
 				"genderDistribution": [
 					{
 						"key": "MALE",
-						"value": 993275
+						"value": 794
 					},
 					{
 						"key": "FEMALE",
-						"value": 993277
+						"value": 797
 					}
 				],
-				"births": 19053,
-				"deaths": 34472
+				"births": 60,
+				"deaths": 19
 			},
 			"metrics": [
 				{
@@ -6539,7 +7001,7 @@
 				},
 				{
 					"type": "UNEMPLOYMENT",
-					"value": 99.57931034482759,
+					"value": 0,
 					"lastMonthValue": 33
 				},
 				{
@@ -6549,25 +7011,25 @@
 				},
 				{
 					"type": "EDUCATION_LEVEL",
-					"value": 0.08499999999999999,
+					"value": 60,
 					"lastMonthValue": 47
 				},
 				{
 					"type": "HEALTH_RATE",
-					"value": 0.026785714285714288,
+					"value": 34.305317324185246,
 					"lastMonthValue": 56
 				},
 				{
 					"type": "STABILITY",
-					"value": 60.03452340802922,
+					"value": 57.47197088524586,
 					"lastMonthValue": 61
 				}
 			],
 			"economy": {
 				"kind": "RegionEconomy",
-				"income": 520176.52885852224,
-				"expanse": 298225,
-				"balance": 221951.52885852224,
+				"income": 115165.29919210481,
+				"expanse": 87270,
+				"balance": 27895.29919210481,
 				"tax": {
 					"incomeTaxRate": 8,
 					"propertyTaxRate": 8,
@@ -6579,11 +7041,11 @@
 				"taxRevenues": [
 					{
 						"key": "INCOME_TAX",
-						"value": 7498.335578522284
+						"value": 7163.943512104814
 					},
 					{
 						"key": "PROPERTY_TAX",
-						"value": 406528.00127999997
+						"value": 324.76367999999997
 					},
 					{
 						"key": "VAT",
@@ -6595,7 +7057,7 @@
 					},
 					{
 						"key": "CORPORATE_TAX",
-						"value": 12708
+						"value": 14234.4
 					},
 					{
 						"key": "PRODUCTION_TAX",
@@ -6605,63 +7067,63 @@
 				"componentBudgets": [
 					{
 						"key": "FACTORY",
-						"value": 4800
+						"value": 960
 					},
 					{
 						"key": "OFFICE",
-						"value": 3750
+						"value": 750
 					},
 					{
 						"key": "TOURISM",
-						"value": 7800
+						"value": 1560
 					},
 					{
 						"key": "AGRICULTURE",
-						"value": 4050
+						"value": 810
 					},
 					{
 						"key": "HEALTH_SERVICES",
-						"value": 6150
+						"value": 1230
 					},
 					{
 						"key": "EDUCATION",
-						"value": 3000
+						"value": 600
 					},
 					{
 						"key": "SECURITY",
-						"value": 5400
+						"value": 1080
 					},
 					{
 						"key": "ROAD_TRANSPORT",
-						"value": 2850
+						"value": 570
 					},
 					{
 						"key": "RAIL_TRANSPORT",
-						"value": 6600
+						"value": 1320
 					},
 					{
 						"key": "MARINE_TRANSPORT",
-						"value": 14700
+						"value": 2940
 					},
 					{
 						"key": "AIR_TRANSPORT",
-						"value": 19200
+						"value": 3840
 					},
 					{
 						"key": "ROAD_NETWORK",
-						"value": 9600
+						"value": 1920
 					},
 					{
 						"key": "ELECTRICITY",
-						"value": 5700
+						"value": 1140
 					},
 					{
 						"key": "WATER_MANAGEMENT",
-						"value": 3450
+						"value": 690
 					},
 					{
 						"key": "INTERNET",
-						"value": 7800
+						"value": 1560
 					}
 				],
 				"production": [
@@ -6741,7 +7203,7 @@
 					}
 				],
 				"treasury": 0,
-				"importValue": 193375,
+				"importValue": 66300,
 				"exportValue": 74500
 			}
 		},
@@ -6754,7 +7216,7 @@
 					"componentType": "FACTORY",
 					"description": "Produces industrial goods.",
 					"baseMonthlyBudget": 4800,
-					"finalMonthlyBudget": 4800,
+					"finalMonthlyBudget": 960,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.0044207607746127,
@@ -6866,7 +7328,7 @@
 					"componentType": "OFFICE",
 					"description": "Supports administration and service sector.",
 					"baseMonthlyBudget": 3750,
-					"finalMonthlyBudget": 3750,
+					"finalMonthlyBudget": 750,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.1555062732736814,
@@ -6974,7 +7436,7 @@
 					"componentType": "TOURISM",
 					"description": "Generates income from visitors.",
 					"baseMonthlyBudget": 7800,
-					"finalMonthlyBudget": 7800,
+					"finalMonthlyBudget": 1560,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.7643093960909664,
@@ -7096,7 +7558,7 @@
 					"componentType": "AGRICULTURE",
 					"description": "Produces food and raw materials.",
 					"baseMonthlyBudget": 4050,
-					"finalMonthlyBudget": 4050,
+					"finalMonthlyBudget": 810,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.1185587655254356,
@@ -7212,7 +7674,7 @@
 					"componentType": "HEALTH_SERVICES",
 					"description": "Improves population health and lifespan.",
 					"baseMonthlyBudget": 6150,
-					"finalMonthlyBudget": 6150,
+					"finalMonthlyBudget": 1230,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.0951555535130484,
@@ -7341,7 +7803,7 @@
 					"componentType": "EDUCATION",
 					"description": "Increases knowledge and workforce quality.",
 					"baseMonthlyBudget": 3000,
-					"finalMonthlyBudget": 3000,
+					"finalMonthlyBudget": 600,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.9145380873082587,
@@ -7482,7 +7944,7 @@
 					"componentType": "SECURITY",
 					"description": "Maintains public order and safety.",
 					"baseMonthlyBudget": 5400,
-					"finalMonthlyBudget": 5400,
+					"finalMonthlyBudget": 1080,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.8820670490105383,
@@ -7606,7 +8068,7 @@
 					"componentType": "ROAD_TRANSPORT",
 					"description": "Enables transport via trucks and cars.",
 					"baseMonthlyBudget": 2850,
-					"finalMonthlyBudget": 2850,
+					"finalMonthlyBudget": 570,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.826375705107296,
@@ -7745,7 +8207,7 @@
 					"componentType": "RAIL_TRANSPORT",
 					"description": "Supports large-scale rail transportation.",
 					"baseMonthlyBudget": 6600,
-					"finalMonthlyBudget": 6600,
+					"finalMonthlyBudget": 1320,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.793943663611095,
@@ -7884,7 +8346,7 @@
 					"componentType": "MARINE_TRANSPORT",
 					"description": "Allows sea transport and trade.",
 					"baseMonthlyBudget": 14700,
-					"finalMonthlyBudget": 14700,
+					"finalMonthlyBudget": 2940,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -8003,7 +8465,7 @@
 					"componentType": "AIR_TRANSPORT",
 					"description": "Enables fast air transportation.",
 					"baseMonthlyBudget": 19200,
-					"finalMonthlyBudget": 19200,
+					"finalMonthlyBudget": 3840,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6949798427588469,
@@ -8133,7 +8595,7 @@
 					"componentType": "ROAD_NETWORK",
 					"description": "Enables land transportation and logistics.",
 					"baseMonthlyBudget": 9600,
-					"finalMonthlyBudget": 9600,
+					"finalMonthlyBudget": 1920,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -8292,7 +8754,7 @@
 					"componentType": "ELECTRICITY",
 					"description": "Provides power for industry and services.",
 					"baseMonthlyBudget": 5700,
-					"finalMonthlyBudget": 5700,
+					"finalMonthlyBudget": 1140,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -8417,7 +8879,7 @@
 					"componentType": "WATER_MANAGEMENT",
 					"description": "Ensures water supply and sanitation.",
 					"baseMonthlyBudget": 3450,
-					"finalMonthlyBudget": 3450,
+					"finalMonthlyBudget": 690,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -8543,7 +9005,7 @@
 					"componentType": "INTERNET",
 					"description": "Improves communication and digital access.",
 					"baseMonthlyBudget": 7800,
-					"finalMonthlyBudget": 7800,
+					"finalMonthlyBudget": 1560,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -8683,41 +9145,41 @@
 				"ageDistribution": [
 					{
 						"key": "BABY",
-						"value": 130488
+						"value": 148
 					},
 					{
 						"key": "CHILD",
-						"value": 279370
+						"value": 221
 					},
 					{
 						"key": "TEENAGER",
-						"value": 281360
+						"value": 225
 					},
 					{
 						"key": "YOUNG_ADULT",
-						"value": 558840
+						"value": 441
 					},
 					{
 						"key": "ADULT",
-						"value": 736508
+						"value": 578
 					},
 					{
 						"key": "ELDERLY",
-						"value": 248562
+						"value": 166
 					}
 				],
 				"genderDistribution": [
 					{
 						"key": "MALE",
-						"value": 1117564
+						"value": 890
 					},
 					{
 						"key": "FEMALE",
-						"value": 1117564
+						"value": 893
 					}
 				],
-				"births": 21727,
-				"deaths": 38789
+				"births": 68,
+				"deaths": 22
 			},
 			"metrics": [
 				{
@@ -8727,7 +9189,7 @@
 				},
 				{
 					"type": "UNEMPLOYMENT",
-					"value": 99.62605363984675,
+					"value": 0,
 					"lastMonthValue": 32
 				},
 				{
@@ -8737,25 +9199,25 @@
 				},
 				{
 					"type": "EDUCATION_LEVEL",
-					"value": 0.07555555555555556,
+					"value": 60,
 					"lastMonthValue": 48
 				},
 				{
 					"type": "HEALTH_RATE",
-					"value": 0.023809523809523808,
+					"value": 30.612244897959183,
 					"lastMonthValue": 56
 				},
 				{
 					"type": "STABILITY",
-					"value": 60.085523408029225,
+					"value": 57.658334269245856,
 					"lastMonthValue": 61
 				}
 			],
 			"economy": {
 				"kind": "RegionEconomy",
-				"income": 571244.4814985222,
-				"expanse": 298225,
-				"balance": 273019.4814985222,
+				"income": 115404.40053595291,
+				"expanse": 87270,
+				"balance": 28134.40053595291,
 				"tax": {
 					"incomeTaxRate": 8,
 					"propertyTaxRate": 8,
@@ -8767,11 +9229,11 @@
 				"taxRevenues": [
 					{
 						"key": "INCOME_TAX",
-						"value": 7697.695578522285
+						"value": 7363.753975952908
 					},
 					{
 						"key": "PROPERTY_TAX",
-						"value": 457396.59391999996
+						"value": 364.05456
 					},
 					{
 						"key": "VAT",
@@ -8783,7 +9245,7 @@
 					},
 					{
 						"key": "CORPORATE_TAX",
-						"value": 12708
+						"value": 14234.4
 					},
 					{
 						"key": "PRODUCTION_TAX",
@@ -8793,63 +9255,63 @@
 				"componentBudgets": [
 					{
 						"key": "FACTORY",
-						"value": 4800
+						"value": 960
 					},
 					{
 						"key": "OFFICE",
-						"value": 3750
+						"value": 750
 					},
 					{
 						"key": "TOURISM",
-						"value": 7800
+						"value": 1560
 					},
 					{
 						"key": "AGRICULTURE",
-						"value": 4050
+						"value": 810
 					},
 					{
 						"key": "HEALTH_SERVICES",
-						"value": 6150
+						"value": 1230
 					},
 					{
 						"key": "EDUCATION",
-						"value": 3000
+						"value": 600
 					},
 					{
 						"key": "SECURITY",
-						"value": 5400
+						"value": 1080
 					},
 					{
 						"key": "ROAD_TRANSPORT",
-						"value": 2850
+						"value": 570
 					},
 					{
 						"key": "RAIL_TRANSPORT",
-						"value": 6600
+						"value": 1320
 					},
 					{
 						"key": "MARINE_TRANSPORT",
-						"value": 14700
+						"value": 2940
 					},
 					{
 						"key": "AIR_TRANSPORT",
-						"value": 19200
+						"value": 3840
 					},
 					{
 						"key": "ROAD_NETWORK",
-						"value": 9600
+						"value": 1920
 					},
 					{
 						"key": "ELECTRICITY",
-						"value": 5700
+						"value": 1140
 					},
 					{
 						"key": "WATER_MANAGEMENT",
-						"value": 3450
+						"value": 690
 					},
 					{
 						"key": "INTERNET",
-						"value": 7800
+						"value": 1560
 					}
 				],
 				"production": [
@@ -8929,7 +9391,7 @@
 					}
 				],
 				"treasury": 0,
-				"importValue": 193375,
+				"importValue": 66300,
 				"exportValue": 74500
 			}
 		},
@@ -8942,7 +9404,7 @@
 					"componentType": "FACTORY",
 					"description": "Produces industrial goods.",
 					"baseMonthlyBudget": 4800,
-					"finalMonthlyBudget": 4800,
+					"finalMonthlyBudget": 960,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.0044207607746127,
@@ -9054,7 +9516,7 @@
 					"componentType": "OFFICE",
 					"description": "Supports administration and service sector.",
 					"baseMonthlyBudget": 3750,
-					"finalMonthlyBudget": 3750,
+					"finalMonthlyBudget": 750,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.1555062732736814,
@@ -9162,7 +9624,7 @@
 					"componentType": "TOURISM",
 					"description": "Generates income from visitors.",
 					"baseMonthlyBudget": 7800,
-					"finalMonthlyBudget": 7800,
+					"finalMonthlyBudget": 1560,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.7643093960909664,
@@ -9284,7 +9746,7 @@
 					"componentType": "AGRICULTURE",
 					"description": "Produces food and raw materials.",
 					"baseMonthlyBudget": 4050,
-					"finalMonthlyBudget": 4050,
+					"finalMonthlyBudget": 810,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.1185587655254356,
@@ -9400,7 +9862,7 @@
 					"componentType": "HEALTH_SERVICES",
 					"description": "Improves population health and lifespan.",
 					"baseMonthlyBudget": 6150,
-					"finalMonthlyBudget": 6150,
+					"finalMonthlyBudget": 1230,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.0951555535130484,
@@ -9529,7 +9991,7 @@
 					"componentType": "EDUCATION",
 					"description": "Increases knowledge and workforce quality.",
 					"baseMonthlyBudget": 3000,
-					"finalMonthlyBudget": 3000,
+					"finalMonthlyBudget": 600,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.9145380873082587,
@@ -9669,35 +10131,35 @@
 				{
 					"componentType": "SECURITY",
 					"description": "Maintains public order and safety.",
-					"baseMonthlyBudget": 5400,
-					"finalMonthlyBudget": 5400,
+					"baseMonthlyBudget": 137400,
+					"finalMonthlyBudget": 27480,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.8820670490105383,
-					"totalOccupiedLand": 2300,
+					"totalOccupiedLand": 46300,
 					"relatedMetrics": [
 						{
 							"key": "HAPPINESS",
-							"value": 0.322
+							"value": 0.6220000000000002
 						},
 						{
 							"key": "CRIME_RATE",
-							"value": -0.12
+							"value": -2.120000000000001
 						}
 					],
 					"relatedComponents": [],
 					"demand": [
 						{
 							"key": "WATER",
-							"value": 270
+							"value": 4270
 						},
 						{
 							"key": "ENERGY",
-							"value": 500
+							"value": 11500
 						},
 						{
 							"key": "TECHNOLOGY",
-							"value": 160
+							"value": 4560
 						},
 						{
 							"key": "INDUSTRIAL_GOOD",
@@ -9786,6 +10248,746 @@
 									"value": 120
 								}
 							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 3",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 4",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 5",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 6",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 7",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 8",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 9",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 10",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 11",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 12",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 13",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 14",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 15",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 16",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 17",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 18",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 19",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 20",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 21",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
+						},
+						{
+							"name": "SPECIAL_FORCES_UNIT 22",
+							"typeName": "SPECIAL_FORCES_UNIT",
+							"workerAmount": 120,
+							"maxWorkerAmount": 120,
+							"efficiency": 1,
+							"performanceMultiplier": 0,
+							"constructionCost": 60000,
+							"maintenanceCost": 6600,
+							"occupiedLand": 2200,
+							"production": 0,
+							"relatedMetrics": [
+								{
+									"key": "HAPPINESS",
+									"value": 0.015
+								},
+								{
+									"key": "CRIME_RATE",
+									"value": -0.1
+								}
+							],
+							"relatedComponents": [],
+							"demand": [
+								{
+									"key": "WATER",
+									"value": 200
+								},
+								{
+									"key": "ENERGY",
+									"value": 550
+								},
+								{
+									"key": "TECHNOLOGY",
+									"value": 220
+								}
+							]
 						}
 					],
 					"activeEffects": []
@@ -9794,7 +10996,7 @@
 					"componentType": "ROAD_TRANSPORT",
 					"description": "Enables transport via trucks and cars.",
 					"baseMonthlyBudget": 2850,
-					"finalMonthlyBudget": 2850,
+					"finalMonthlyBudget": 570,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.826375705107296,
@@ -9933,7 +11135,7 @@
 					"componentType": "RAIL_TRANSPORT",
 					"description": "Supports large-scale rail transportation.",
 					"baseMonthlyBudget": 6600,
-					"finalMonthlyBudget": 6600,
+					"finalMonthlyBudget": 1320,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.793943663611095,
@@ -10072,7 +11274,7 @@
 					"componentType": "MARINE_TRANSPORT",
 					"description": "Allows sea transport and trade.",
 					"baseMonthlyBudget": 14700,
-					"finalMonthlyBudget": 14700,
+					"finalMonthlyBudget": 2940,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -10191,7 +11393,7 @@
 					"componentType": "AIR_TRANSPORT",
 					"description": "Enables fast air transportation.",
 					"baseMonthlyBudget": 19200,
-					"finalMonthlyBudget": 19200,
+					"finalMonthlyBudget": 3840,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6949798427588469,
@@ -10321,7 +11523,7 @@
 					"componentType": "ROAD_NETWORK",
 					"description": "Enables land transportation and logistics.",
 					"baseMonthlyBudget": 9600,
-					"finalMonthlyBudget": 9600,
+					"finalMonthlyBudget": 1920,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -10480,7 +11682,7 @@
 					"componentType": "ELECTRICITY",
 					"description": "Provides power for industry and services.",
 					"baseMonthlyBudget": 5700,
-					"finalMonthlyBudget": 5700,
+					"finalMonthlyBudget": 1140,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -10605,7 +11807,7 @@
 					"componentType": "WATER_MANAGEMENT",
 					"description": "Ensures water supply and sanitation.",
 					"baseMonthlyBudget": 3450,
-					"finalMonthlyBudget": 3450,
+					"finalMonthlyBudget": 690,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -10731,7 +11933,7 @@
 					"componentType": "INTERNET",
 					"description": "Improves communication and digital access.",
 					"baseMonthlyBudget": 7800,
-					"finalMonthlyBudget": 7800,
+					"finalMonthlyBudget": 1560,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -10871,41 +12073,41 @@
 				"ageDistribution": [
 					{
 						"key": "BABY",
-						"value": 145389
+						"value": 166
 					},
 					{
 						"key": "CHILD",
-						"value": 310423
+						"value": 246
 					},
 					{
 						"key": "TEENAGER",
-						"value": 312627
+						"value": 250
 					},
 					{
 						"key": "YOUNG_ADULT",
-						"value": 620992
+						"value": 491
 					},
 					{
 						"key": "ADULT",
-						"value": 818378
+						"value": 640
 					},
 					{
 						"key": "ELDERLY",
-						"value": 276182
+						"value": 182
 					}
 				],
 				"genderDistribution": [
 					{
 						"key": "MALE",
-						"value": 1241997
+						"value": 989
 					},
 					{
 						"key": "FEMALE",
-						"value": 1241998
+						"value": 990
 					}
 				],
-				"births": 24553,
-				"deaths": 43110
+				"births": 78,
+				"deaths": 26
 			},
 			"metrics": [
 				{
@@ -10915,7 +12117,7 @@
 				},
 				{
 					"type": "UNEMPLOYMENT",
-					"value": 99.66344827586207,
+					"value": 0,
 					"lastMonthValue": 31
 				},
 				{
@@ -10925,25 +12127,25 @@
 				},
 				{
 					"type": "EDUCATION_LEVEL",
-					"value": 0.068,
+					"value": 60,
 					"lastMonthValue": 49
 				},
 				{
 					"type": "HEALTH_RATE",
-					"value": 0.02142857142857143,
+					"value": 27.573529411764707,
 					"lastMonthValue": 57
 				},
 				{
 					"type": "STABILITY",
-					"value": 61.076523408029225,
+					"value": 58.625446613245856,
 					"lastMonthValue": 62
 				}
 			],
 			"economy": {
 				"kind": "RegionEconomy",
-				"income": 622424.5658185222,
-				"expanse": 298225,
-				"balance": 324199.56581852224,
+				"income": 117566.54980364723,
+				"expanse": 196350,
+				"balance": -78783.45019635277,
 				"tax": {
 					"incomeTaxRate": 8,
 					"propertyTaxRate": 8,
@@ -10955,23 +12157,23 @@
 				"taxRevenues": [
 					{
 						"key": "INCOME_TAX",
-						"value": 7950.455578522281
+						"value": 7615.553803647224
 					},
 					{
 						"key": "PROPERTY_TAX",
-						"value": 508323.91823999997
+						"value": 543.204
 					},
 					{
 						"key": "VAT",
-						"value": 1958
+						"value": 3510
 					},
 					{
 						"key": "EXCISE_TAX",
-						"value": 160.19199999999998
+						"value": 339.392
 					},
 					{
 						"key": "CORPORATE_TAX",
-						"value": 12708
+						"value": 14234.4
 					},
 					{
 						"key": "PRODUCTION_TAX",
@@ -10981,63 +12183,63 @@
 				"componentBudgets": [
 					{
 						"key": "FACTORY",
-						"value": 4800
+						"value": 960
 					},
 					{
 						"key": "OFFICE",
-						"value": 3750
+						"value": 750
 					},
 					{
 						"key": "TOURISM",
-						"value": 7800
+						"value": 1560
 					},
 					{
 						"key": "AGRICULTURE",
-						"value": 4050
+						"value": 810
 					},
 					{
 						"key": "HEALTH_SERVICES",
-						"value": 6150
+						"value": 1230
 					},
 					{
 						"key": "EDUCATION",
-						"value": 3000
+						"value": 600
 					},
 					{
 						"key": "SECURITY",
-						"value": 5400
+						"value": 27480
 					},
 					{
 						"key": "ROAD_TRANSPORT",
-						"value": 2850
+						"value": 570
 					},
 					{
 						"key": "RAIL_TRANSPORT",
-						"value": 6600
+						"value": 1320
 					},
 					{
 						"key": "MARINE_TRANSPORT",
-						"value": 14700
+						"value": 2940
 					},
 					{
 						"key": "AIR_TRANSPORT",
-						"value": 19200
+						"value": 3840
 					},
 					{
 						"key": "ROAD_NETWORK",
-						"value": 9600
+						"value": 1920
 					},
 					{
 						"key": "ELECTRICITY",
-						"value": 5700
+						"value": 1140
 					},
 					{
 						"key": "WATER_MANAGEMENT",
-						"value": 3450
+						"value": 690
 					},
 					{
 						"key": "INTERNET",
-						"value": 7800
+						"value": 1560
 					}
 				],
 				"production": [
@@ -11081,19 +12283,19 @@
 				"demand": [
 					{
 						"type": "WATER",
-						"amount": 6890,
+						"amount": 10890,
 						"salePrice": 8,
 						"purchasePrice": 10
 					},
 					{
 						"type": "ENERGY",
-						"amount": 12650,
+						"amount": 23650,
 						"salePrice": 12,
 						"purchasePrice": 15
 					},
 					{
 						"type": "TECHNOLOGY",
-						"amount": 3155,
+						"amount": 7555,
 						"salePrice": 90,
 						"purchasePrice": 110
 					},
@@ -11117,7 +12319,7 @@
 					}
 				],
 				"treasury": 0,
-				"importValue": 193375,
+				"importValue": 148980,
 				"exportValue": 74500
 			}
 		},
@@ -11130,7 +12332,7 @@
 					"componentType": "FACTORY",
 					"description": "Produces industrial goods.",
 					"baseMonthlyBudget": 4800,
-					"finalMonthlyBudget": 4800,
+					"finalMonthlyBudget": 960,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.0044207607746127,
@@ -11242,7 +12444,7 @@
 					"componentType": "OFFICE",
 					"description": "Supports administration and service sector.",
 					"baseMonthlyBudget": 3750,
-					"finalMonthlyBudget": 3750,
+					"finalMonthlyBudget": 750,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.1555062732736814,
@@ -11350,7 +12552,7 @@
 					"componentType": "TOURISM",
 					"description": "Generates income from visitors.",
 					"baseMonthlyBudget": 7800,
-					"finalMonthlyBudget": 7800,
+					"finalMonthlyBudget": 1560,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.7643093960909664,
@@ -11472,7 +12674,7 @@
 					"componentType": "AGRICULTURE",
 					"description": "Produces food and raw materials.",
 					"baseMonthlyBudget": 4050,
-					"finalMonthlyBudget": 4050,
+					"finalMonthlyBudget": 810,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.1185587655254356,
@@ -11588,7 +12790,7 @@
 					"componentType": "HEALTH_SERVICES",
 					"description": "Improves population health and lifespan.",
 					"baseMonthlyBudget": 6150,
-					"finalMonthlyBudget": 6150,
+					"finalMonthlyBudget": 1230,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.0951555535130484,
@@ -11717,7 +12919,7 @@
 					"componentType": "EDUCATION",
 					"description": "Increases knowledge and workforce quality.",
 					"baseMonthlyBudget": 3000,
-					"finalMonthlyBudget": 3000,
+					"finalMonthlyBudget": 600,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.9145380873082587,
@@ -11858,7 +13060,7 @@
 					"componentType": "SECURITY",
 					"description": "Maintains public order and safety.",
 					"baseMonthlyBudget": 5400,
-					"finalMonthlyBudget": 5400,
+					"finalMonthlyBudget": 1080,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.8820670490105383,
@@ -11982,7 +13184,7 @@
 					"componentType": "ROAD_TRANSPORT",
 					"description": "Enables transport via trucks and cars.",
 					"baseMonthlyBudget": 2850,
-					"finalMonthlyBudget": 2850,
+					"finalMonthlyBudget": 570,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.826375705107296,
@@ -12121,7 +13323,7 @@
 					"componentType": "RAIL_TRANSPORT",
 					"description": "Supports large-scale rail transportation.",
 					"baseMonthlyBudget": 6600,
-					"finalMonthlyBudget": 6600,
+					"finalMonthlyBudget": 1320,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.793943663611095,
@@ -12260,7 +13462,7 @@
 					"componentType": "MARINE_TRANSPORT",
 					"description": "Allows sea transport and trade.",
 					"baseMonthlyBudget": 14700,
-					"finalMonthlyBudget": 14700,
+					"finalMonthlyBudget": 2940,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -12379,7 +13581,7 @@
 					"componentType": "AIR_TRANSPORT",
 					"description": "Enables fast air transportation.",
 					"baseMonthlyBudget": 19200,
-					"finalMonthlyBudget": 19200,
+					"finalMonthlyBudget": 3840,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6949798427588469,
@@ -12509,7 +13711,7 @@
 					"componentType": "ROAD_NETWORK",
 					"description": "Enables land transportation and logistics.",
 					"baseMonthlyBudget": 9600,
-					"finalMonthlyBudget": 9600,
+					"finalMonthlyBudget": 1920,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -12668,7 +13870,7 @@
 					"componentType": "ELECTRICITY",
 					"description": "Provides power for industry and services.",
 					"baseMonthlyBudget": 5700,
-					"finalMonthlyBudget": 5700,
+					"finalMonthlyBudget": 1140,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -12793,7 +13995,7 @@
 					"componentType": "WATER_MANAGEMENT",
 					"description": "Ensures water supply and sanitation.",
 					"baseMonthlyBudget": 3450,
-					"finalMonthlyBudget": 3450,
+					"finalMonthlyBudget": 690,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -12919,7 +14121,7 @@
 					"componentType": "INTERNET",
 					"description": "Improves communication and digital access.",
 					"baseMonthlyBudget": 7800,
-					"finalMonthlyBudget": 7800,
+					"finalMonthlyBudget": 1560,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -13059,41 +14261,41 @@
 				"ageDistribution": [
 					{
 						"key": "BABY",
-						"value": 160274
+						"value": 183
 					},
 					{
 						"key": "CHILD",
-						"value": 341458
+						"value": 271
 					},
 					{
 						"key": "TEENAGER",
-						"value": 343886
+						"value": 275
 					},
 					{
 						"key": "YOUNG_ADULT",
-						"value": 683061
+						"value": 538
 					},
 					{
 						"key": "ADULT",
-						"value": 900197
+						"value": 706
 					},
 					{
 						"key": "ELDERLY",
-						"value": 303800
+						"value": 200
 					}
 				],
 				"genderDistribution": [
 					{
 						"key": "MALE",
-						"value": 1366341
+						"value": 1089
 					},
 					{
 						"key": "FEMALE",
-						"value": 1366340
+						"value": 1088
 					}
 				],
-				"births": 27366,
-				"deaths": 47431
+				"births": 87,
+				"deaths": 27
 			},
 			"metrics": [
 				{
@@ -13103,7 +14305,7 @@
 				},
 				{
 					"type": "UNEMPLOYMENT",
-					"value": 99.69404388714733,
+					"value": 0,
 					"lastMonthValue": 30
 				},
 				{
@@ -13113,25 +14315,25 @@
 				},
 				{
 					"type": "EDUCATION_LEVEL",
-					"value": 0.061818181818181814,
+					"value": 57.16911764705882,
 					"lastMonthValue": 50
 				},
 				{
 					"type": "HEALTH_RATE",
-					"value": 0.01948051948051948,
+					"value": 25.08361204013378,
 					"lastMonthValue": 57
 				},
 				{
 					"type": "STABILITY",
-					"value": 61.12752340802922,
+					"value": 58.811809997245845,
 					"lastMonthValue": 62
 				}
 			],
 			"economy": {
 				"kind": "RegionEconomy",
-				"income": 673514.8242185223,
-				"expanse": 298225,
-				"balance": 375289.8242185223,
+				"income": 115938.1382823031,
+				"expanse": 87270,
+				"balance": 28668.1382823031,
 				"tax": {
 					"incomeTaxRate": 8,
 					"propertyTaxRate": 8,
@@ -13143,11 +14345,11 @@
 				"taxRevenues": [
 					{
 						"key": "INCOME_TAX",
-						"value": 8149.815578522283
+						"value": 7816.863562303103
 					},
 					{
 						"key": "PROPERTY_TAX",
-						"value": 559214.81664
+						"value": 444.68271999999996
 					},
 					{
 						"key": "VAT",
@@ -13159,7 +14361,7 @@
 					},
 					{
 						"key": "CORPORATE_TAX",
-						"value": 12708
+						"value": 14234.4
 					},
 					{
 						"key": "PRODUCTION_TAX",
@@ -13169,63 +14371,63 @@
 				"componentBudgets": [
 					{
 						"key": "FACTORY",
-						"value": 4800
+						"value": 960
 					},
 					{
 						"key": "OFFICE",
-						"value": 3750
+						"value": 750
 					},
 					{
 						"key": "TOURISM",
-						"value": 7800
+						"value": 1560
 					},
 					{
 						"key": "AGRICULTURE",
-						"value": 4050
+						"value": 810
 					},
 					{
 						"key": "HEALTH_SERVICES",
-						"value": 6150
+						"value": 1230
 					},
 					{
 						"key": "EDUCATION",
-						"value": 3000
+						"value": 600
 					},
 					{
 						"key": "SECURITY",
-						"value": 5400
+						"value": 1080
 					},
 					{
 						"key": "ROAD_TRANSPORT",
-						"value": 2850
+						"value": 570
 					},
 					{
 						"key": "RAIL_TRANSPORT",
-						"value": 6600
+						"value": 1320
 					},
 					{
 						"key": "MARINE_TRANSPORT",
-						"value": 14700
+						"value": 2940
 					},
 					{
 						"key": "AIR_TRANSPORT",
-						"value": 19200
+						"value": 3840
 					},
 					{
 						"key": "ROAD_NETWORK",
-						"value": 9600
+						"value": 1920
 					},
 					{
 						"key": "ELECTRICITY",
-						"value": 5700
+						"value": 1140
 					},
 					{
 						"key": "WATER_MANAGEMENT",
-						"value": 3450
+						"value": 690
 					},
 					{
 						"key": "INTERNET",
-						"value": 7800
+						"value": 1560
 					}
 				],
 				"production": [
@@ -13305,7 +14507,7 @@
 					}
 				],
 				"treasury": 0,
-				"importValue": 193375,
+				"importValue": 66300,
 				"exportValue": 74500
 			}
 		},
@@ -13318,7 +14520,7 @@
 					"componentType": "FACTORY",
 					"description": "Produces industrial goods.",
 					"baseMonthlyBudget": 4800,
-					"finalMonthlyBudget": 4800,
+					"finalMonthlyBudget": 960,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.0044207607746127,
@@ -13430,7 +14632,7 @@
 					"componentType": "OFFICE",
 					"description": "Supports administration and service sector.",
 					"baseMonthlyBudget": 3750,
-					"finalMonthlyBudget": 3750,
+					"finalMonthlyBudget": 750,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.1555062732736814,
@@ -13538,7 +14740,7 @@
 					"componentType": "TOURISM",
 					"description": "Generates income from visitors.",
 					"baseMonthlyBudget": 7800,
-					"finalMonthlyBudget": 7800,
+					"finalMonthlyBudget": 1560,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.7643093960909664,
@@ -13660,7 +14862,7 @@
 					"componentType": "AGRICULTURE",
 					"description": "Produces food and raw materials.",
 					"baseMonthlyBudget": 4050,
-					"finalMonthlyBudget": 4050,
+					"finalMonthlyBudget": 810,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.1185587655254356,
@@ -13776,7 +14978,7 @@
 					"componentType": "HEALTH_SERVICES",
 					"description": "Improves population health and lifespan.",
 					"baseMonthlyBudget": 6150,
-					"finalMonthlyBudget": 6150,
+					"finalMonthlyBudget": 1230,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 1.0951555535130484,
@@ -13905,7 +15107,7 @@
 					"componentType": "EDUCATION",
 					"description": "Increases knowledge and workforce quality.",
 					"baseMonthlyBudget": 3000,
-					"finalMonthlyBudget": 3000,
+					"finalMonthlyBudget": 600,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.9145380873082587,
@@ -14046,7 +15248,7 @@
 					"componentType": "SECURITY",
 					"description": "Maintains public order and safety.",
 					"baseMonthlyBudget": 5400,
-					"finalMonthlyBudget": 5400,
+					"finalMonthlyBudget": 1080,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.8820670490105383,
@@ -14170,7 +15372,7 @@
 					"componentType": "ROAD_TRANSPORT",
 					"description": "Enables transport via trucks and cars.",
 					"baseMonthlyBudget": 2850,
-					"finalMonthlyBudget": 2850,
+					"finalMonthlyBudget": 570,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.826375705107296,
@@ -14309,7 +15511,7 @@
 					"componentType": "RAIL_TRANSPORT",
 					"description": "Supports large-scale rail transportation.",
 					"baseMonthlyBudget": 6600,
-					"finalMonthlyBudget": 6600,
+					"finalMonthlyBudget": 1320,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.793943663611095,
@@ -14448,7 +15650,7 @@
 					"componentType": "MARINE_TRANSPORT",
 					"description": "Allows sea transport and trade.",
 					"baseMonthlyBudget": 14700,
-					"finalMonthlyBudget": 14700,
+					"finalMonthlyBudget": 2940,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -14567,7 +15769,7 @@
 					"componentType": "AIR_TRANSPORT",
 					"description": "Enables fast air transportation.",
 					"baseMonthlyBudget": 19200,
-					"finalMonthlyBudget": 19200,
+					"finalMonthlyBudget": 3840,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6949798427588469,
@@ -14697,7 +15899,7 @@
 					"componentType": "ROAD_NETWORK",
 					"description": "Enables land transportation and logistics.",
 					"baseMonthlyBudget": 9600,
-					"finalMonthlyBudget": 9600,
+					"finalMonthlyBudget": 1920,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -14856,7 +16058,7 @@
 					"componentType": "ELECTRICITY",
 					"description": "Provides power for industry and services.",
 					"baseMonthlyBudget": 5700,
-					"finalMonthlyBudget": 5700,
+					"finalMonthlyBudget": 1140,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -14981,7 +16183,7 @@
 					"componentType": "WATER_MANAGEMENT",
 					"description": "Ensures water supply and sanitation.",
 					"baseMonthlyBudget": 3450,
-					"finalMonthlyBudget": 3450,
+					"finalMonthlyBudget": 690,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -15107,7 +16309,7 @@
 					"componentType": "INTERNET",
 					"description": "Improves communication and digital access.",
 					"baseMonthlyBudget": 7800,
-					"finalMonthlyBudget": 7800,
+					"finalMonthlyBudget": 1560,
 					"budgetMultiplier": 1,
 					"budgetPercentage": 100,
 					"performance": 0.6931471805599453,
@@ -15247,41 +16449,41 @@
 				"ageDistribution": [
 					{
 						"key": "BABY",
-						"value": 175327
+						"value": 200
 					},
 					{
 						"key": "CHILD",
-						"value": 372510
+						"value": 295
 					},
 					{
 						"key": "TEENAGER",
-						"value": 375154
+						"value": 300
 					},
 					{
 						"key": "YOUNG_ADULT",
-						"value": 745207
+						"value": 587
 					},
 					{
 						"key": "ADULT",
-						"value": 982063
+						"value": 768
 					},
 					{
 						"key": "ELDERLY",
-						"value": 331420
+						"value": 217
 					}
 				],
 				"genderDistribution": [
 					{
 						"key": "MALE",
-						"value": 1490843
+						"value": 1186
 					},
 					{
 						"key": "FEMALE",
-						"value": 1490844
+						"value": 1185
 					}
 				],
-				"births": 30348,
-				"deaths": 51758
+				"births": 96,
+				"deaths": 32
 			},
 			"metrics": [
 				{
@@ -15291,7 +16493,7 @@
 				},
 				{
 					"type": "UNEMPLOYMENT",
-					"value": 99.71954022988506,
+					"value": 0,
 					"lastMonthValue": 29
 				},
 				{
@@ -15301,25 +16503,25 @@
 				},
 				{
 					"type": "EDUCATION_LEVEL",
-					"value": 0.056666666666666664,
+					"value": 54.56081081081081,
 					"lastMonthValue": 51
 				},
 				{
 					"type": "HEALTH_RATE",
-					"value": 0.017857142857142856,
+					"value": 23.014959723820482,
 					"lastMonthValue": 58
 				},
 				{
 					"type": "STABILITY",
-					"value": 62.11852340802922,
+					"value": 59.778922341245845,
 					"lastMonthValue": 63
 				}
 			],
 			"economy": {
 				"kind": "RegionEconomy",
-				"income": 724723.9674185223,
-				"expanse": 298225,
-				"balance": 426498.96741852234,
+				"income": 116230.75181903587,
+				"expanse": 87270,
+				"balance": 28960.751819035868,
 				"tax": {
 					"incomeTaxRate": 8,
 					"propertyTaxRate": 8,
@@ -15331,11 +16533,11 @@
 				"taxRevenues": [
 					{
 						"key": "INCOME_TAX",
-						"value": 8402.575578522283
+						"value": 8069.776939035867
 					},
 					{
 						"key": "PROPERTY_TAX",
-						"value": 610171.19984
+						"value": 484.38288
 					},
 					{
 						"key": "VAT",
@@ -15347,7 +16549,7 @@
 					},
 					{
 						"key": "CORPORATE_TAX",
-						"value": 12708
+						"value": 14234.4
 					},
 					{
 						"key": "PRODUCTION_TAX",
@@ -15357,63 +16559,63 @@
 				"componentBudgets": [
 					{
 						"key": "FACTORY",
-						"value": 4800
+						"value": 960
 					},
 					{
 						"key": "OFFICE",
-						"value": 3750
+						"value": 750
 					},
 					{
 						"key": "TOURISM",
-						"value": 7800
+						"value": 1560
 					},
 					{
 						"key": "AGRICULTURE",
-						"value": 4050
+						"value": 810
 					},
 					{
 						"key": "HEALTH_SERVICES",
-						"value": 6150
+						"value": 1230
 					},
 					{
 						"key": "EDUCATION",
-						"value": 3000
+						"value": 600
 					},
 					{
 						"key": "SECURITY",
-						"value": 5400
+						"value": 1080
 					},
 					{
 						"key": "ROAD_TRANSPORT",
-						"value": 2850
+						"value": 570
 					},
 					{
 						"key": "RAIL_TRANSPORT",
-						"value": 6600
+						"value": 1320
 					},
 					{
 						"key": "MARINE_TRANSPORT",
-						"value": 14700
+						"value": 2940
 					},
 					{
 						"key": "AIR_TRANSPORT",
-						"value": 19200
+						"value": 3840
 					},
 					{
 						"key": "ROAD_NETWORK",
-						"value": 9600
+						"value": 1920
 					},
 					{
 						"key": "ELECTRICITY",
-						"value": 5700
+						"value": 1140
 					},
 					{
 						"key": "WATER_MANAGEMENT",
-						"value": 3450
+						"value": 690
 					},
 					{
 						"key": "INTERNET",
-						"value": 7800
+						"value": 1560
 					}
 				],
 				"production": [
@@ -15493,7 +16695,7 @@
 					}
 				],
 				"treasury": 0,
-				"importValue": 193375,
+				"importValue": 66300,
 				"exportValue": 74500
 			}
 		},
@@ -15503,12 +16705,12 @@
 	]
 },
 "mapType": "map1",
-"playTime": 60.00188446044922,
+"playTime": 68.02108001708984,
 "version": "1.0.0",
 "saveTimestamp": {
-	"epochMillis": 1775711530093,
-	"hour": 8,
-	"minute": 12
+	"epochMillis": 1775773826817,
+	"hour": 1,
+	"minute": 30
 },
 "snapshotPath": "snapshots/slot-0.png"
 }
