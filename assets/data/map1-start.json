@@ -1,0 +1,69 @@
+{
+  "startTreasury": 1250000,
+  "startDate": "1/2026",
+  "regions": [
+    {
+      "name": "Marmara",
+      "totalPopulation": 15800000,
+      "security": 63,
+      "industry": 78,
+      "health": 66,
+      "education": 72,
+      "happiness": 61
+    },
+    {
+      "name": "Aegean",
+      "totalPopulation": 10400000,
+      "security": 59,
+      "industry": 68,
+      "health": 64,
+      "education": 65,
+      "happiness": 60
+    },
+    {
+      "name": "Mediterranean",
+      "totalPopulation": 11200000,
+      "security": 56,
+      "industry": 62,
+      "health": 60,
+      "education": 58,
+      "happiness": 59
+    },
+    {
+      "name": "Central Anatolia",
+      "totalPopulation": 12900000,
+      "security": 58,
+      "industry": 64,
+      "health": 59,
+      "education": 61,
+      "happiness": 57
+    },
+    {
+      "name": "Black Sea",
+      "totalPopulation": 7600000,
+      "security": 54,
+      "industry": 49,
+      "health": 56,
+      "education": 52,
+      "happiness": 55
+    },
+    {
+      "name": "Eastern Anatolia",
+      "totalPopulation": 6100000,
+      "security": 47,
+      "industry": 39,
+      "health": 48,
+      "education": 43,
+      "happiness": 46
+    },
+    {
+      "name": "Southeastern Anatolia",
+      "totalPopulation": 8400000,
+      "security": 45,
+      "industry": 44,
+      "health": 47,
+      "education": 41,
+      "happiness": 44
+    }
+  ]
+}

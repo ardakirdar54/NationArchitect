@@ -1,0 +1,14 @@
+
+button1.png
+size: 1024, 1024
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+button
+  rotate: false
+  xy: 1, 248
+  size: 529, 280
+  split: 0, 0, 0, 0
+  orig: 529, 280
+  offset: 0, 0
+  index: -1
