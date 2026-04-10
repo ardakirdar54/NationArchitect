@@ -77,6 +77,9 @@ public class GameScreen extends BaseScreen {
     private static final float MAP_Y = 0f;
     private static final float MAP_WIDTH = WIDTH;
     private static final float MAP_HEIGHT = HEIGHT;
+    private static final float MAP_DATA_WIDTH = 1300f;
+    private static final float MAP_DATA_HEIGHT = 580f;
+    private static final float MAP_CLICK_X_OFFSET = 60f;
 
     public GameScreen(Main game, String nationName, GameMap gameMap) {
         super(game);
@@ -345,9 +348,12 @@ public class GameScreen extends BaseScreen {
             float normalized = Math.max(0f, Math.min(1f, value / 100f));
             pixmap.setColor(new Color(1f - normalized, normalized, 0.2f, 0.5f));
 
-            float centerX = region.getBounds().x + (region.getBounds().width / 2f);
-            float centerY = region.getBounds().y + (region.getBounds().height / 2f);
-            pixmap.fillCircle((int) centerX, (int) (MAP_HEIGHT - centerY), 100);
+            float centerX = worldToScreenX(region.getBounds().x + (region.getBounds().width / 2f)) + getMapModeOffsetX(region);
+            float centerY = MAP_HEIGHT - worldToScreenY(region.getBounds().y + (region.getBounds().height / 2f)) + getMapModeOffsetY(region);
+            int drawWidth = Math.max(64, Math.round((region.getBounds().width / MAP_DATA_WIDTH) * MAP_WIDTH * 0.50f));
+            int drawHeight = Math.max(56, Math.round((region.getBounds().height / MAP_DATA_HEIGHT) * MAP_HEIGHT * 0.50f));
+            int radius = Math.max(18, Math.min(drawWidth, drawHeight) / 2);
+            pixmap.fillCircle((int) centerX, (int) centerY, radius);
         }
 
         overlayTexture = new Texture(pixmap);
@@ -709,8 +715,8 @@ public class GameScreen extends BaseScreen {
         mapImage.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                float regionX = ((x - 60f) / MAP_WIDTH) * 1300f;
-                float regionY = (y / MAP_HEIGHT) * 580f;
+                float regionX = screenToWorldX(x);
+                float regionY = screenToWorldY(y);
 
                 UIRegion clicked = gameMap.getRegionAt(regionX, regionY);
                 if (clicked != null) {
@@ -822,6 +828,39 @@ public class GameScreen extends BaseScreen {
                 speedLabel.setText("--");
                 break;
         }
+    }
+
+    private float worldToScreenX(float worldX) {
+        return (worldX / MAP_DATA_WIDTH) * MAP_WIDTH + MAP_CLICK_X_OFFSET;
+    }
+
+    private float worldToScreenY(float worldY) {
+        return (worldY / MAP_DATA_HEIGHT) * MAP_HEIGHT;
+    }
+
+    private float screenToWorldX(float screenX) {
+        return ((screenX - MAP_CLICK_X_OFFSET) / MAP_WIDTH) * MAP_DATA_WIDTH;
+    }
+
+    private float screenToWorldY(float screenY) {
+        return (screenY / MAP_HEIGHT) * MAP_DATA_HEIGHT;
+    }
+
+    private float getMapModeOffsetX(UIRegion region) {
+        if ("Eastern Anatolia".equalsIgnoreCase(region.getName())) {
+            return 45f;
+        }
+        if ("Southeastern Anatolia".equalsIgnoreCase(region.getName())) {
+            return 24f;
+        }
+        return 0f;
+    }
+
+    private float getMapModeOffsetY(UIRegion region) {
+        if ("Eastern Anatolia".equalsIgnoreCase(region.getName())) {
+            return 205f;
+        }
+        return 0f;
     }
 
     public void resumeGame() {
